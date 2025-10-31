@@ -1,0 +1,3 @@
+ssid=TutoriazLab
+pass=SuperSecureWiFi!
+host=10.0.0.20

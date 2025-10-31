@@ -1,0 +1,47 @@
+site_name: IoT Basic Course Documentation
+site_url: https://tutoriaz.modulemore.com/docs/iot_basic_course/site/
+site_description: >-
+  เอกสารประกอบการเรียนหลักสูตร IoT Basic Course โดย Modulemore
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue
+      accent: deep orange
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: indigo
+      accent: amber
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+nav:
+  - Home: index.md
+  - ESP32 Course:
+      - Overview: esp32/overview.md
+  #     - Module 01 · Board Bring-up: esp32/module-01.md
+  #     - Module 02 · Networking Fundamentals: esp32/module-02.md
+  #     - Appendix:
+  #         - Pinout Reference: esp32/appendix/pinout-reference.md
+  #         - Troubleshooting Checklist: esp32/appendix/troubleshooting.md
+  # - Shared Resources:
+  #     - Getting Started: shared/getting-started.md
+  #     - Classroom Etiquette: shared/classroom-etiquette.md
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fxprime/tutoriaz
+      name: Tutoriaz on GitHub
