@@ -1,12 +1,28 @@
-# Welcome to Tutoriaz Course Docs
+# IoT Basic Course
 
-Tutoriaz uses this documentation hub to keep course material, lab guides, and quick-reference
-checklists in a single version-controlled space. Each section mirrors the classroom experience:
+ยินดีต้อนรับสู่หลักสูตร IoT Basic!
 
-- **Course overviews** capture learning objectives, prerequisites, and pacing guides.
-- **Module walkthroughs** pair lecture topics with lab steps and embedded code snippets.
-- **Appendices** host pinouts, wiring diagrams, and troubleshooting flows that students can
-  reference during live sessions.
+ในหลักสูตรนี้ คุณจะได้เรียนรู้พื้นฐานของการพัฒนา Internet of Things (IoT) โดยใช้บอร์ด ESP32 ซึ่งเป็นแพลตฟอร์มที่ได้รับความนิยมอย่างมากในชุมชน IoT
+ผ่านการเขียนโปรแกรมและการเชื่อมต่ออุปกรณ์ต่าง ๆ คุณจะได้เรียนรู้วิธีการสร้างโครงการ IoT ที่สามารถสื่อสารและทำงานร่วมกับอุปกรณ์อื่น ๆ ได้
 
-Use the navigation panel to jump directly into an ESP32 module or browse shared resources that
-apply across multiple courses.
+โดยหลักสูตรนี้จะเน้นในการเรียนรู้ผ่านการปฏิบัติจริง คุณจะได้ลงมือเขียนโค้ดและทดลองใช้งานอุปกรณ์ต่าง ๆ เพื่อเสริมสร้างความเข้าใจและทักษะในการพัฒนา IoT
+
+## ToDo
+- [ ] Download IDE
+- [ ] Setup ESP32
+- [ ] First Program
+- [ ] Serial Monitor
+- [ ] Button
+- [ ] LED
+- [ ] Game Time!
+- [ ] Debounce
+- [ ] WiFi
+- [ ] Protocol
+   - [ ] TCP/IP
+   - [ ] Game (hero vs boss)
+   - [ ] UDP
+   - [ ] WebSocket
+
+
+## เนื้อหาหลักสูตร
+
