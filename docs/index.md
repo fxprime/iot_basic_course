@@ -13,15 +13,29 @@
 - [ ] First Program
 - [ ] Serial Monitor
 - [ ] Button
+   - [ ] Input Pullup/Pulldown
 - [ ] LED
 - [ ] Game Time!
-- [ ] Debounce
+- [ ] Debounce Button
+- [ ] Sensor
+   - [ ] DHT11
+   - [ ] Ultrasonic
+- [ ] Data Processing
+   - [ ] Average
+   - [ ] Median
+   - [ ] Mode
+- [ ] Timing 
+- [ ] Automatic Parking door project
+- [ ] Design Project Pattern
 - [ ] WiFi
 - [ ] Protocol
    - [ ] TCP/IP
-   - [ ] Game (hero vs boss)
+   - [ ] Game (hero vs boss) (class introduced)
    - [ ] UDP
    - [ ] WebSocket
+- [ ] API Example
+- [ ] Get accurate time with NTP
+- [ ] Google Sheets interaction
 
 
 ## เนื้อหาหลักสูตร
