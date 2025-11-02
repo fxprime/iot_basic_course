@@ -17,7 +17,7 @@
 ![ลักษณะภายนอกชิพพร้อมกันสัญญาณรบกวน](../assets/images/outside_esp32.webp)
 ![ภายในชิพ](../assets/images/inside_esp32.webp)
 
-<details>
+<details markdown="1">
 <summary>📖 <b>ESP32 คืออะไร?</b></summary>
 
 **ESP32** คือไมโครคอนโทรลเลอร์ที่มีความสามารถพิเศษ:
@@ -72,7 +72,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 4. กด **OK**
 
-<details>
+<details markdown="1">
 <summary>🤔 <b>Board Manager URL คืออะไร?</b></summary>
 
 **Board Manager URL** คือที่อยู่ที่บอก Arduino IDE ว่าจะดาวน์โหลดไฟล์สำหรับบอร์ด ESP32 จากที่ไหน
@@ -144,7 +144,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ![TODO: รูปเลือก Port](../assets/images/arduino-select-port.webp)
 
-<details>
+<details markdown="1">
 <summary>❗ <b>ไม่เจอ Port?</b></summary>
 
 ถ้าไม่เห็น Port ปรากฏ แสดงว่าต้องติดตั้ง USB Driver:
@@ -236,7 +236,7 @@ void loop() {
 }
 ```
 
-<details>
+<details markdown="1">
 <summary>📖 <b>โค้ดนี้ทำอะไร?</b></summary>
 
 ### ส่วน setup()
@@ -326,7 +326,7 @@ Count: 4 | Uptime: 4 seconds
 
 ✅ **สำเร็จ!** ESP32 ของคุณพร้อมใช้งานแล้ว
 
-<details>
+<details markdown="1">
 <summary>❗ <b>แก้ปัญหาการ Upload</b></summary>
 
 ### ปัญหา: Upload ไม่สำเร็จ - ค้างที่ "Connecting..."

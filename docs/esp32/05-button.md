@@ -46,7 +46,7 @@
 
 ![TODO: รูปการทำงานของปุ่มกด](../assets/images/button-how-it-works.png)
 
-<details>
+<details markdown="1">
 <summary>📖 <b>Digital Input คืออะไร?</b></summary>
 
 **Digital Input** คือการอ่านสัญญาณที่มี 2 สถานะ:
@@ -88,7 +88,7 @@ GPIO ────┤ o ├──── GND
 
 ### 3.2 วิธีแก้: ใช้ Pull-up หรือ Pull-down
 
-<details>
+<details markdown="1">
 <summary>📖 <b>Pull-down Resistor (ดึงลง)</b></summary>
 
 ```
@@ -113,7 +113,7 @@ GPIO ────┤ o ├──── GND
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>📖 <b>Pull-up Resistor (ดึงขึ้น)</b></summary>
 
 ```
@@ -189,7 +189,7 @@ void loop() {
 
 ![TODO: รูปต่อวงจร Pull-up](../assets/images/button-pullup-wiring.png)
 
-<details>
+<details markdown="1">
 <summary>📖 <b>digitalRead() คืออะไร?</b></summary>
 
 ```cpp
@@ -327,7 +327,7 @@ void loop() {
 }
 ```
 
-<details>
+<details markdown="1">
 <summary>📖 <b>การตรวจจับ Edge (Falling/Rising)</b></summary>
 
 ### Edge Detection คืออะไร?
@@ -487,7 +487,7 @@ void loop() {
 }
 ```
 
-<details>
+<details markdown="1">
 <summary>📖 <b>millis() และการจับเวลา</b></summary>
 
 ### `millis()` คืออะไร?
@@ -564,7 +564,7 @@ while (condition) {
 2. สร้างเกมกดปุ่ม: กดปุ่มให้ได้ 10 ครั้งภายใน 10 วินาที
 3. สร้างโปรแกรมที่ปุ่ม 1 กด = เพิ่มค่า, ปุ่ม 2 กด = ลดค่า, แสดงค่าใน Serial
 
-<details>
+<details markdown="1">
 <summary>💡 <b>ดูเฉลย แบบฝึกหัดที่ 2</b></summary>
 
 ```cpp

@@ -40,13 +40,20 @@
 ### สำหรับ Windows
 
 1. เปิดไฟล์ `.exe` ที่ดาวน์โหลดมา
+![รูปหน้าจอติดตั้ง Windows](../assets/images/window_install_1.webp)
+
 2. คลิก "I Agree" เพื่อยอมรับข้อตกลง
+![รูปหน้าจอติดตั้ง Windows](../assets/images/window_install_2.webp)
+![รูปหน้าจอติดตั้ง Windows](../assets/images/window_install_3.webp)
+
 3. เลือก "Install" ทุกตัวเลือก (รวม USB Driver)
+
 4. คลิก "Next" และรอจนการติดตั้งเสร็จสมบูรณ์
+![รูปหน้าจอติดตั้ง Windows](../assets/images/window_install_4.webp)
+
 5. คลิก "Close" เมื่อติดตั้งเสร็จ
-
-![TODO: รูปหน้าจอติดตั้ง Windows](../assets/images/arduino-install-windows.webp)
-
+![รูปหน้าจอติดตั้ง Windows](../assets/images/window_install_5.webp) 
+ 
 ### สำหรับ macOS
 
 1. เปิดไฟล์ `.dmg` ที่ดาวน์โหลดมา
@@ -80,8 +87,8 @@ sudo ./install.sh
 ## ขั้นตอนที่ 3: รู้จักกับ Arduino IDE
 
 เมื่อเปิด Arduino IDE ขึ้นมาครั้งแรก คุณจะเห็นหน้าจอหลักแบบนี้:
-
-![TODO: รูปหน้าจอ Arduino IDE](../assets/images/arduino-ide-interface.webp)
+ 
+![รูปหน้าจอ Arduino IDE](../assets/images/arduino-ide-interface.webp)
 
 ### ส่วนประกอบสำคัญ
 
@@ -107,7 +114,7 @@ sudo ./install.sh
 └─────────────────────────────────────────┘
 ```
 
-<details>
+<details markdown="1">
 <summary>📖 <b>อธิบายส่วนประกอบแต่ละส่วน</b></summary>
 
 ### 1. เมนูบาร์ (Menu Bar)
@@ -134,7 +141,7 @@ sudo ./install.sh
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>🔧 <b>ฟังก์ชันพื้นฐานที่ต้องรู้</b></summary>
 
 ### `void setup()`
@@ -182,7 +189,7 @@ void loop() {
 
 ![TODO: รูปการ Verify สำเร็จ](../assets/images/arduino-verify-success.webp)
 
-<details>
+<details markdown="1">
 <summary>❗ <b>แก้ปัญหาที่พบบ่อย</b></summary>
 
 ### ปัญหา: กดปุ่ม Verify แล้วขึ้น Error

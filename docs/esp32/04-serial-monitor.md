@@ -35,11 +35,10 @@ void loop() {
     Serial.println(input);
   }
 }
-```
+``` 
+![รูปโปรแกรมรับข้อความ](../assets/images/serial-read-basic.webp)
 
-![TODO: รูปโปรแกรมรับข้อความ](../assets/images/serial-read-basic.png)
-
-<details>
+<details markdown="1">
 <summary>📖 <b>อธิบายโค้ดทีละส่วน</b></summary>
 
 ### `Serial.available()`
@@ -87,10 +86,10 @@ readStringUntil() จะได้: "Hello" เลย
 Type something and press Enter
 
 You typed: Hello ESP32
-```
+``` 
 
-![TODO: รูปผลลัพธ์การทดสอบ](../assets/images/serial-test-input.png)
-
+![รูปผลลัพธ์การทดสอบ](../assets/images/serial-test-input.webp)
+![รูปผลลัพธ์การทดสอบ](../assets/images/serial-test-result.webp)
 ---
 
 ## ขั้นตอนที่ 2: ควบคุม LED ด้วย Serial
@@ -98,7 +97,7 @@ You typed: Hello ESP32
 ### 2.1 เขียนโปรแกรมควบคุม
 
 ```cpp
-#define LED_PIN 2  // LED บน ESP32
+#define LED_PIN 2  // LED ที่ต่อกับขา GPIO 2
 
 void setup() {
   Serial.begin(115200);
@@ -109,7 +108,7 @@ void setup() {
   Serial.println("  ON  - Turn LED on");
   Serial.println("  OFF - Turn LED off");
   Serial.println();
-}
+} 
 
 void loop() {
   if (Serial.available() > 0) {
@@ -133,7 +132,7 @@ void loop() {
 }
 ```
 
-<details>
+<details markdown="1">
 <summary>📖 <b>String Functions ที่ใช้</b></summary>
 
 ### `command.trim()`
@@ -181,7 +180,7 @@ text.indexOf("LED");    // หาตำแหน่งของ "LED"
 - `on` → LED ติด (แปลงเป็นตัวใหญ่อัตโนมัติ)
 - `hello` → แสดง error
 
-![TODO: รูปทดสอบควบคุม LED](../assets/images/serial-led-control.png)
+![รูปทดสอบควบคุม LED](../assets/images/serial-led-control.webp)
 
 ---
 
@@ -220,7 +219,7 @@ void loop() {
 }
 ```
 
-<details>
+<details markdown="1">
 <summary>📖 <b>การแปลง String เป็นตัวเลข</b></summary>
 
 ### `toInt()` - แปลงเป็น Integer
@@ -354,9 +353,9 @@ void showStatus() {
 }
 ```
 
-![TODO: รูป Menu System](../assets/images/serial-menu-system.png)
+![TODO: รูป Menu System](../assets/images/serial-menu-system.webp)
 
-<details>
+<details markdown="1">
 <summary>📖 <b>การสร้าง Function เอง</b></summary>
 
 ### ทำไมต้องสร้าง Function?
@@ -464,7 +463,7 @@ void loop() {
 }
 ```
 
-<details>
+<details markdown="1">
 <summary>📖 <b>เทคนิค Debug ด้วย Serial</b></summary>
 
 ### 1. ใช้ Prefix แยกประเภทข้อความ
@@ -547,7 +546,7 @@ debugPrint("Value: " + String(sensorValue));
 2. สร้างโปรแกรมที่รับชื่อและตอบกลับ "Hello, [ชื่อ]!"
 3. เพิ่มเมนูในโปรแกรม LED Control ให้มีตัวเลือก "BLINK" (กระพริบ LED)
 
-<details>
+<details markdown="1">
 <summary>💡 <b>ดูเฉลย</b></summary>
 
 ### แบบฝึกหัดที่ 1: เครื่องคิดเลข

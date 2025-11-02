@@ -28,13 +28,15 @@ void loop() {
  
 
 
-<details>
+<details markdown="1">
 <summary>📖 <b>ทำไมต้องแยกเป็น setup() และ loop()?</b></summary>
 
 ### `void setup()`
+
 คิดว่าเป็น**การเตรียมตัวก่อนทำงาน**
 
 ตัวอย่างในชีวิตจริง:
+
 - ก่อนทำอาหาร → เตรียมเครื่องครัว, ล้างมือ
 - ก่อนขับรถ → ปรับกระจก, คาดเข็มขัด
 - ก่อนใช้ ESP32 → กำหนด pinMode, เชื่อมต่อ WiFi
@@ -42,9 +44,11 @@ void loop() {
 **ทำแค่ครั้งเดียว** พอ
 
 ### `void loop()`
+
 คิดว่าเป็น**งานประจำที่ต้องทำซ้ำ**
 
 ตัวอย่างในชีวิตจริง:
+
 - พนักงานรักษาความปลอดภัย → ตรวจเฝ้าซ้ำๆ ทุกรอบ
 - ใบพัดลม → หมุนซ้ำๆ เรื่อยๆ
 - ESP32 → อ่านเซ็นเซอร์, ควบคุมอุปกรณ์, ส่งข้อมูล
@@ -52,11 +56,14 @@ void loop() {
 **ทำซ้ำไปเรื่อยๆ** ไม่มีวันหยุด
 
 ### ทำไมต้องแยก?
+
 ถ้าเราใส่ทุกอย่างใน `loop()`:
+
 - ต้องตั้งค่าซ้ำทุกรอบ (เสียเวลา)
 - โค้ดยุ่งเหยิง
 
 แยกออกมาจะ:
+
 - โค้ดอ่านง่าย เข้าใจง่าย
 - ทำงานเร็วขึ้น (setup แค่ครั้งเดียว)
 
@@ -92,7 +99,7 @@ void loop() {
 }
 ```
 
-<details>
+<details markdown="1">
 <summary>📖 <b>อธิบายโค้ดทีละบรรทัด</b></summary>
 
 ```cpp
@@ -165,7 +172,7 @@ This is my first program!
 
 ✅ **สำเร็จ!** คุณได้เขียนโปรแกรมแรกแล้ว
 
-<details>
+<details markdown="1">
 <summary>📖 <b>Serial Monitor คืออะไร?</b></summary>
 
 **Serial Monitor** คือหน้าต่างที่ใช้สำหรับ:
@@ -185,7 +192,7 @@ This is my first program!
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>❗ <b>ไม่เห็นข้อความใน Serial Monitor?</b></summary>
 
 ### ปัญหา: Serial Monitor ว่างเปล่า
@@ -237,7 +244,7 @@ void loop() {
 
 ![รูปข้อความวนซ้ำ](../assets/images/serial-monitor-loop.webp)
  
-<details>
+<details markdown="1">
 <summary>📖 <b>ทำไมข้อความถึงแสดงซ้ำไปเรื่อยๆ?</b></summary>
 
 เพราะโค้ดใน `loop()` จะทำงาน**วนซ้ำไม่หยุด**:
@@ -302,7 +309,7 @@ Count: 4
 
 ![รูป Counter](../assets/images/serial-monitor-counter.webp)
 
-<details>
+<details markdown="1">
 <summary>📖 <b>ตัวแปรและการนับเลข</b></summary>
 
 ### การประกาศตัวแปร
@@ -361,7 +368,7 @@ char letter = 'A';           // อักษรตัวเดียว
 bool isOn = true;            // true หรือ false
 ```
 
-<details>
+<details markdown="1">
 <summary>📖 <b>เลือกใช้ตัวแปรอย่างไร?</b></summary>
 
 ### การเก็บอุณหภูมิ
@@ -438,7 +445,7 @@ Voltage: 3.3 V
 Active: Yes
 ```
 
-<details>
+<details markdown="1">
 <summary>🤔 <b>โค้ดบรรทัดนี้คืออะไร?</b></summary>
 
 ```cpp
@@ -488,7 +495,7 @@ if (isActive) {
 2. แสดงข้อความ "Hello" และ "World" สลับกันทุก 1 วินาที
 3. สร้างตัวแปรเก็บชื่อของคุณและแสดงทุก 2 วินาที
 
-<details>
+<details markdown="1">
 <summary>💡 <b>ดูเฉลย</b></summary>
 
 ### แบบฝึกหัดที่ 1: นับถอยหลัง

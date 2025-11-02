@@ -22,7 +22,7 @@
 - **Anode (+)** - ขาบวก (ขายาว)
 - **Cathode (-)** - ขาลบ (ขาสั้น)
 
-<details>
+<details markdown="1">
 <summary>📖 <b>หลักการทำงานของ LED</b></summary>
 
 ### LED ทำงานอย่างไร?
@@ -104,7 +104,7 @@ void loop() {
 - เปิด-ปิด LED **เร็วมาก** (หลายพันครั้งต่อวินาที)
 - ตาเราเห็นเป็นความสว่างต่างกัน
 
-<details>
+<details markdown="1">
 <summary>📖 <b>PWM ทำงานอย่างไร?</b></summary>
 
 ### Duty Cycle
@@ -183,7 +183,7 @@ void loop() {
 
 ![TODO: รูป LED ปรับความสว่าง](../assets/images/led-fade.png)
 
-<details>
+<details markdown="1">
 <summary>📖 <b>PWM Functions บน ESP32</b></summary>
 
 ### `ledcSetup(channel, freq, resolution)`
@@ -291,7 +291,7 @@ void loop() {
 - **Common Cathode** - ขาลบร่วมกัน (ใช้บ่อย)
 - **Common Anode** - ขาบวกร่วมกัน
 
-<details>
+<details markdown="1">
 <summary>📖 <b>การผสมสี RGB</b></summary>
 
 ### สีพื้นฐาน

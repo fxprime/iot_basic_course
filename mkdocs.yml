@@ -23,23 +23,37 @@ markdown_extensions:
   - toc:
       permalink: true
   - admonition
-  - codehilite:
-      guess_lang: false
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+  - md_in_html
+  - attr_list
 nav:
   - Home: index.md
   - ESP32 Course:
       - Overview: esp32/overview.md
-  #     - Module 01 · Board Bring-up: esp32/module-01.md
-  #     - Module 02 · Networking Fundamentals: esp32/module-02.md
-  #     - Appendix:
-  #         - Pinout Reference: esp32/appendix/pinout-reference.md
-  #         - Troubleshooting Checklist: esp32/appendix/troubleshooting.md
-  # - Shared Resources:
-  #     - Getting Started: shared/getting-started.md
-  #     - Classroom Etiquette: shared/classroom-etiquette.md
+      - 'Module 1: เริ่มต้นกับ ESP32':
+          - 'บทที่ 1: ดาวน์โหลดและติดตั้ง Arduino IDE': esp32/01-download-ide.md
+          - 'บทที่ 2: ติดตั้ง ESP32 Board': esp32/02-setup-esp32.md
+          - 'บทที่ 3: โปรแกรมแรก': esp32/03-first-program.md
+          - 'บทที่ 4: Serial Monitor - การสื่อสารสองทาง': esp32/04-serial-monitor.md
+      - 'Module 2: Input/Output พื้นฐาน':
+          - 'บทที่ 5: Button - การรับสัญญาณจากปุ่มกด': esp32/05-button.md
+          - 'บทที่ 6: LED - การควบคุมความสว่างและสี': esp32/06-led.md
+      - Appendix:
+          - Pinout Reference: esp32/appendix/pinout-reference.md
+          - Troubleshooting Checklist: esp32/appendix/troubleshooting.md
+  - Shared Resources:
+      - Getting Started: shared/getting-started.md
+      - Classroom Etiquette: shared/classroom-etiquette.md
 extra:
   social:
     - icon: fontawesome/brands/github
