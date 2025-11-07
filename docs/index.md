@@ -44,11 +44,24 @@
 - Edge Detection
 - การใช้ `millis()` จับเวลา
 
+#### [บทที่ 5.5: Analog Input - การอ่านค่าแบบต่อเนื่อง](esp32/05.5-analog-input.md)
+เรียนรู้การอ่านสัญญาณ Analog ด้วย ADC
+- ความแตกต่างระหว่าง Digital และ Analog
+- Potentiometer - ปรับค่าแบบต่อเนื่อง
+- IR Sensor - ตรวจจับวัตถุ/เส้น
+- Passive Buzzer - สร้างเสียงตามค่า Analog
+
 #### [บทที่ 6: LED - การควบคุมความสว่างและสี](esp32/06-led.md)
 ควบคุม LED ขั้นสูงด้วย PWM
 - PWM และการปรับความสว่าง
 - RGB LED และการผสมสี
 - เอฟเฟกต์แสงต่างๆ
+
+#### [บทที่ 6.5: Servo Motor - ควบคุมมอเตอร์เซอร์โว](esp32/06.5-servo-motor.md)
+เรียนรู้การควบคุม Servo Motor แบบ Manual PWM
+- PWM Timing สำหรับ Servo (500-2500μs)
+- Serial Command Control
+- Multi-servo Coordination
 
 #### [บทที่ 7: Timing - การจัดการเวลาและ Library](esp32/07-timing-basics.md)
 เรียนรู้การจัดการเวลาและความสำคัญของ Library
@@ -56,6 +69,31 @@
 - สร้างโปรแกรมที่ทำหลายอย่างพร้อมกัน
 - โปรเจค: เกมส่งสัญญาณมอร์ส
 - ทำความเข้าใจ Protocol และ Library
+
+#### [บทที่ 7.5: LCD Display - จอแสดงผล 16x2](esp32/07.5-lcd-display.md)
+แสดงข้อมูลด้วย LCD I2C
+- LiquidCrystal_I2C Library
+- Custom Characters
+- Menu System และ Bar Graph
+
+#### [บทที่ 7.6: HTU21D Sensor - วัดอุณหภูมิและความชื้น](esp32/07.6-htu21d-sensor.md)
+เซนเซอร์วัดอุณหภูมิและความชื้น
+- SparkFun HTU21D Library
+- LCD Integration
+- Alert System และ Data Logging
+
+#### [บทที่ 7.7: Relay Module - ควบคุมอุปกรณ์ไฟฟ้า](esp32/07.7-relay-module.md)
+ควบคุมอุปกรณ์ไฟฟ้าแรงดันสูง
+- Relay Module 2CH
+- Home Automation
+- Safety Features
+
+#### [🎯 โปรเจค: ระบบประตูจอดรถอัตโนมัติ](esp32/07.8-project-parking-gate.md)
+โปรเจคประยุกต์ใช้ความรู้ทั้งหมด
+- HC-SR04 Ultrasonic Distance Sensor
+- State Machine Design
+- Multi-sensor Coordination
+- NewPing Library และ Internal Pull-up
 
 ### Module 3: การเขียนโค้ดขั้นสูง
 
@@ -89,50 +127,50 @@
 ## 🎯 ความคืบหน้าของหลักสูตร
 
 ### เนื้อหาที่พร้อมใช้แล้ว ✅
-- ✅ Download IDE
-- ✅ Setup ESP32
-- ✅ First Program
-- ✅ Serial Monitor
-- ✅ Button (รวม Input Pullup/Pulldown)
-- ✅ LED
-- ✅ Timing และ Library
-- ✅ #define และ const
-- ✅ Array และ Enum
-- ✅ การแยกไฟล์ Header
-- ✅ Class เบื้องต้น
+
+**Module 1: เริ่มต้นกับ ESP32**
+- ✅ บทที่ 1: Download IDE
+- ✅ บทที่ 2: Setup ESP32
+- ✅ บทที่ 3: First Program
+- ✅ บทที่ 4: Serial Monitor
+
+**Module 2: Input/Output พื้นฐาน**
+- ✅ บทที่ 5: Button (Digital Input)
+- ✅ บทที่ 5.5: Analog Input (Potentiometer, IR Sensor, Passive Buzzer)
+- ✅ บทที่ 6: LED (PWM, RGB)
+- ✅ บทที่ 6.5: Servo Motor (Manual PWM)
+- ✅ บทที่ 7: Timing และ Library (Morse Code Game)
+- ✅ บทที่ 7.5: LCD Display (16x2 I2C)
+- ✅ บทที่ 7.6: HTU21D Sensor (Temperature/Humidity)
+- ✅ บทที่ 7.7: Relay Module (2CH)
+- ✅ 🎯 โปรเจค: ระบบประตูจอดรถอัตโนมัติ (HC-SR04 + State Machine)
+
+**Module 3: การเขียนโค้ดขั้นสูง**
+- ✅ บทที่ 8: #define และ const
+- ✅ บทที่ 9: Array และ Enum (Button Dash Game)
+- ✅ บทที่ 10: การแยกไฟล์ Header
+- ✅ บทที่ 11: Class เบื้องต้น (OOP)
 
 ### เนื้อหาที่กำลังพัฒนา 🚧
-- 🚧 Game Time!
-- 🚧 Debounce Button
-- 🚧 Sensor (DHT11, Ultrasonic)
-- 🚧 Data Processing (Average, Median, Mode)
+- 🚧 Module 4: Network & Communication
+- 🚧 WiFi Basics
+- 🚧 Web Server
 
 ### เนื้อหาที่วางแผนไว้ 📋
 
-#### Hardware & Sensors
-- [ ] Game Time!
-- [ ] Debounce Button
-- [ ] Sensor
-   - [ ] DHT11
-   - [ ] Ultrasonic
-- [ ] Data Processing
-   - [ ] Average
-   - [ ] Median
-   - [ ] Mode
-- [ ] Timing
-- [ ] Automatic Parking door project
+#### Module 4: Network & Communication
+- [ ] WiFi Connection และ Web Server
+- [ ] HTTP Client และ API Integration
+- [ ] MQTT Protocol
+- [ ] WebSocket Real-time Communication
+- [ ] NTP Time Synchronization
+- [ ] Google Sheets Integration
 
-#### Network & Communication
-- [ ] Design Project Pattern
-- [ ] WiFi
-- [ ] Protocol
-   - [ ] TCP/IP
-   - [ ] Game (hero vs boss) (class introduced)
-   - [ ] UDP
-   - [ ] WebSocket
-- [ ] API Example
-- [ ] Get accurate time with NTP
-- [ ] Google Sheets interaction
+#### Module 5: Advanced Projects
+- [ ] IoT Dashboard with Chart.js
+- [ ] Multi-player Game (TCP/IP)
+- [ ] Smart Home Control System
+- [ ] Weather Station with Cloud Logging
 
 ---
 

@@ -58,6 +58,7 @@ nav:
           - 'บทที่ 7.5: LCD Display - จอแสดงผล 16x2': esp32/07.5-lcd-display.md
           - 'บทที่ 7.6: HTU21D Sensor - วัดอุณหภูมิและความชื้น': esp32/07.6-htu21d-sensor.md
           - 'บทที่ 7.7: Relay Module - ควบคุมอุปกรณ์ไฟฟ้า': esp32/07.7-relay-module.md
+          - '🎯 โปรเจค: ระบบประตูจอดรถอัตโนมัติ': esp32/07.8-project-parking-gate.md
       - 'Module 3: การเขียนโค้ดขั้นสูง':
           - 'บทที่ 8: #define และ const - การใช้ค่าคงที่': esp32/08-define-const.md
           - 'บทที่ 9: Array และ Enum - จัดการข้อมูลหลายค่า': esp32/09-array-enum.md
