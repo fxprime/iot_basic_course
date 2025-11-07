@@ -10,6 +10,15 @@
 
 ---
 
+## Bonus : โปรแกรม simulation วงจร falstad
+https://www.falstad.com/circuit/circuitjs.html
+
+(สอนวิธีใช้เฉพาะสอน offline เท่านั้น)
+
+ใช้สำหรับจำลองวงจรไฟฟ้า ที่สามารถทดสอบการทำงานของปุ่มกดและวงจรต่างๆ ได้โดยไม่ต้องใช้ฮาร์ดแวร์จริง 
+
+---
+
 ## ขั้นตอนที่ 1: เตรียมอุปกรณ์
 
 ### อุปกรณ์ที่ต้องใช้
@@ -22,7 +31,8 @@
 6. **Breadboard** - 1 อัน
 7. **สายจั๊มเปอร์** - หลายเส้น
 
-![TODO: รูปอุปกรณ์ที่ใช้](../assets/images/button-components.png)
+![รูปอุปกรณ์ที่ใช้](../assets/images/button-components.webp)
+ 
 
 ---
 
@@ -35,7 +45,6 @@
       │  ┌───┐  │
   ●───┤  │ o │  ├───●
       │  └───┘  │
-      │         │
   ●───┤         ├───●
       └─────────┘
 ```
@@ -44,7 +53,18 @@
 - **ไม่กด** → วงจรเปิด (ไม่มีกระแสไหล)
 - **กด** → วงจรปิด (มีกระแสไหล)
 
-![TODO: รูปการทำงานของปุ่มกด](../assets/images/button-how-it-works.png)
+![รูปการทำงานของปุ่มกด](../assets/images/button-how-it-works.webp)
+
+การต่อวงจรปุ่มกด 4 วิธี:
+
+![รูปการทำงานของปุ่มกด](../assets/images/button-how-wiring.webp)
+
+การทำงานของปุ่มกดถูกกด
+
+![รูปการทำงานตอนปุ่มกด](../assets/images/button-pressed.webp)
+
+[ขอบคุณภาพจาก arduinogetstarted](https://arduinogetstarted.com/tutorials/arduino-button)
+
 
 <details markdown="1">
 <summary>📖 <b>Digital Input คืออะไร?</b></summary>
@@ -74,32 +94,23 @@
 ### 3.1 ปัญหาของ Floating Input
 
 ถ้าต่อปุ่มแบบนี้:
-
-```
-GPIO ────┤ o ├──── GND
-       (Button)
-```
+ 
+![ตัวอย่าง gpio กับ ปุ่มกดต่อกราว](../assets/images/button_float_1.webp)
 
 **ปัญหา:** เมื่อ**ไม่กดปุ่ม** GPIO จะอยู่ในสถานะ "ลอย" (Floating)
 - ไม่ได้เชื่อมต่อกับ HIGH หรือ LOW
 - อ่านค่าได้ไม่แน่นอน (บางทีอ่านได้ 1 บางทีอ่านได้ 0)
 
-![TODO: รูป Floating Input](../assets/images/floating-input.png)
+![รูป Floating Input](../assets/images/button_float_2.webp)
+ 
 
 ### 3.2 วิธีแก้: ใช้ Pull-up หรือ Pull-down
 
 <details markdown="1">
 <summary>📖 <b>Pull-down Resistor (ดึงลง)</b></summary>
+ 
 
-```
-        3.3V
-          │
-          ├────┤ o ├──── GPIO
-          │   (Button)
-         10kΩ
-          │
-         GND
-```
+![รูป Pull-down Circuit](../assets/images/pulldown-circuit.webp) 
 
 **การทำงาน:**
 - **ไม่กดปุ่ม** → GPIO ต่อกับ GND ผ่าน 10kΩ → อ่านค่าได้ **LOW (0)**
@@ -108,24 +119,16 @@ GPIO ────┤ o ├──── GND
 **สรุป:**
 - ไม่กด = LOW (0)
 - กด = HIGH (1)
+ 
 
-![TODO: รูป Pull-down Circuit](../assets/images/pulldown-circuit.png)
 
 </details>
 
 <details markdown="1">
 <summary>📖 <b>Pull-up Resistor (ดึงขึ้น)</b></summary>
 
-```
-        3.3V
-          │
-         10kΩ
-          │
-          ├──── GPIO
-          │
-          ├────┤ o ├──── GND
-               (Button)
-```
+ 
+![รูป Pull-up Circuit](../assets/images/pullup-circuit.webp)
 
 **การทำงาน:**
 - **ไม่กดปุ่ม** → GPIO ต่อกับ 3.3V ผ่าน 10kΩ → อ่านค่าได้ **HIGH (1)**
@@ -135,7 +138,6 @@ GPIO ────┤ o ├──── GND
 - ไม่กด = HIGH (1)
 - กด = LOW (0) ← ตรงข้ามกับ Pull-down!
 
-![TODO: รูป Pull-up Circuit](../assets/images/pullup-circuit.png)
 
 </details>
 
@@ -151,8 +153,11 @@ pinMode(pin, INPUT_PULLUP);
 pinMode(pin, INPUT_PULLDOWN);
 ```
 
-![TODO: รูป Internal Pull-up/down](../assets/images/internal-pullup.png)
+ 
+![รูป Internal Pull-up/down](../assets/images/internal-pullup.webp)
 
+![รูป Internal Pull-up/down](../assets/images/internal-pulldown.webp)
+ 
 ---
 
 ## ขั้นตอนที่ 4: ต่อวงจรและเขียนโปรแกรม
@@ -187,7 +192,8 @@ void loop() {
 }
 ```
 
-![TODO: รูปต่อวงจร Pull-up](../assets/images/button-pullup-wiring.png)
+![รูปต่อวงจร Pull-up](../assets/images/button-pullup-wiring.webp)
+ 
 
 <details markdown="1">
 <summary>📖 <b>digitalRead() คืออะไร?</b></summary>
@@ -249,7 +255,7 @@ ESP32
   GPIO 2 ────[330Ω]────|>|──── GND  (LED)
 ```
 
-![TODO: รูปต่อวงจรปุ่ม + LED](../assets/images/button-led-circuit.png)
+![รูปต่อวงจรปุ่ม + LED](../assets/images/button-led-circuit.webp)
 
 ### 5.2 โปรแกรมควบคุม LED
 

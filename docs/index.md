@@ -50,6 +50,40 @@
 - RGB LED และการผสมสี
 - เอฟเฟกต์แสงต่างๆ
 
+#### [บทที่ 7: Timing - การจัดการเวลาและ Library](esp32/07-timing-basics.md)
+เรียนรู้การจัดการเวลาและความสำคัญของ Library
+- ความแตกต่างระหว่าง `delay()` และ `millis()`
+- สร้างโปรแกรมที่ทำหลายอย่างพร้อมกัน
+- โปรเจค: เกมส่งสัญญาณมอร์ส
+- ทำความเข้าใจ Protocol และ Library
+
+### Module 3: การเขียนโค้ดขั้นสูง
+
+#### [บทที่ 8: #define และ const - การใช้ค่าคงที่](esp32/08-define-const.md)
+เรียนรู้การใช้ค่าคงที่เพื่อให้โค้ดอ่านง่ายและแก้ไขสะดวก
+- ความแตกต่างระหว่าง `#define` และ `const`
+- การตั้งชื่อค่าคงที่ที่มีความหมาย
+- ปรับปรุงโค้ดให้อ่านง่าย
+
+#### [บทที่ 9: Array และ Enum - จัดการข้อมูลหลายค่า](esp32/09-array-enum.md)
+จัดการกับข้อมูลหลายๆ ค่าอย่างมีประสิทธิภาพ
+- การใช้ Array เก็บข้อมูลหลายค่า
+- การใช้ Enum ทำให้โค้ดอ่านง่าย
+- การใช้ for loop กับ Array และ Enum
+
+#### [บทที่ 10: การแยกไฟล์ Header - จัดระเบียบโปรเจค](esp32/10-header-files.md)
+จัดระเบียบโค้ดให้เป็นระบบและใช้งานซ้ำได้
+- การแยกไฟล์ .h และ .cpp
+- Header Guards (#ifndef #define #endif)
+- การสร้าง library ของตัวเอง
+
+#### [บทที่ 11: Class เบื้องต้น - Object-Oriented Programming](esp32/11-class-basics.md)
+เรียนรู้การเขียนโปรแกรมเชิงวัตถุ (OOP) พื้นฐาน
+- เข้าใจแนวคิด Class และ Object
+- เปรียบเทียบ Class กับตัวแปรธรรมดา
+- สร้าง Class สำหรับ LED และ Button
+- Encapsulation และการซ่อนข้อมูล
+
 ---
 
 ## 🎯 ความคืบหน้าของหลักสูตร
@@ -61,14 +95,17 @@
 - ✅ Serial Monitor
 - ✅ Button (รวม Input Pullup/Pulldown)
 - ✅ LED
+- ✅ Timing และ Library
+- ✅ #define และ const
+- ✅ Array และ Enum
+- ✅ การแยกไฟล์ Header
+- ✅ Class เบื้องต้น
 
 ### เนื้อหาที่กำลังพัฒนา 🚧
 - 🚧 Game Time!
 - 🚧 Debounce Button
 - 🚧 Sensor (DHT11, Ultrasonic)
 - 🚧 Data Processing (Average, Median, Mode)
-
-### เนื้อหาที่วางแผนไว้ 📋
 
 ### เนื้อหาที่วางแผนไว้ 📋
 

@@ -1,5 +1,9 @@
 # บทที่ 4: Serial Monitor - การสื่อสารสองทาง
 
+ในการพัฒนาโปรแกรมด้วย Arduino IDE นั้น การสื่อสารผ่าน Serial Monitor เป็นเครื่องมือที่สำคัญมาก
+เพราะช่วยให้เราสามารถรับข้อมูลจากผู้ใช้และแสดงผลลัพธ์ได้อย่างง่ายดาย
+รวมถึงใช้สำหรับการ Debug โปรแกรมอีกด้วย
+
 ในบทนี้เราจะเรียนรู้การรับข้อมูลจาก Serial Monitor และสร้างโปรแกรมที่โต้ตอบได้
 
 ## วัตถุประสงค์
@@ -352,8 +356,8 @@ void showStatus() {
   Serial.println(" seconds");
 }
 ```
-
-![TODO: รูป Menu System](../assets/images/serial-menu-system.webp)
+ 
+![รูป Menu System](../assets/images/serial-menu-system.webp)
 
 <details markdown="1">
 <summary>📖 <b>การสร้าง Function เอง</b></summary>

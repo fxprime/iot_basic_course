@@ -16,7 +16,8 @@
 
 **LED (Light Emitting Diode)** = ไดโอดเปล่งแสง
 
-![TODO: รูป LED และสัญลักษณ์](../assets/images/led-structure.png)
+![รูป LED และสัญลักษณ์](../assets/images/led-structure.png)
+ 
 
 **ส่วนประกอบ:**
 - **Anode (+)** - ขาบวก (ขายาว)
@@ -98,7 +99,6 @@ void loop() {
 
 **PWM (Pulse Width Modulation)** = การปรับความกว้างของพัลส์
 
-![TODO: รูป PWM Signal](../assets/images/pwm-signal.png)
 
 **หลักการ:**
 - เปิด-ปิด LED **เร็วมาก** (หลายพันครั้งต่อวินาที)
@@ -110,26 +110,9 @@ void loop() {
 ### Duty Cycle
 
 **Duty Cycle** = เปอร์เซ็นต์ของเวลาที่เป็น HIGH
+ 
+![รูป PWM Signal, Ref : https://medium.com/icreativesystems/to-know-pwm-373efa1322ce](../assets/images/pwm-signal.png)
 
-```
-0% Duty Cycle (ปิดตลอด)
-LOW ──────────────────────────
-
-25% Duty Cycle (สว่าง 25%)
-HIGH ──┐  ┐  ┐  ┐  ┐  ┐  ┐
-LOW   └──└──└──└──└──└──└──
-
-50% Duty Cycle (สว่าง 50%)
-HIGH ───┐  ┐  ┐  ┐  ┐  ┐
-LOW    └──└──└──└──└──└──
-
-75% Duty Cycle (สว่าง 75%)
-HIGH ────┐ ┐ ┐ ┐ ┐ ┐ ┐
-LOW     └─└─└─└─└─└─└─
-
-100% Duty Cycle (เปิดตลอด)
-HIGH ──────────────────────────
-```
 
 ### ใน ESP32
 
@@ -151,17 +134,13 @@ HIGH ─────────────────────────
 
 // ตั้งค่า PWM
 const int freq = 5000;      // ความถี่ 5000 Hz
-const int ledChannel = 0;   // ช่อง PWM 0
 const int resolution = 8;   // ความละเอียด 8-bit (0-255)
 
 void setup() {
   Serial.begin(115200);
   
-  // ตั้งค่า PWM channel
-  ledcSetup(ledChannel, freq, resolution);
-  
-  // ผูก channel กับ GPIO
-  ledcAttachPin(LED_PIN, ledChannel);
+  // ตั้งค่า PWM: ledcAttach(pin, freq, resolution)
+  ledcAttach(LED_PIN, freq, resolution);
   
   Serial.println("=== PWM LED Control ===");
 }
@@ -169,72 +148,89 @@ void setup() {
 void loop() {
   // ค่อยๆ สว่างขึ้น (Fade In)
   for (int brightness = 0; brightness <= 255; brightness++) {
-    ledcWrite(ledChannel, brightness);
+    ledcWrite(LED_PIN, brightness);  // ใช้ pin โดยตรง
     delay(10);
   }
   
   // ค่อยๆ มืดลง (Fade Out)
   for (int brightness = 255; brightness >= 0; brightness--) {
-    ledcWrite(ledChannel, brightness);
+    ledcWrite(LED_PIN, brightness);  // ใช้ pin โดยตรง
     delay(10);
   }
 }
 ```
 
-![TODO: รูป LED ปรับความสว่าง](../assets/images/led-fade.png)
+![รูป LED ปรับความสว่าง](../assets/images/led-fade.png)
+ 
 
 <details markdown="1">
 <summary>📖 <b>PWM Functions บน ESP32</b></summary>
 
-### `ledcSetup(channel, freq, resolution)`
-ตั้งค่า PWM channel
+### `ledcAttach(pin, freq, resolution)`
+ตั้งค่า PWM บน GPIO pin (API ใหม่ - Arduino Core 3.x+)
 
 **Parameters:**
-- `channel` - หมายเลขช่อง (0-15)
+- `pin` - หมายเลข GPIO
 - `freq` - ความถี่ในหน่วย Hz
 - `resolution` - ความละเอียด (1-16 bit)
 
-**Return:** ความถี่จริงที่ตั้งได้
+**Return:** `true` = สำเร็จ, `false` = ล้มเหลว
 
 ```cpp
-ledcSetup(0, 5000, 8);  // Channel 0, 5kHz, 8-bit
+ledcAttach(2, 5000, 8);  // GPIO 2, 5kHz, 8-bit
 ```
 
-### `ledcAttachPin(pin, channel)`
-ผูก GPIO กับ PWM channel
-
-```cpp
-ledcAttachPin(2, 0);  // GPIO 2 ใช้ Channel 0
-```
-
-### `ledcWrite(channel, dutyCycle)`
+### `ledcWrite(pin, dutyCycle)`
 เขียนค่า PWM
 
 ```cpp
-ledcWrite(0, 128);  // Channel 0, Duty = 128 (50%)
+ledcWrite(2, 128);  // GPIO 2, Duty = 128 (50%)
 ```
 
-### `ledcDetachPin(pin)`
-ยกเลิกการผูก GPIO กับ PWM
+### `ledcDetach(pin)`
+ยกเลิก PWM บน GPIO
 
 ```cpp
-ledcDetachPin(2);
+ledcDetach(2);
 ```
 
-### ตัวอย่างการใช้หลาย Channel
+### `ledcRead(pin)`
+อ่านค่า PWM ปัจจุบัน
 
 ```cpp
-// LED 1 - Channel 0
-ledcSetup(0, 5000, 8);
-ledcAttachPin(2, 0);
+int value = ledcRead(2);
+```
 
-// LED 2 - Channel 1
-ledcSetup(1, 5000, 8);
-ledcAttachPin(4, 1);
+### `ledcReadFreq(pin)`
+อ่านค่าความถี่ที่ตั้งไว้
+
+```cpp
+uint32_t freq = ledcReadFreq(2);
+```
+
+### ตัวอย่างการใช้หลาย LED
+
+```cpp
+// LED 1
+ledcAttach(2, 5000, 8);
+
+// LED 2
+ledcAttach(4, 5000, 8);
 
 // ควบคุม
-ledcWrite(0, 100);  // LED 1 สว่าง 39%
-ledcWrite(1, 200);  // LED 2 สว่าง 78%
+ledcWrite(2, 100);  // LED 1 สว่าง 39%
+ledcWrite(4, 200);  // LED 2 สว่าง 78%
+```
+
+### API เก่า (Arduino Core 2.x)
+
+หากใช้เวอร์ชันเก่า จะใช้ `ledcSetup()` และ `ledcAttachPin()`:
+
+```cpp
+// API เก่า (ไม่แนะนำแล้ว)
+ledcSetup(0, 5000, 8);      // channel, freq, resolution
+ledcAttachPin(2, 0);        // pin, channel
+ledcWrite(0, 128);          // channel, duty
 ```
 
 </details>
@@ -244,12 +240,9 @@ ledcWrite(1, 200);  // LED 2 สว่าง 78%
 ```cpp
 #define LED_PIN 2
 
-const int ledChannel = 0;
-
 void setup() {
   Serial.begin(115200);
-  ledcSetup(ledChannel, 5000, 8);
-  ledcAttachPin(LED_PIN, ledChannel);
+  ledcAttach(LED_PIN, 5000, 8);
   
   Serial.println("=== LED Brightness Control ===");
   Serial.println("Enter brightness (0-255):");
@@ -262,7 +255,7 @@ void loop() {
     
     // ตรวจสอบช่วงค่า
     if (brightness >= 0 && brightness <= 255) {
-      ledcWrite(ledChannel, brightness);
+      ledcWrite(LED_PIN, brightness);
       Serial.print("Brightness set to: ");
       Serial.print(brightness);
       Serial.print(" (");
@@ -347,23 +340,13 @@ GPIO 27 ────[330Ω]──── Blue  ┘
 #define GREEN_PIN 26
 #define BLUE_PIN  27
 
-// PWM Channels
-#define RED_CHANNEL   0
-#define GREEN_CHANNEL 1
-#define BLUE_CHANNEL  2
-
 void setup() {
   Serial.begin(115200);
   
-  // ตั้งค่า PWM
-  ledcSetup(RED_CHANNEL, 5000, 8);
-  ledcSetup(GREEN_CHANNEL, 5000, 8);
-  ledcSetup(BLUE_CHANNEL, 5000, 8);
-  
-  // ผูก Pins
-  ledcAttachPin(RED_PIN, RED_CHANNEL);
-  ledcAttachPin(GREEN_PIN, GREEN_CHANNEL);
-  ledcAttachPin(BLUE_PIN, BLUE_CHANNEL);
+  // ตั้งค่า PWM สำหรับแต่ละสี
+  ledcAttach(RED_PIN, 5000, 8);
+  ledcAttach(GREEN_PIN, 5000, 8);
+  ledcAttach(BLUE_PIN, 5000, 8);
   
   Serial.println("=== RGB LED Demo ===");
 }
@@ -403,9 +386,9 @@ void loop() {
 }
 
 void setColor(int red, int green, int blue) {
-  ledcWrite(RED_CHANNEL, red);
-  ledcWrite(GREEN_CHANNEL, green);
-  ledcWrite(BLUE_CHANNEL, blue);
+  ledcWrite(RED_PIN, red);
+  ledcWrite(GREEN_PIN, green);
+  ledcWrite(BLUE_PIN, blue);
 }
 ```
 
@@ -546,23 +529,16 @@ void randomColors() {
 #define GREEN_PIN 26
 #define BLUE_PIN  27
 
-#define RED_CHANNEL   0
-#define GREEN_CHANNEL 1
-#define BLUE_CHANNEL  2
-
 int currentMode = 0;
 int customR = 0, customG = 0, customB = 0;
 
 void setup() {
   Serial.begin(115200);
   
-  ledcSetup(RED_CHANNEL, 5000, 8);
-  ledcSetup(GREEN_CHANNEL, 5000, 8);
-  ledcSetup(BLUE_CHANNEL, 5000, 8);
-  
-  ledcAttachPin(RED_PIN, RED_CHANNEL);
-  ledcAttachPin(GREEN_PIN, GREEN_CHANNEL);
-  ledcAttachPin(BLUE_PIN, BLUE_CHANNEL);
+  // ตั้งค่า PWM
+  ledcAttach(RED_PIN, 5000, 8);
+  ledcAttach(GREEN_PIN, 5000, 8);
+  ledcAttach(BLUE_PIN, 5000, 8);
   
   showMenu();
 }
@@ -659,9 +635,9 @@ void processCommand(String cmd) {
 }
 
 void setColor(int r, int g, int b) {
-  ledcWrite(RED_CHANNEL, r);
-  ledcWrite(GREEN_CHANNEL, g);
-  ledcWrite(BLUE_CHANNEL, b);
+  ledcWrite(RED_PIN, r);
+  ledcWrite(GREEN_PIN, g);
+  ledcWrite(BLUE_PIN, b);
 }
 
 void rainbowMode() {
@@ -748,6 +724,10 @@ void hsvToRgb(int h, int s, int v, int &r, int &g, int &b) {
 
 ## ขั้นตอนถัดไป
 
-ต่อไปเราจะมาเล่นเกมง่ายๆ ด้วย LED และปุ่มเพื่อฝึกทักษะที่เรียนมา!
+ต่อไปเราจะเรียนรู้เรื่องการจัดการเวลาด้วย `millis()` และทำความเข้าใจว่าทำไม Library ถึงสำคัญ!
 
-➡️ [บทถัดไป: Game Time!](07-game-time.md)
+➡️ **[บทถัดไป: บทที่ 7 - Timing และ Library](07-timing-basics.md)**
+
+**หน้าก่อน:** [← บทที่ 5: Button](05-button.md)
+
+**กลับหน้าแรก:** [← กลับไปหน้าหลักสูตร](../index.md)
