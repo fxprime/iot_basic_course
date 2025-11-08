@@ -38,72 +38,60 @@
 
 ### Module 2: Input/Output และโปรเจคประยุกต์ (⭐ ปรับปรุงใหม่)
 
-#### [บทที่ 5: Floating Input - ทำไม Input ถึงไม่เสถียร](esp32/05-floating-input.md)
-เข้าใจปัญหาของสัญญาณที่ลอย
-- Floating Input คืออะไร
-- ทดลองด้วยการแตะนิ้ว
-- Serial Plotter สำหรับดูพฤติกรรม
-
-#### [บทที่ 6: Pull-up/Pull-down และ Button Bounce](esp32/06-button-pullup.md)
-เรียนรู้การต่อปุ่มกดอย่างถูกต้อง
-- Pull-up vs Pull-down Resistor
-- Internal Pull-up (ไม่ต้องใช้ตัวต้านทานภายนอก)
-- Button Bounce และการสังเกตบน Serial Plotter
-
-#### [บทที่ 7: Debouncing - แก้ปัญหา Button Bounce](esp32/07-debouncing.md)
-แก้ปัญหา Button Bounce ด้วย Software
-- Debouncing ด้วย delay()
-- Debouncing ด้วย millis() (Non-blocking)
+#### [บทที่ 5: Button และ Debouncing](esp32/05-button-debouncing.md)
+เรียนรู้การใช้งานปุ่มกดและแก้ปัญหา Button Bounce
+- การอ่านค่าปุ่มด้วย INPUT_PULLUP
+- Pull-up และ Pull-down Resistor
+- Debouncing ด้วย Software
 - Long Press Detection
 
-#### [บทที่ 8: PWM และการควบคุมความสว่าง LED](esp32/08-pwm-led.md)
+#### [บทที่ 6: PWM และการควบคุมความสว่าง LED](esp32/06-pwm-led.md)
 ควบคุมความสว่าง LED ด้วย PWM
 - PWM และ Duty Cycle
-- ledcWrite() function
-- ควบคุมความสว่างตามระยะเวลาที่กดปุ่ม
+- ledcAttach() และ ledcWrite()
+- กดค้างเพิ่มความสว่าง ปล่อยลดความสว่าง
 
-#### [บทที่ 9: Servo Motor และการควบคุมมุม](esp32/09-servo-motor.md)
-ควบคุม Servo Motor ด้วย ledcWrite()
+#### [บทที่ 7: Servo Motor และการควบคุมมุม](esp32/07-servo-motor.md)
+ควบคุม Servo Motor ด้วย PWM
 - PWM สำหรับ Servo (50Hz, 500-2500μs)
 - ควบคุมด้วยปุ่มกด
 - โปรเจค: ระบบล็อคอย่างง่าย
 
-#### [บทที่ 10: Ultrasonic Sensor และถังขยะอัตโนมัติ](esp32/10-ultrasonic-sensor.md)
+#### [บทที่ 8: Ultrasonic Sensor และถังขยะอัตโนมัติ](esp32/08-ultrasonic-sensor.md)
 วัดระยะทางด้วย Ultrasonic (HC-SR04)
 - NewPing Library
 - โปรเจค: ถังขยะอัตโนมัติ (Ultrasonic + Servo)
 
-#### [บทที่ 11: Analog Input และตู้ให้อาหารปลา](esp32/11-analog-input.md)
+#### [บทที่ 9: Analog Input และตู้ให้อาหารปลา](esp32/09-analog-input.md)
 อ่านค่า Analog ด้วย ADC
 - Potentiometer ควบคุม Servo
 - โปรเจค: ตู้ให้อาหารปลา (ควบคุมปริมาณด้วย Potentiometer)
 
-#### [🎯 บทที่ 12: โปรเจคประตูโรงจอดรถอัตโนมัติ](esp32/12-parking-gate-project.md)
+#### [🎯 บทที่ 10: โปรเจคประตูโรงจอดรถอัตโนมัติ](esp32/10-parking-gate-project.md)
 โปรเจคฝึกหัดสำหรับนักเรียน
 - Template พร้อมฟังก์ชัน
 - ให้นักเรียนเติม Logic เอง
 - Ultrasonic + IR Sensor + Servo
 
-#### [บทที่ 13: LCD Display และการแสดงผล](esp32/13-lcd-display.md)
+#### [บทที่ 11: LCD Display และการแสดงผล](esp32/11-lcd-display.md)
 แสดงข้อมูลบนจอ LCD 16x2 I2C
-- Hello World (Run ครั้งเดียว)
-- แสดงค่า Potentiometer
+- LiquidCrystal_PCF8574 Library
+- Hello World
 - แก้ปัญหาตัวอักษรค้าง
-- แสดงสถานะปุ่มกด (YES/NO)
+- โปรเจคพิเศษ: ESP32 Dino Run Game 🦖
 
-#### [บทที่ 14: Relay Module และโปรเจครวม](esp32/14-relay-module.md)
+#### [บทที่ 12: Relay Module และโปรเจครวม](esp32/12-relay-module.md)
 ควบคุมอุปกรณ์ไฟฟ้า 220V
 - Relay Module 1 Channel
 - โปรเจครวม: Relay + LCD + Potentiometer + Button
-- โจทย์: ควบคุม Relay ตามค่า Potentiometer
 
-#### [บทที่ 15: WiFi และ NTP Time](esp32/15-wifi-ntp.md)
+#### [บทที่ 13: WiFi และ NTP Time](esp32/13-wifi-ntp.md)
 เชื่อมต่ออินเทอร์เน็ตและดึงเวลา
 - WiFi Scan และ Connect
 - ดึงเวลาจาก NTP Server
 - แสดงเวลาบน LCD แบบเสถียร (ไม่กะพริบ)
 
-#### [บทที่ 16: Google Sheets Integration](esp32/16-google-sheets.md)
+#### [บทที่ 14: Google Sheets Integration](esp32/14-google-sheets.md)
 ส่งข้อมูลขึ้น Cloud
 - Google Apps Script
 - บันทึก Timestamp
@@ -121,29 +109,28 @@
 - ✅ บทที่ 3: First Program
 - ✅ บทที่ 4: Serial Monitor
 
-**Module 2: Input/Output และโปรเจคประยุกต์** (12 บท - ⭐ ปรับปรุงใหม่สำหรับการสอนพรุ่งนี้)
-- ✅ บทที่ 5: Floating Input (ทดลองแตะนิ้ว, Serial Plotter)
-- ✅ บทที่ 6: Pull-up/Pull-down (Internal Pull-up, Button Bounce)
-- ✅ บทที่ 7: Debouncing (แก้ปัญหา Bounce)
-- ✅ บทที่ 8: PWM LED (ledcWrite, ควบคุมตามเวลาที่กด)
-- ✅ บทที่ 9: Servo Motor (ledcWrite, ระบบล็อค)
-- ✅ บทที่ 10: Ultrasonic Sensor (NewPing Library, ถังขยะอัตโนมัติ)
-- ✅ บทที่ 11: Analog Input (Potentiometer, ตู้ให้อาหารปลา)
-- ✅ บทที่ 12: 🎯 โปรเจคประตูโรงจอดรถ (Template สำหรับนักเรียน)
-- ✅ บทที่ 13: LCD Display (Hello World, แก้ปัญหาตัวอักษรค้าง)
-- ✅ บทที่ 14: Relay Module (โปรเจครวม LCD + Potentiometer)
-- ✅ บทที่ 15: WiFi และ NTP (แสดงเวลาแบบเสถียร)
-- ✅ บทที่ 16: Google Sheets (บันทึก Timestamp, วิเคราะห์ข้อมูล)
+**Module 2: Input/Output และโปรเจคประยุกต์** (10 บท - ⭐ ปรับปรุงใหม่)
+- ✅ บทที่ 5: Button และ Debouncing (รวม 3 บทเดิม)
+- ✅ บทที่ 6: PWM LED (ledcAttach, กดค้างเพิ่ม/ปล่อยลด)
+- ✅ บทที่ 7: Servo Motor (ledcAttach, ระบบล็อค)
+- ✅ บทที่ 8: Ultrasonic Sensor (NewPing Library, ถังขยะอัตโนมัติ)
+- ✅ บทที่ 9: Analog Input (Potentiometer, ตู้ให้อาหารปลา)
+- ✅ บทที่ 10: 🎯 โปรเจคประตูโรงจอดรถ (Template สำหรับนักเรียน)
+- ✅ บทที่ 11: LCD Display (LiquidCrystal_PCF8574, Dino Run Game 🦖)
+- ✅ บทที่ 12: Relay Module (โปรเจครวม LCD + Potentiometer)
+- ✅ บทที่ 13: WiFi และ NTP (แสดงเวลาแบบเสถียร)
+- ✅ บทที่ 14: Google Sheets (บันทึก Timestamp, วิเคราะห์ข้อมูล)
 
 **Archive: เนื้อหาเก่า** (สำหรับอ้างอิง)
 - Module 3: การเขียนโค้ดขั้นสูง (#define, Array, Enum, Header Files, Class)
 
 ### สถิติหลักสูตร 📊
 
-- ✅ **เนื้อหาหลัก:** 16 บท
+- ✅ **เนื้อหาหลัก:** 14 บท (Module 1: 4 บท + Module 2: 10 บท)
 - 🎯 **โปรเจคครบวงจร:** 4 โปรเจค (ถังขยะ, ให้อาหารปลา, ประตูโรงจอดรถ, โปรเจครวม)
-- � **Library ที่ใช้:** NewPing, LiquidCrystal_I2C, WiFi, HTTPClient
-- � **Hardware:** ESP32, Ultrasonic, IR, Servo, LCD, Relay, Potentiometer
+- 🎮 **โปรเจคพิเศษ:** ESP32 Dino Run Game บน LCD
+- 📚 **Library ที่ใช้:** NewPing, LiquidCrystal_PCF8574, WiFi, HTTPClient
+- 🔧 **Hardware:** ESP32, Ultrasonic, IR, Servo, LCD, Relay, Potentiometer
 
 ### เนื้อหาที่วางแผนไว้ (อนาคต) 📋
 
