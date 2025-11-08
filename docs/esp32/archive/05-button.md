@@ -26,7 +26,7 @@ https://www.falstad.com/circuit/circuitjs.html
 1. **ESP32 board** - 1 ตัว
 2. **Push button (Tactile switch)** - 1 ตัว
 3. **LED** - 1 ดวง
-4. **Resistor 330Ω** - 1 ตัว (สำหรับ LED)
+4. **Resistor 470Ω** - 1 ตัว (สำหรับ LED)
 5. **Resistor 10kΩ** - 1 ตัว (สำหรับ Pull-down, ถ้าไม่ใช้ Internal)
 6. **Breadboard** - 1 อัน
 7. **สายจั๊มเปอร์** - หลายเส้น

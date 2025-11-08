@@ -36,91 +36,78 @@
 - ประมวลผล String
 - สร้าง Menu System
 
-### Module 2: Input/Output พื้นฐาน
+### Module 2: Input/Output และโปรเจคประยุกต์ (⭐ ปรับปรุงใหม่)
 
-#### [บทที่ 5: Button - การรับสัญญาณจากปุ่มกด](esp32/05-button.md)
-เรียนรู้การใช้ปุ่มกดและการอ่าน Digital Input
-- Pull-up และ Pull-down Resistor
-- Edge Detection
-- การใช้ `millis()` จับเวลา
+#### [บทที่ 5: Floating Input - ทำไม Input ถึงไม่เสถียร](esp32/05-floating-input.md)
+เข้าใจปัญหาของสัญญาณที่ลอย
+- Floating Input คืออะไร
+- ทดลองด้วยการแตะนิ้ว
+- Serial Plotter สำหรับดูพฤติกรรม
 
-#### [บทที่ 5.5: Analog Input - การอ่านค่าแบบต่อเนื่อง](esp32/05.5-analog-input.md)
-เรียนรู้การอ่านสัญญาณ Analog ด้วย ADC
-- ความแตกต่างระหว่าง Digital และ Analog
-- Potentiometer - ปรับค่าแบบต่อเนื่อง
-- IR Sensor - ตรวจจับวัตถุ/เส้น
-- Passive Buzzer - สร้างเสียงตามค่า Analog
+#### [บทที่ 6: Pull-up/Pull-down และ Button Bounce](esp32/06-button-pullup.md)
+เรียนรู้การต่อปุ่มกดอย่างถูกต้อง
+- Pull-up vs Pull-down Resistor
+- Internal Pull-up (ไม่ต้องใช้ตัวต้านทานภายนอก)
+- Button Bounce และการสังเกตบน Serial Plotter
 
-#### [บทที่ 6: LED - การควบคุมความสว่างและสี](esp32/06-led.md)
-ควบคุม LED ขั้นสูงด้วย PWM
-- PWM และการปรับความสว่าง
-- RGB LED และการผสมสี
-- เอฟเฟกต์แสงต่างๆ
+#### [บทที่ 7: Debouncing - แก้ปัญหา Button Bounce](esp32/07-debouncing.md)
+แก้ปัญหา Button Bounce ด้วย Software
+- Debouncing ด้วย delay()
+- Debouncing ด้วย millis() (Non-blocking)
+- Long Press Detection
 
-#### [บทที่ 6.5: Servo Motor - ควบคุมมอเตอร์เซอร์โว](esp32/06.5-servo-motor.md)
-เรียนรู้การควบคุม Servo Motor แบบ Manual PWM
-- PWM Timing สำหรับ Servo (500-2500μs)
-- Serial Command Control
-- Multi-servo Coordination
+#### [บทที่ 8: PWM และการควบคุมความสว่าง LED](esp32/08-pwm-led.md)
+ควบคุมความสว่าง LED ด้วย PWM
+- PWM และ Duty Cycle
+- ledcWrite() function
+- ควบคุมความสว่างตามระยะเวลาที่กดปุ่ม
 
-#### [บทที่ 7: Timing - การจัดการเวลาและ Library](esp32/07-timing-basics.md)
-เรียนรู้การจัดการเวลาและความสำคัญของ Library
-- ความแตกต่างระหว่าง `delay()` และ `millis()`
-- สร้างโปรแกรมที่ทำหลายอย่างพร้อมกัน
-- โปรเจค: เกมส่งสัญญาณมอร์ส
-- ทำความเข้าใจ Protocol และ Library
+#### [บทที่ 9: Servo Motor และการควบคุมมุม](esp32/09-servo-motor.md)
+ควบคุม Servo Motor ด้วย ledcWrite()
+- PWM สำหรับ Servo (50Hz, 500-2500μs)
+- ควบคุมด้วยปุ่มกด
+- โปรเจค: ระบบล็อคอย่างง่าย
 
-#### [บทที่ 7.5: LCD Display - จอแสดงผล 16x2](esp32/07.5-lcd-display.md)
-แสดงข้อมูลด้วย LCD I2C
-- LiquidCrystal_I2C Library
-- Custom Characters
-- Menu System และ Bar Graph
+#### [บทที่ 10: Ultrasonic Sensor และถังขยะอัตโนมัติ](esp32/10-ultrasonic-sensor.md)
+วัดระยะทางด้วย Ultrasonic (HC-SR04)
+- NewPing Library
+- โปรเจค: ถังขยะอัตโนมัติ (Ultrasonic + Servo)
 
-#### [บทที่ 7.6: HTU21D Sensor - วัดอุณหภูมิและความชื้น](esp32/07.6-htu21d-sensor.md)
-เซนเซอร์วัดอุณหภูมิและความชื้น
-- SparkFun HTU21D Library
-- LCD Integration
-- Alert System และ Data Logging
+#### [บทที่ 11: Analog Input และตู้ให้อาหารปลา](esp32/11-analog-input.md)
+อ่านค่า Analog ด้วย ADC
+- Potentiometer ควบคุม Servo
+- โปรเจค: ตู้ให้อาหารปลา (ควบคุมปริมาณด้วย Potentiometer)
 
-#### [บทที่ 7.7: Relay Module - ควบคุมอุปกรณ์ไฟฟ้า](esp32/07.7-relay-module.md)
-ควบคุมอุปกรณ์ไฟฟ้าแรงดันสูง
-- Relay Module 2CH
-- Home Automation
-- Safety Features
+#### [🎯 บทที่ 12: โปรเจคประตูโรงจอดรถอัตโนมัติ](esp32/12-parking-gate-project.md)
+โปรเจคฝึกหัดสำหรับนักเรียน
+- Template พร้อมฟังก์ชัน
+- ให้นักเรียนเติม Logic เอง
+- Ultrasonic + IR Sensor + Servo
 
-#### [🎯 โปรเจค: ระบบประตูจอดรถอัตโนมัติ](esp32/07.8-project-parking-gate.md)
-โปรเจคประยุกต์ใช้ความรู้ทั้งหมด
-- HC-SR04 Ultrasonic Distance Sensor
-- State Machine Design
-- Multi-sensor Coordination
-- NewPing Library และ Internal Pull-up
+#### [บทที่ 13: LCD Display และการแสดงผล](esp32/13-lcd-display.md)
+แสดงข้อมูลบนจอ LCD 16x2 I2C
+- Hello World (Run ครั้งเดียว)
+- แสดงค่า Potentiometer
+- แก้ปัญหาตัวอักษรค้าง
+- แสดงสถานะปุ่มกด (YES/NO)
 
-### Module 3: การเขียนโค้ดขั้นสูง
+#### [บทที่ 14: Relay Module และโปรเจครวม](esp32/14-relay-module.md)
+ควบคุมอุปกรณ์ไฟฟ้า 220V
+- Relay Module 1 Channel
+- โปรเจครวม: Relay + LCD + Potentiometer + Button
+- โจทย์: ควบคุม Relay ตามค่า Potentiometer
 
-#### [บทที่ 8: #define และ const - การใช้ค่าคงที่](esp32/08-define-const.md)
-เรียนรู้การใช้ค่าคงที่เพื่อให้โค้ดอ่านง่ายและแก้ไขสะดวก
-- ความแตกต่างระหว่าง `#define` และ `const`
-- การตั้งชื่อค่าคงที่ที่มีความหมาย
-- ปรับปรุงโค้ดให้อ่านง่าย
+#### [บทที่ 15: WiFi และ NTP Time](esp32/15-wifi-ntp.md)
+เชื่อมต่ออินเทอร์เน็ตและดึงเวลา
+- WiFi Scan และ Connect
+- ดึงเวลาจาก NTP Server
+- แสดงเวลาบน LCD แบบเสถียร (ไม่กะพริบ)
 
-#### [บทที่ 9: Array และ Enum - จัดการข้อมูลหลายค่า](esp32/09-array-enum.md)
-จัดการกับข้อมูลหลายๆ ค่าอย่างมีประสิทธิภาพ
-- การใช้ Array เก็บข้อมูลหลายค่า
-- การใช้ Enum ทำให้โค้ดอ่านง่าย
-- การใช้ for loop กับ Array และ Enum
-
-#### [บทที่ 10: การแยกไฟล์ Header - จัดระเบียบโปรเจค](esp32/10-header-files.md)
-จัดระเบียบโค้ดให้เป็นระบบและใช้งานซ้ำได้
-- การแยกไฟล์ .h และ .cpp
-- Header Guards (#ifndef #define #endif)
-- การสร้าง library ของตัวเอง
-
-#### [บทที่ 11: Class เบื้องต้น - Object-Oriented Programming](esp32/11-class-basics.md)
-เรียนรู้การเขียนโปรแกรมเชิงวัตถุ (OOP) พื้นฐาน
-- เข้าใจแนวคิด Class และ Object
-- เปรียบเทียบ Class กับตัวแปรธรรมดา
-- สร้าง Class สำหรับ LED และ Button
-- Encapsulation และการซ่อนข้อมูล
+#### [บทที่ 16: Google Sheets Integration](esp32/16-google-sheets.md)
+ส่งข้อมูลขึ้น Cloud
+- Google Apps Script
+- บันทึก Timestamp
+- เก็บข้อมูลเพื่อวิเคราะห์
 
 ---
 
@@ -128,49 +115,43 @@
 
 ### เนื้อหาที่พร้อมใช้แล้ว ✅
 
-**Module 1: เริ่มต้นกับ ESP32**
+**Module 1: เริ่มต้นกับ ESP32** (4 บท)
 - ✅ บทที่ 1: Download IDE
 - ✅ บทที่ 2: Setup ESP32
 - ✅ บทที่ 3: First Program
 - ✅ บทที่ 4: Serial Monitor
 
-**Module 2: Input/Output พื้นฐาน**
-- ✅ บทที่ 5: Button (Digital Input)
-- ✅ บทที่ 5.5: Analog Input (Potentiometer, IR Sensor, Passive Buzzer)
-- ✅ บทที่ 6: LED (PWM, RGB)
-- ✅ บทที่ 6.5: Servo Motor (Manual PWM)
-- ✅ บทที่ 7: Timing และ Library (Morse Code Game)
-- ✅ บทที่ 7.5: LCD Display (16x2 I2C)
-- ✅ บทที่ 7.6: HTU21D Sensor (Temperature/Humidity)
-- ✅ บทที่ 7.7: Relay Module (2CH)
-- ✅ 🎯 โปรเจค: ระบบประตูจอดรถอัตโนมัติ (HC-SR04 + State Machine)
+**Module 2: Input/Output และโปรเจคประยุกต์** (12 บท - ⭐ ปรับปรุงใหม่สำหรับการสอนพรุ่งนี้)
+- ✅ บทที่ 5: Floating Input (ทดลองแตะนิ้ว, Serial Plotter)
+- ✅ บทที่ 6: Pull-up/Pull-down (Internal Pull-up, Button Bounce)
+- ✅ บทที่ 7: Debouncing (แก้ปัญหา Bounce)
+- ✅ บทที่ 8: PWM LED (ledcWrite, ควบคุมตามเวลาที่กด)
+- ✅ บทที่ 9: Servo Motor (ledcWrite, ระบบล็อค)
+- ✅ บทที่ 10: Ultrasonic Sensor (NewPing Library, ถังขยะอัตโนมัติ)
+- ✅ บทที่ 11: Analog Input (Potentiometer, ตู้ให้อาหารปลา)
+- ✅ บทที่ 12: 🎯 โปรเจคประตูโรงจอดรถ (Template สำหรับนักเรียน)
+- ✅ บทที่ 13: LCD Display (Hello World, แก้ปัญหาตัวอักษรค้าง)
+- ✅ บทที่ 14: Relay Module (โปรเจครวม LCD + Potentiometer)
+- ✅ บทที่ 15: WiFi และ NTP (แสดงเวลาแบบเสถียร)
+- ✅ บทที่ 16: Google Sheets (บันทึก Timestamp, วิเคราะห์ข้อมูล)
 
-**Module 3: การเขียนโค้ดขั้นสูง**
-- ✅ บทที่ 8: #define และ const
-- ✅ บทที่ 9: Array และ Enum (Button Dash Game)
-- ✅ บทที่ 10: การแยกไฟล์ Header
-- ✅ บทที่ 11: Class เบื้องต้น (OOP)
+**Archive: เนื้อหาเก่า** (สำหรับอ้างอิง)
+- Module 3: การเขียนโค้ดขั้นสูง (#define, Array, Enum, Header Files, Class)
 
-### เนื้อหาที่กำลังพัฒนา 🚧
-- 🚧 Module 4: Network & Communication
-- 🚧 WiFi Basics
-- 🚧 Web Server
+### สถิติหลักสูตร 📊
 
-### เนื้อหาที่วางแผนไว้ 📋
+- ✅ **เนื้อหาหลัก:** 16 บท
+- 🎯 **โปรเจคครบวงจร:** 4 โปรเจค (ถังขยะ, ให้อาหารปลา, ประตูโรงจอดรถ, โปรเจครวม)
+- � **Library ที่ใช้:** NewPing, LiquidCrystal_I2C, WiFi, HTTPClient
+- � **Hardware:** ESP32, Ultrasonic, IR, Servo, LCD, Relay, Potentiometer
 
-#### Module 4: Network & Communication
-- [ ] WiFi Connection และ Web Server
-- [ ] HTTP Client และ API Integration
+### เนื้อหาที่วางแผนไว้ (อนาคต) 📋
+
+#### Module 3: Advanced Topics (Optional)
 - [ ] MQTT Protocol
-- [ ] WebSocket Real-time Communication
-- [ ] NTP Time Synchronization
-- [ ] Google Sheets Integration
-
-#### Module 5: Advanced Projects
-- [ ] IoT Dashboard with Chart.js
-- [ ] Multi-player Game (TCP/IP)
-- [ ] Smart Home Control System
-- [ ] Weather Station with Cloud Logging
+- [ ] WebSocket Real-time
+- [ ] IoT Dashboard
+- [ ] Multi-player Network Game
 
 ---
 

@@ -49,21 +49,19 @@ nav:
           - 'บทที่ 2: ติดตั้ง ESP32 Board': esp32/02-setup-esp32.md
           - 'บทที่ 3: โปรแกรมแรก': esp32/03-first-program.md
           - 'บทที่ 4: Serial Monitor - การสื่อสารสองทาง': esp32/04-serial-monitor.md
-      - 'Module 2: Input/Output พื้นฐาน':
-          - 'บทที่ 5: Button - การรับสัญญาณจากปุ่มกด': esp32/05-button.md
-          - 'บทที่ 5.5: Analog Input - การอ่านค่าแบบต่อเนื่อง': esp32/05.5-analog-input.md
-          - 'บทที่ 6: LED - การควบคุมความสว่างและสี': esp32/06-led.md
-          - 'บทที่ 6.5: Servo Motor - ควบคุมมอเตอร์เซอร์โว': esp32/06.5-servo-motor.md
-          - 'บทที่ 7: Timing - การจัดการเวลาและ Library': esp32/07-timing-basics.md
-          - 'บทที่ 7.5: LCD Display - จอแสดงผล 16x2': esp32/07.5-lcd-display.md
-          - 'บทที่ 7.6: HTU21D Sensor - วัดอุณหภูมิและความชื้น': esp32/07.6-htu21d-sensor.md
-          - 'บทที่ 7.7: Relay Module - ควบคุมอุปกรณ์ไฟฟ้า': esp32/07.7-relay-module.md
-          - '🎯 โปรเจค: ระบบประตูจอดรถอัตโนมัติ': esp32/07.8-project-parking-gate.md
-      - 'Module 3: การเขียนโค้ดขั้นสูง':
-          - 'บทที่ 8: #define และ const - การใช้ค่าคงที่': esp32/08-define-const.md
-          - 'บทที่ 9: Array และ Enum - จัดการข้อมูลหลายค่า': esp32/09-array-enum.md
-          - 'บทที่ 10: การแยกไฟล์ Header - จัดระเบียบโปรเจค': esp32/10-header-files.md
-          - 'บทที่ 11: Class เบื้องต้น - Object-Oriented Programming': esp32/11-class-basics.md
+      - 'Module 2: Input/Output และโปรเจคประยุกต์':
+          - 'บทที่ 5: Button และ Debouncing': esp32/05-button-debouncing.md
+          - 'บทที่ 6: PWM และการควบคุมความสว่าง LED': esp32/06-pwm-led.md
+          - 'บทที่ 7: Servo Motor และการควบคุมมุม': esp32/07-servo-motor.md
+          - 'บทที่ 8: Ultrasonic Sensor และถังขยะอัตโนมัติ': esp32/08-ultrasonic-sensor.md
+          - 'บทที่ 9: Analog Input และตู้ให้อาหารปลา': esp32/09-analog-input.md
+          - '🎯 บทที่ 10: โปรเจคประตูโรงจอดรถอัตโนมัติ': esp32/10-parking-gate-project.md
+          - 'บทที่ 11: LCD Display และการแสดงผล': esp32/11-lcd-display.md
+          - 'บทที่ 12: Relay Module และโปรเจครวม': esp32/12-relay-module.md
+          - 'บทที่ 13: WiFi และ NTP Time': esp32/13-wifi-ntp.md
+          - 'บทที่ 14: Google Sheets Integration': esp32/14-google-sheets.md
+      - 'Archive (เนื้อหาเก่า)':
+          - 'Module 3: การเขียนโค้ดขั้นสูง': esp32/archive/08-define-const.md
       - Appendix:
           - Pinout Reference: esp32/appendix/pinout-reference.md
           - Troubleshooting Checklist: esp32/appendix/troubleshooting.md
