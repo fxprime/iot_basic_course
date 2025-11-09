@@ -353,8 +353,6 @@ const int BUTTON_PIN = 19;
 const int LED_PIN = 25;
 const int SERVO_PIN = 26;
 
-const int PWM_CHANNEL = 0;
-
 int lastButtonState = HIGH;
 
 void setup() {
@@ -362,8 +360,7 @@ void setup() {
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   pinMode(LED_PIN, OUTPUT);
   
-  ledcSetup(PWM_CHANNEL, 50, 16);
-  ledcAttachPin(SERVO_PIN, PWM_CHANNEL);
+  ledcAttach(SERVO_PIN, 50, 16);
   
   servoWrite(0);  // ปิดฝา
   
@@ -446,7 +443,7 @@ void servoWrite(int angle) {
   int pulseWidth = map(angle, 0, 180, 500, 2500);
   int duty = (pulseWidth * 65536) / 20000;
   
-  ledcWrite(PWM_CHANNEL, duty);
+  ledcWrite(SERVO_PIN, duty);
 }
 ```
 
