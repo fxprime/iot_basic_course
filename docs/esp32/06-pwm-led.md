@@ -176,7 +176,7 @@ LED จะ**ค่อยๆ สว่างขึ้น → สว่างเ�
 ### วงจร
  
 
- ![alt text](../assets/images/led-button--pwm.png)
+ ![alt text](../assets/images/led-button--pwm.webp)
 
 
 
