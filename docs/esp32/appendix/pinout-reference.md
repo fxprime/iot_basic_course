@@ -7,7 +7,7 @@
 ### ภาพ Pinout
  
  
-![devboard pinout](../../assets/images/esp32-pinout.png)
+![devboard pinout](../../assets/images/esp32-pinout.webp)
 
 
 ---
@@ -77,10 +77,12 @@ void setup() {
 ### 2. Analog Input (ADC)
 
 ESP32 มี 2 ADC:
+
 - **ADC1** (8 channels): GPIO32-39 - ใช้ได้ตลอดเวลา ⭐ แนะนำ
 - **ADC2** (10 channels): GPIO0, 2, 4, 12-15, 25-27 - ⚠️ ใช้ไม่ได้เมื่อเปิด WiFi
 
 **ขาที่แนะนำสำหรับ ADC:**
+
 - **GPIO32, 33** - ADC1 ใช้ได้ดีที่สุด
 - **GPIO34, 35, 36, 39** - ADC1 แต่เป็น Input Only
 
@@ -101,6 +103,7 @@ void loop() {
 ### 3. Analog Output (DAC)
 
 ESP32 มี DAC 2 ช่อง สามารถส่งสัญญาณ Analog จริงๆ (0-3.3V):
+
 - **GPIO25** - DAC1
 - **GPIO26** - DAC2
 
@@ -169,6 +172,7 @@ void loop() {
 ### 6. I2C Communication
 
 **ขาเริ่มต้น:**
+
 - **SDA**: GPIO21
 - **SCL**: GPIO22
 
@@ -187,6 +191,7 @@ void setup() {
 ### 7. SPI Communication
 
 **ขาเริ่มต้น (VSPI):**
+
 - **MOSI**: GPIO23
 - **MISO**: GPIO19
 - **SCK**: GPIO18
@@ -205,6 +210,7 @@ void setup() {
 ```
 
 **HSPI (SPI ชุดที่ 2):**
+
 - **MOSI**: GPIO13
 - **MISO**: GPIO12
 - **SCK**: GPIO14
@@ -213,11 +219,13 @@ void setup() {
 ### 8. UART (Serial)
 
 **UART0** (USB):
+
 - **TX**: GPIO1
 - **RX**: GPIO3
 - ❌ ไม่แนะนำให้ใช้กับอุปกรณ์อื่น เพราะใช้กับ Serial Monitor
 
 **UART2** (แนะนำ):
+
 - **TX**: GPIO17
 - **RX**: GPIO16
 

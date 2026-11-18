@@ -19,6 +19,12 @@ theme:
         name: Switch to dark mode
       primary: indigo
       accent: amber
+extra_css:
+  - assets/stylesheets/progress-tracker.css
+extra_javascript:
+  - assets/javascripts/progress-tracker.js
+  - assets/javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
 markdown_extensions:
   - toc:
       permalink: true
@@ -40,6 +46,8 @@ markdown_extensions:
       clickable_checkbox: false
   - md_in_html
   - attr_list
+  - pymdownx.arithmatex:
+      generic: true
 nav:
   - Home: index.md
   - ESP32 Course:

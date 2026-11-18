@@ -2,7 +2,8 @@
 
 ในบทนี้เราจะติดตั้ง ESP32 เข้ากับ Arduino IDE เพื่อให้สามารถเขียนโปรแกรมและอัปโหลดเข้าบอร์ด ESP32 ได้
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="02-objectives" data-progress-title="วัตถุประสงค์" }
+
 - ติดตั้ง ESP32 Board Manager
 - เลือกบอร์ด ESP32 ที่ถูกต้อง
 - ติดตั้ง USB Driver (ถ้าจำเป็น)
@@ -10,7 +11,7 @@
 
 ---
 
-## ขั้นตอนที่ 1: เตรียม ESP32 Board
+## ขั้นตอนที่ 1: เตรียม ESP32 Board { data-progress-section="02-step-1" data-progress-title="ขั้นตอนที่ 1: เตรียม ESP32 Board" }
 
 ### 1.1 รู้จักกับ ESP32
 
@@ -21,12 +22,14 @@
 <summary>📖 <b>ESP32 คืออะไร?</b></summary>
 
 **ESP32** คือไมโครคอนโทรลเลอร์ที่มีความสามารถพิเศษ:
+
 - มี **WiFi** และ **Bluetooth** ในตัว
 - ราคาถูก แต่ประสิทธิภาพสูง
 - มี GPIO (General Purpose Input/Output) หลายพิน
 - รองรับการเขียนโปรแกรมด้วย Arduino IDE
 
 **ส่วนประกอบสำคัญของบอร์ด:**
+
 - **Micro USB Port** - เสียบสาย USB เชื่อมต่อกับคอมพิวเตอร์
 - **EN Button** - ปุ่ม Reset บอร์ด
 - **BOOT Button** - ปุ่มสำหรับโหลดโปรแกรม
@@ -46,14 +49,14 @@
 
 ---
 
-## ขั้นตอนที่ 2: เพิ่ม ESP32 Board Manager URL
+## ขั้นตอนที่ 2: เพิ่ม ESP32 Board Manager URL { data-progress-section="02-step-2" data-progress-title="ขั้นตอนที่ 2: เพิ่ม ESP32 Board Manager URL" }
 
 ### 2.1 เปิด Preferences
 
 1. เปิด Arduino IDE
 2. ไปที่เมนู:
-   - **Windows/Linux:** File > Preferences
-   - **macOS:** Arduino IDE > Settings
+    - **Windows/Linux:** File > Preferences
+    - **macOS:** Arduino IDE > Settings
 
 ![TODO: รูปเมนู Preferences](../assets/images/arduino-preferences-menu.webp)
 
@@ -83,7 +86,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ---
 
-## ขั้นตอนที่ 3: ติดตั้ง ESP32 Board
+## ขั้นตอนที่ 3: ติดตั้ง ESP32 Board { data-progress-section="02-step-3" data-progress-title="ขั้นตอนที่ 3: ติดตั้ง ESP32 Board" }
 
 ### 3.1 เปิด Board Manager
 
@@ -111,7 +114,7 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 ---
 
-## ขั้นตอนที่ 4: เลือก ESP32 Board
+## ขั้นตอนที่ 4: เลือก ESP32 Board { data-progress-section="02-step-4" data-progress-title="ขั้นตอนที่ 4: เลือก ESP32 Board" }
 
 ### 4.1 เชื่อมต่อบอร์ดกับคอมพิวเตอร์
 
@@ -125,10 +128,10 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 1. ไปที่ **Tools** > **Board** > **esp32**
 2. เลือกบอร์ดที่ตรงกับที่คุณใช้:
-   - **ESP32 Dev Module** (บอร์ดทั่วไป)
-   - **ESP32-WROOM-DA Module**
-   - **DOIT ESP32 DEVKIT V1**
-   - หรือรุ่นอื่นตามที่มี
+    - **ESP32 Dev Module** (บอร์ดทั่วไป)
+    - **ESP32-WROOM-DA Module**
+    - **DOIT ESP32 DEVKIT V1**
+    - หรือรุ่นอื่นตามที่มี
 
 > 💡 **ไม่แน่ใจ?** ถ้าไม่รู้ว่าบอร์ดเป็นรุ่นไหน ให้เลือก **"ESP32 Dev Module"** (ใช้ได้กับส่วนใหญ่)
 
@@ -138,9 +141,9 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 
 1. ไปที่ **Tools** > **Port**
 2. เลือก Port ที่ปรากฏ:
-   - **Windows:** COM3, COM4, ... (ตัวเลขอาจต่างกัน)
-   - **macOS:** /dev/cu.usbserial-xxxxx
-   - **Linux:** /dev/ttyUSB0 หรือ /dev/ttyACM0
+    - **Windows:** COM3, COM4, ... (ตัวเลขอาจต่างกัน)
+    - **macOS:** /dev/cu.usbserial-xxxxx
+    - **Linux:** /dev/ttyUSB0 หรือ /dev/ttyACM0
 
 ![TODO: รูปเลือก Port](../assets/images/arduino-select-port.webp)
 
@@ -152,10 +155,12 @@ https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32
 ### สำหรับ Windows:
 
 **1. ตรวจสอบชิป USB-to-Serial บนบอร์ด:**
+
 - **CP2102** → [ดาวน์โหลด CP210x Driver](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
 - **CH340** → [ดาวน์โหลด CH340 Driver](https://sparks.gogo.co.nz/ch340.html)
 
 **2. ติดตั้ง Driver:**
+
 1. ดาวน์โหลดไฟล์ตามชิปที่ใช้
 2. แตกไฟล์และรัน Setup/Installer
 3. ถอดสาย USB และเสียบใหม่
@@ -186,7 +191,7 @@ sudo usermod -a -G dialout $USER
 
 ---
 
-## ขั้นตอนที่ 5: ทดสอบการเชื่อมต่อ
+## ขั้นตอนที่ 5: ทดสอบการเชื่อมต่อ { data-progress-section="02-step-5" data-progress-title="ขั้นตอนที่ 5: ทดสอบการเชื่อมต่อ" }
 
 ### 5.1 สร้างโปรแกรมทดสอบ
 
@@ -244,12 +249,14 @@ void loop() {
 ```cpp
 Serial.begin(115200);
 ```
+
 - เริ่มต้นการสื่อสารผ่าน Serial ที่ความเร็ว 115200 baud
 - ใช้สำหรับส่งข้อความไปแสดงบนคอมพิวเตอร์
 
 ```cpp
 Serial.println("=================================");
 ```
+
 - พิมพ์ข้อความและขึ้นบรรทัดใหม่
 
 ```cpp
@@ -258,6 +265,7 @@ ESP.getChipRevision()
 ESP.getCpuFreqMHz()
 ESP.getFlashChipSize()
 ```
+
 - ฟังก์ชันพิเศษของ ESP32 สำหรับอ่านข้อมูลของชิป
 - แสดงรุ่นชิป, เวอร์ชัน, ความเร็ว CPU, และขนาด Flash
 
@@ -267,12 +275,14 @@ ESP.getFlashChipSize()
 static int counter = 0;
 counter++;
 ```
+
 - `static` = ตัวแปรจะเก็บค่าไว้แม้ออกจากฟังก์ชัน
 - เพิ่มค่า counter ทุกครั้งที่วนลูป
 
 ```cpp
 millis() / 1000
 ```
+
 - `millis()` = เวลาที่ผ่านไปนับจากตอนเริ่มโปรแกรม (มิลลิวินาที)
 - หาร 1000 = แปลงเป็นวินาที
 
@@ -332,6 +342,7 @@ Count: 4 | Uptime: 4 seconds
 ### ปัญหา: Upload ไม่สำเร็จ - ค้างที่ "Connecting..."
 
 **วิธีแก้:**
+
 1. กดปุ่ม **BOOT** บนบอร์ดค้างไว้
 2. คลิก Upload ใน Arduino IDE
 3. เมื่อเห็นข้อความ "Connecting..." ปล่อยปุ่ม BOOT
@@ -339,6 +350,7 @@ Count: 4 | Uptime: 4 seconds
 ### ปัญหา: Error "Failed to connect to ESP32"
 
 **วิธีแก้:**
+
 - ตรวจสอบว่าสาย USB เสียบแน่น
 - ลองเปลี่ยนสาย USB
 - ตรวจสอบว่าเลือก Port ถูกต้อง
@@ -347,6 +359,7 @@ Count: 4 | Uptime: 4 seconds
 ### ปัญหา: Error "A fatal error occurred: Failed to write to target RAM"
 
 **วิธีแก้:**
+
 1. ไปที่ **Tools** > **Upload Speed**
 2. เปลี่ยนเป็น **115200** (ช้าลง แต่เสถียรกว่า)
 3. Upload ใหม่
@@ -356,9 +369,10 @@ Count: 4 | Uptime: 4 seconds
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="02-summary" data-progress-title="สรุป" }
 
 ในบทนี้เราได้:
+
 - ✅ ติดตั้ง ESP32 Board Manager
 - ✅ เลือกบอร์ดและ Port ที่ถูกต้อง
 - ✅ Upload โปรแกรมเข้าบอร์ด ESP32
@@ -366,7 +380,7 @@ Count: 4 | Uptime: 4 seconds
 
 ---
 
-## ขั้นตอนถัดไป
+## ขั้นตอนถัดไป { data-progress-section="02-next-steps" data-progress-title="ขั้นตอนถัดไป" }
 
 ตอนนี้คุณพร้อมที่จะเริ่มเขียนโปรแกรมแรกของคุณเอง!
 

@@ -1,6 +1,7 @@
 # บทที่ 13: WiFi และ NTP (เวลาจากอินเทอร์เน็ต) Time
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="13-objectives" data-progress-title="วัตถุประสงค์" }
+
 - สแกนเครือข่าย WiFi
 - เชื่อมต่ออินเทอร์เน็ต
 - ดึงเวลาจาก NTP Server
@@ -8,14 +9,15 @@
 
 ---
 
-## อุปกรณ์ที่ใช้
+## อุปกรณ์ที่ใช้ { data-progress-section="13-equipment" data-progress-title="อุปกรณ์ที่ใช้" }
+
 - ESP32 Development Board
 - LCD 16x2 I2C
 - Router WiFi (SSID และ Password)
 
 ---
 
-## ตัวอย่าง 1: สแกน WiFi
+## ตัวอย่าง 1: สแกน WiFi { data-progress-section="13-1-wifi" data-progress-title="ตัวอย่าง 1: สแกน WiFi" }
 
 ### โค้ด
 
@@ -69,7 +71,7 @@ Found 5 networks:
 
 ---
 
-## ตัวอย่าง 2: เชื่อมต่อ WiFi
+## ตัวอย่าง 2: เชื่อมต่อ WiFi { data-progress-section="13-2-wifi" data-progress-title="ตัวอย่าง 2: เชื่อมต่อ WiFi" }
 
 ### โค้ด
 
@@ -112,13 +114,14 @@ IP Address: 192.168.1.100
 
 ---
 
-## ตัวอย่าง 3: ดึงเวลาจาก NTP
+## ตัวอย่าง 3: ดึงเวลาจาก NTP { data-progress-section="13-3-ntp" data-progress-title="ตัวอย่าง 3: ดึงเวลาจาก NTP" }
 
 ### ทฤษฎี
 
 **NTP (Network Time Protocol)** = โปรโตคอลดึงเวลาที่ถูกต้องจากเซิร์ฟเวอร์
 
 **NTP Server สำหรับไทย:**
+
 - `time.navy.mi.th` (กรมอุทกศาสตร์ ทหารเรือ)
 - `pool.ntp.org` (Global)
 
@@ -196,7 +199,7 @@ Time: 14:35:21
 
 ---
 
-## ตัวอย่าง 4: แสดงเวลาบน LCD (เสถียร)
+## ตัวอย่าง 4: แสดงเวลาบน LCD (เสถียร) { data-progress-section="13-4-lcd" data-progress-title="ตัวอย่าง 4: แสดงเวลาบน LCD (เสถียร)" }
 
 ### ปัญหา
 
@@ -292,7 +295,7 @@ void loop() {
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="13-summary" data-progress-title="สรุป" }
 
 | หัวข้อ | รายละเอียด |
 |--------|-----------|
@@ -304,12 +307,13 @@ void loop() {
 
 ---
 
-## 📚 เนื้อหาบทถัดไป
+## 📚 เนื้อหาบทถัดไป { data-progress-section="13-next-steps" data-progress-title="📚 เนื้อหาบทถัดไป" }
 
 ในบทถัดไป เราจะเรียนรู้:
+
 - 📊 ส่งข้อมูลขึ้น Google Sheets
 - 🕒 บันทึกเวลา (Timestamp)
 - 📈 เอาข้อมูลไปวิเคราะห์ต่อ
 - 🔗 ใช้ Google Apps Script
 
-[→ ไปบทที่ 16: Google Sheets Integration](16-google-sheets.md)
+[→ ไปบทที่ 14: Google Sheets Integration](14-google-sheets.md)

@@ -2,6 +2,7 @@
 
 # Script to build MkDocs site
 # Usage: ./build.sh
+set -euo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV_DIR="$PROJECT_DIR/.venv"
@@ -43,7 +44,8 @@ fi
 
 # Build site
 echo "🔨 Building site..."
-mkdocs build --clean
+node "$PROJECT_DIR/generate-section-registry.js"
+mkdocs build --config-file "$PROJECT_DIR/mkdocs.yml" --clean
 
 echo ""
 echo "✅ Build complete!"

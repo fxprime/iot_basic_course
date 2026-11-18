@@ -1,0 +1,1084 @@
+{
+  "generatedAt": "2026-11-18T05:03:26.075Z",
+  "totalSections": 154,
+  "sections": {
+    "01-objectives": {
+      "sectionId": "01-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "01",
+      "pageUrl": "esp32/01-download-ide/",
+      "sourceFile": "esp32/01-download-ide.md"
+    },
+    "01-step-1": {
+      "sectionId": "01-step-1",
+      "title": "ขั้นตอนที่ 1: ดาวน์โหลด Arduino IDE",
+      "chapterId": "01",
+      "pageUrl": "esp32/01-download-ide/",
+      "sourceFile": "esp32/01-download-ide.md"
+    },
+    "01-step-2": {
+      "sectionId": "01-step-2",
+      "title": "ขั้นตอนที่ 2: ติดตั้ง Arduino IDE",
+      "chapterId": "01",
+      "pageUrl": "esp32/01-download-ide/",
+      "sourceFile": "esp32/01-download-ide.md"
+    },
+    "01-step-3": {
+      "sectionId": "01-step-3",
+      "title": "ขั้นตอนที่ 3: รู้จักกับ Arduino IDE",
+      "chapterId": "01",
+      "pageUrl": "esp32/01-download-ide/",
+      "sourceFile": "esp32/01-download-ide.md"
+    },
+    "01-step-4": {
+      "sectionId": "01-step-4",
+      "title": "ขั้นตอนที่ 4: ทดสอบว่าติดตั้งสำเร็จ",
+      "chapterId": "01",
+      "pageUrl": "esp32/01-download-ide/",
+      "sourceFile": "esp32/01-download-ide.md"
+    },
+    "01-summary": {
+      "sectionId": "01-summary",
+      "title": "สรุป",
+      "chapterId": "01",
+      "pageUrl": "esp32/01-download-ide/",
+      "sourceFile": "esp32/01-download-ide.md"
+    },
+    "01-next-steps": {
+      "sectionId": "01-next-steps",
+      "title": "ขั้นตอนถัดไป",
+      "chapterId": "01",
+      "pageUrl": "esp32/01-download-ide/",
+      "sourceFile": "esp32/01-download-ide.md"
+    },
+    "02-objectives": {
+      "sectionId": "02-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "02",
+      "pageUrl": "esp32/02-setup-esp32/",
+      "sourceFile": "esp32/02-setup-esp32.md"
+    },
+    "02-step-1": {
+      "sectionId": "02-step-1",
+      "title": "ขั้นตอนที่ 1: เตรียม ESP32 Board",
+      "chapterId": "02",
+      "pageUrl": "esp32/02-setup-esp32/",
+      "sourceFile": "esp32/02-setup-esp32.md"
+    },
+    "02-step-2": {
+      "sectionId": "02-step-2",
+      "title": "ขั้นตอนที่ 2: เพิ่ม ESP32 Board Manager URL",
+      "chapterId": "02",
+      "pageUrl": "esp32/02-setup-esp32/",
+      "sourceFile": "esp32/02-setup-esp32.md"
+    },
+    "02-step-3": {
+      "sectionId": "02-step-3",
+      "title": "ขั้นตอนที่ 3: ติดตั้ง ESP32 Board",
+      "chapterId": "02",
+      "pageUrl": "esp32/02-setup-esp32/",
+      "sourceFile": "esp32/02-setup-esp32.md"
+    },
+    "02-step-4": {
+      "sectionId": "02-step-4",
+      "title": "ขั้นตอนที่ 4: เลือก ESP32 Board",
+      "chapterId": "02",
+      "pageUrl": "esp32/02-setup-esp32/",
+      "sourceFile": "esp32/02-setup-esp32.md"
+    },
+    "02-step-5": {
+      "sectionId": "02-step-5",
+      "title": "ขั้นตอนที่ 5: ทดสอบการเชื่อมต่อ",
+      "chapterId": "02",
+      "pageUrl": "esp32/02-setup-esp32/",
+      "sourceFile": "esp32/02-setup-esp32.md"
+    },
+    "02-summary": {
+      "sectionId": "02-summary",
+      "title": "สรุป",
+      "chapterId": "02",
+      "pageUrl": "esp32/02-setup-esp32/",
+      "sourceFile": "esp32/02-setup-esp32.md"
+    },
+    "02-next-steps": {
+      "sectionId": "02-next-steps",
+      "title": "ขั้นตอนถัดไป",
+      "chapterId": "02",
+      "pageUrl": "esp32/02-setup-esp32/",
+      "sourceFile": "esp32/02-setup-esp32.md"
+    },
+    "03-objectives": {
+      "sectionId": "03-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "03",
+      "pageUrl": "esp32/03-first-program/",
+      "sourceFile": "esp32/03-first-program.md"
+    },
+    "03-arduino": {
+      "sectionId": "03-arduino",
+      "title": "โครงสร้างโปรแกรม Arduino",
+      "chapterId": "03",
+      "pageUrl": "esp32/03-first-program/",
+      "sourceFile": "esp32/03-first-program.md"
+    },
+    "03-step-1": {
+      "sectionId": "03-step-1",
+      "title": "ขั้นตอนที่ 1: โปรแกรมแรก - Hello World",
+      "chapterId": "03",
+      "pageUrl": "esp32/03-first-program/",
+      "sourceFile": "esp32/03-first-program.md"
+    },
+    "03-step-2": {
+      "sectionId": "03-step-2",
+      "title": "ขั้นตอนที่ 2: ดูผลลัพธ์ใน Serial Monitor",
+      "chapterId": "03",
+      "pageUrl": "esp32/03-first-program/",
+      "sourceFile": "esp32/03-first-program.md"
+    },
+    "03-step-3": {
+      "sectionId": "03-step-3",
+      "title": "ขั้นตอนที่ 3: เพิ่มความสามารถให้โปรแกรม",
+      "chapterId": "03",
+      "pageUrl": "esp32/03-first-program/",
+      "sourceFile": "esp32/03-first-program.md"
+    },
+    "03-step-4": {
+      "sectionId": "03-step-4",
+      "title": "ขั้นตอนที่ 4: เรียนรู้ประเภทข้อมูลและตัวแปร",
+      "chapterId": "03",
+      "pageUrl": "esp32/03-first-program/",
+      "sourceFile": "esp32/03-first-program.md"
+    },
+    "03-summary": {
+      "sectionId": "03-summary",
+      "title": "สรุป",
+      "chapterId": "03",
+      "pageUrl": "esp32/03-first-program/",
+      "sourceFile": "esp32/03-first-program.md"
+    },
+    "03-exercises": {
+      "sectionId": "03-exercises",
+      "title": "แบบฝึกหัด",
+      "chapterId": "03",
+      "pageUrl": "esp32/03-first-program/",
+      "sourceFile": "esp32/03-first-program.md"
+    },
+    "03-next-steps": {
+      "sectionId": "03-next-steps",
+      "title": "ขั้นตอนถัดไป",
+      "chapterId": "03",
+      "pageUrl": "esp32/03-first-program/",
+      "sourceFile": "esp32/03-first-program.md"
+    },
+    "04-objectives": {
+      "sectionId": "04-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "04",
+      "pageUrl": "esp32/04-serial-monitor/",
+      "sourceFile": "esp32/04-serial-monitor.md"
+    },
+    "04-step-1": {
+      "sectionId": "04-step-1",
+      "title": "ขั้นตอนที่ 1: รับข้อความจาก Serial Monitor",
+      "chapterId": "04",
+      "pageUrl": "esp32/04-serial-monitor/",
+      "sourceFile": "esp32/04-serial-monitor.md"
+    },
+    "04-step-2": {
+      "sectionId": "04-step-2",
+      "title": "ขั้นตอนที่ 2: ควบคุม LED ด้วย Serial",
+      "chapterId": "04",
+      "pageUrl": "esp32/04-serial-monitor/",
+      "sourceFile": "esp32/04-serial-monitor.md"
+    },
+    "04-step-3": {
+      "sectionId": "04-step-3",
+      "title": "ขั้นตอนที่ 3: รับตัวเลขและคำนวณ",
+      "chapterId": "04",
+      "pageUrl": "esp32/04-serial-monitor/",
+      "sourceFile": "esp32/04-serial-monitor.md"
+    },
+    "04-step-4": {
+      "sectionId": "04-step-4",
+      "title": "ขั้นตอนที่ 4: สร้าง Menu Interactive",
+      "chapterId": "04",
+      "pageUrl": "esp32/04-serial-monitor/",
+      "sourceFile": "esp32/04-serial-monitor.md"
+    },
+    "04-step-5": {
+      "sectionId": "04-step-5",
+      "title": "ขั้นตอนที่ 5: การใช้ Serial ในการ Debug",
+      "chapterId": "04",
+      "pageUrl": "esp32/04-serial-monitor/",
+      "sourceFile": "esp32/04-serial-monitor.md"
+    },
+    "04-summary": {
+      "sectionId": "04-summary",
+      "title": "สรุป",
+      "chapterId": "04",
+      "pageUrl": "esp32/04-serial-monitor/",
+      "sourceFile": "esp32/04-serial-monitor.md"
+    },
+    "04-exercises": {
+      "sectionId": "04-exercises",
+      "title": "แบบฝึกหัด",
+      "chapterId": "04",
+      "pageUrl": "esp32/04-serial-monitor/",
+      "sourceFile": "esp32/04-serial-monitor.md"
+    },
+    "04-next-steps": {
+      "sectionId": "04-next-steps",
+      "title": "ขั้นตอนถัดไป",
+      "chapterId": "04",
+      "pageUrl": "esp32/04-serial-monitor/",
+      "sourceFile": "esp32/04-serial-monitor.md"
+    },
+    "05-arduino-esp32": {
+      "sectionId": "05-arduino-esp32",
+      "title": "ตัวอย่างโปรเจค Arduino / ESP32",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "05-objectives": {
+      "sectionId": "05-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "05-equipment": {
+      "sectionId": "05-equipment",
+      "title": "อุปกรณ์ที่ใช้",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "05-bonus-simulation-falstad": {
+      "sectionId": "05-bonus-simulation-falstad",
+      "title": "Bonus : โปรแกรม simulation วงจร falstad",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "05-part-1": {
+      "sectionId": "05-part-1",
+      "title": "Part 1: การใช้งานปุ่มกดพื้นฐาน",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "05-part-2-button-bounce": {
+      "sectionId": "05-part-2-button-bounce",
+      "title": "Part 2: Button Bounce และปัญหา",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "05-part-3-debouncing": {
+      "sectionId": "05-part-3-debouncing",
+      "title": "Part 3: Debouncing - แก้ปัญหา",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "05-summary": {
+      "sectionId": "05-summary",
+      "title": "สรุป",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "05-challenges": {
+      "sectionId": "05-challenges",
+      "title": "🎯 ความท้าทาย",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "05-questions": {
+      "sectionId": "05-questions",
+      "title": "❓ คำถามท้ายบท",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "05-next-steps": {
+      "sectionId": "05-next-steps",
+      "title": "📚 เนื้อหาบทถัดไป",
+      "chapterId": "05",
+      "pageUrl": "esp32/05-button-debouncing/",
+      "sourceFile": "esp32/05-button-debouncing.md"
+    },
+    "06-objectives": {
+      "sectionId": "06-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-equipment": {
+      "sectionId": "06-equipment",
+      "title": "อุปกรณ์ที่ใช้",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-pwm-pulse-width-modulation": {
+      "sectionId": "06-pwm-pulse-width-modulation",
+      "title": "ทฤษฎี: PWM (Pulse Width Modulation)",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-pwm-esp32": {
+      "sectionId": "06-pwm-esp32",
+      "title": "PWM ใน ESP32",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-1-led-pwm": {
+      "sectionId": "06-1-led-pwm",
+      "title": "ตัวอย่าง 1: ควบคุมความสว่าง LED ด้วย PWM",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-2-fade-in-out-effect": {
+      "sectionId": "06-2-fade-in-out-effect",
+      "title": "ตัวอย่าง 2: Fade In/Out Effect",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-3": {
+      "sectionId": "06-3",
+      "title": "ตัวอย่าง 3 (โจทย์): กดค้างเพิ่มความสว่าง ปล่อยลดความสว่าง ⭐",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-4-2": {
+      "sectionId": "06-4-2",
+      "title": "ตัวอย่าง 4: ปรับความสว่างขึ้น-ลงด้วยปุ่ม 2 ปุ่ม",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-5-fade": {
+      "sectionId": "06-5-fade",
+      "title": "ตัวอย่าง 5: กดค้างเพื่อ Fade ขึ้น-ลงอัตโนมัติ",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-summary": {
+      "sectionId": "06-summary",
+      "title": "สรุป",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-challenges": {
+      "sectionId": "06-challenges",
+      "title": "🎯 ความท้าทาย",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-questions": {
+      "sectionId": "06-questions",
+      "title": "❓ คำถามท้ายบท",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "06-next-steps": {
+      "sectionId": "06-next-steps",
+      "title": "📚 เนื้อหาบทถัดไป",
+      "chapterId": "06",
+      "pageUrl": "esp32/06-pwm-led/",
+      "sourceFile": "esp32/06-pwm-led.md"
+    },
+    "07-objectives": {
+      "sectionId": "07-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-equipment": {
+      "sectionId": "07-equipment",
+      "title": "อุปกรณ์ที่ใช้",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-servo-motor": {
+      "sectionId": "07-servo-motor",
+      "title": "ทฤษฎี: Servo Motor",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-ledcwrite-servo": {
+      "sectionId": "07-ledcwrite-servo",
+      "title": "การใช้ ledcWrite() กับ Servo",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-1-servo": {
+      "sectionId": "07-1-servo",
+      "title": "ตัวอย่าง 1: หมุน Servo ไปยังมุมต่างๆ",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-2-servo": {
+      "sectionId": "07-2-servo",
+      "title": "ตัวอย่าง 2: ควบคุม Servo ด้วยปุ่มกด (ล็อค/ปลดล็อค)",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-3-servo-2": {
+      "sectionId": "07-3-servo-2",
+      "title": "ตัวอย่าง 3: ควบคุม Servo ด้วย 2 ปุ่ม (เปิด/ปิด)",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-4-sweep": {
+      "sectionId": "07-4-sweep",
+      "title": "ตัวอย่าง 4: Sweep (กวาด) ซ้าย-ขวา",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-5-serial-command-control": {
+      "sectionId": "07-5-serial-command-control",
+      "title": "ตัวอย่าง 5: Serial Command Control",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-summary": {
+      "sectionId": "07-summary",
+      "title": "สรุป",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-challenges": {
+      "sectionId": "07-challenges",
+      "title": "🎯 ความท้าทาย",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-questions": {
+      "sectionId": "07-questions",
+      "title": "❓ คำถามท้ายบท",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "07-next-steps": {
+      "sectionId": "07-next-steps",
+      "title": "📚 เนื้อหาบทถัดไป",
+      "chapterId": "07",
+      "pageUrl": "esp32/07-servo-motor/",
+      "sourceFile": "esp32/07-servo-motor.md"
+    },
+    "08-objectives": {
+      "sectionId": "08-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-equipment": {
+      "sectionId": "08-equipment",
+      "title": "อุปกรณ์ที่ใช้",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-ultrasonic-sensor-hc-sr04": {
+      "sectionId": "08-ultrasonic-sensor-hc-sr04",
+      "title": "ทฤษฎี: Ultrasonic Sensor (HC-SR04)",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-newping-library": {
+      "sectionId": "08-newping-library",
+      "title": "การใช้ NewPing Library",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-1-newping": {
+      "sectionId": "08-1-newping",
+      "title": "ตัวอย่าง 1: วัดระยะทางด้วย NewPing",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-2-bar-graph": {
+      "sectionId": "08-2-bar-graph",
+      "title": "ตัวอย่าง 2: แสดงระยะทางแบบ Bar Graph",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-3-proximity-alert": {
+      "sectionId": "08-3-proximity-alert",
+      "title": "ตัวอย่าง 3: Proximity Alert (แจ้งเตือนเมื่อใกล้)",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-section-08": {
+      "sectionId": "08-section-08",
+      "title": "โปรเจค: ถังขยะอัตโนมัติ 🗑️",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-5": {
+      "sectionId": "08-5",
+      "title": "ตัวอย่าง 5: ถังขยะอัตโนมัติ (ปรับปรุง - ตรวจจับต่อเนื่อง)",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-summary": {
+      "sectionId": "08-summary",
+      "title": "สรุป",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-challenges": {
+      "sectionId": "08-challenges",
+      "title": "🎯 ความท้าทาย",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-questions": {
+      "sectionId": "08-questions",
+      "title": "❓ คำถามท้ายบท",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "08-next-steps": {
+      "sectionId": "08-next-steps",
+      "title": "📚 เนื้อหาบทถัดไป",
+      "chapterId": "08",
+      "pageUrl": "esp32/08-ultrasonic-sensor/",
+      "sourceFile": "esp32/08-ultrasonic-sensor.md"
+    },
+    "09-objectives": {
+      "sectionId": "09-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-equipment": {
+      "sectionId": "09-equipment",
+      "title": "อุปกรณ์ที่ใช้",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-analog-input-adc": {
+      "sectionId": "09-analog-input-adc",
+      "title": "ทฤษฎี: Analog Input และ ADC",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-potentiometer": {
+      "sectionId": "09-potentiometer",
+      "title": "Potentiometer คืออะไร?",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-1-potentiometer": {
+      "sectionId": "09-1-potentiometer",
+      "title": "ตัวอย่าง 1: อ่านค่า Potentiometer",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-2-adc": {
+      "sectionId": "09-2-adc",
+      "title": "ตัวอย่าง 2: แปลงค่า ADC เป็นแรงดัน",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-3-bar-graph": {
+      "sectionId": "09-3-bar-graph",
+      "title": "ตัวอย่าง 3: แสดงผลแบบ Bar Graph",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-4-led-potentiometer": {
+      "sectionId": "09-4-led-potentiometer",
+      "title": "ตัวอย่าง 4: ควบคุมความสว่าง LED ด้วย Potentiometer",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-5-servo-potentiometer": {
+      "sectionId": "09-5-servo-potentiometer",
+      "title": "ตัวอย่าง 5: ควบคุมมุม Servo ด้วย Potentiometer",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-section-10": {
+      "sectionId": "09-section-10",
+      "title": "โปรเจค: ตู้ให้อาหารปลาอัตโนมัติ 🐟",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-summary": {
+      "sectionId": "09-summary",
+      "title": "สรุป",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-challenges": {
+      "sectionId": "09-challenges",
+      "title": "🎯 ความท้าทาย",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-questions": {
+      "sectionId": "09-questions",
+      "title": "❓ คำถามท้ายบท",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "09-next-steps": {
+      "sectionId": "09-next-steps",
+      "title": "📚 เนื้อหาบทถัดไป",
+      "chapterId": "09",
+      "pageUrl": "esp32/09-analog-input/",
+      "sourceFile": "esp32/09-analog-input.md"
+    },
+    "10-objectives": {
+      "sectionId": "10-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-equipment": {
+      "sectionId": "10-equipment",
+      "title": "อุปกรณ์ที่ใช้",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-section-03": {
+      "sectionId": "10-section-03",
+      "title": "ทฤษฎี: ประตูโรงจอดรถอัตโนมัติ",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-ir-sensor": {
+      "sectionId": "10-ir-sensor",
+      "title": "IR Sensor คืออะไร?",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-section-05": {
+      "sectionId": "10-section-05",
+      "title": "การต่อวงจร",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-section-06": {
+      "sectionId": "10-section-06",
+      "title": "โค้ดตัวอย่าง (ฉบับเต็ม - สำหรับผู้สอน)",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-section-07": {
+      "sectionId": "10-section-07",
+      "title": "โค้ดแบบฝึกหัด (สำหรับนักเรียน) 📝",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-section-08": {
+      "sectionId": "10-section-08",
+      "title": "คำแนะนำสำหรับนักเรียน 📚",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-section-09": {
+      "sectionId": "10-section-09",
+      "title": "เฉลย (สำหรับนักเรียนที่ทำไม่ได้)",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-section-10": {
+      "sectionId": "10-section-10",
+      "title": "การทดสอบ",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-section-11": {
+      "sectionId": "10-section-11",
+      "title": "ปรับปรุงโปรเจค (ขั้นสูง) 🚀",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-summary": {
+      "sectionId": "10-summary",
+      "title": "สรุป",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-challenges": {
+      "sectionId": "10-challenges",
+      "title": "🎯 ความท้าทาย",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-questions": {
+      "sectionId": "10-questions",
+      "title": "❓ คำถามท้ายบท",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "10-next-steps": {
+      "sectionId": "10-next-steps",
+      "title": "📚 เนื้อหาบทถัดไป",
+      "chapterId": "10",
+      "pageUrl": "esp32/10-parking-gate-project/",
+      "sourceFile": "esp32/10-parking-gate-project.md"
+    },
+    "11-objectives": {
+      "sectionId": "11-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-equipment": {
+      "sectionId": "11-equipment",
+      "title": "อุปกรณ์ที่ใช้",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-lcd-16x2-i2c": {
+      "sectionId": "11-lcd-16x2-i2c",
+      "title": "ทฤษฎี: LCD 16x2 I2C",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-library": {
+      "sectionId": "11-library",
+      "title": "ติดตั้ง Library",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-1-hello-world-run": {
+      "sectionId": "11-1-hello-world-run",
+      "title": "ตัวอย่าง 1: Hello World (Run ครั้งเดียว)",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-2-potentiometer-loop": {
+      "sectionId": "11-2-potentiometer-loop",
+      "title": "ตัวอย่าง 2: แสดงค่า Potentiometer (Loop)",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-section-07": {
+      "sectionId": "11-section-07",
+      "title": "⚠️ ปัญหา: ตัวอักษรค้าง",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-3": {
+      "sectionId": "11-3",
+      "title": "ตัวอย่าง 3: แสดงสถานะปุ่มกด",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-1-yes-no": {
+      "sectionId": "11-1-yes-no",
+      "title": "โจทย์สำหรับนักเรียน 1: แสดง YES/NO",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-yes-no": {
+      "sectionId": "11-yes-no",
+      "title": "⚠️ ปัญหา: ตัวอักษรค้าง (YES/NO)",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-2-potentiometer-button": {
+      "sectionId": "11-2-potentiometer-button",
+      "title": "โจทย์สำหรับนักเรียน 2: Potentiometer + Button",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-esp32-dino-run-game": {
+      "sectionId": "11-esp32-dino-run-game",
+      "title": "โปรเจคพิเศษ: ESP32 Dino Run Game 🦖",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-summary": {
+      "sectionId": "11-summary",
+      "title": "สรุป",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "11-next-steps": {
+      "sectionId": "11-next-steps",
+      "title": "📚 เนื้อหาบทถัดไป",
+      "chapterId": "11",
+      "pageUrl": "esp32/11-lcd-display/",
+      "sourceFile": "esp32/11-lcd-display.md"
+    },
+    "12-objectives": {
+      "sectionId": "12-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "12",
+      "pageUrl": "esp32/12-relay-module/",
+      "sourceFile": "esp32/12-relay-module.md"
+    },
+    "12-equipment": {
+      "sectionId": "12-equipment",
+      "title": "อุปกรณ์ที่ใช้",
+      "chapterId": "12",
+      "pageUrl": "esp32/12-relay-module/",
+      "sourceFile": "esp32/12-relay-module.md"
+    },
+    "12-relay": {
+      "sectionId": "12-relay",
+      "title": "ทฤษฎี: Relay คืออะไร?",
+      "chapterId": "12",
+      "pageUrl": "esp32/12-relay-module/",
+      "sourceFile": "esp32/12-relay-module.md"
+    },
+    "12-section-04": {
+      "sectionId": "12-section-04",
+      "title": "⚠️ ความปลอดภัย",
+      "chapterId": "12",
+      "pageUrl": "esp32/12-relay-module/",
+      "sourceFile": "esp32/12-relay-module.md"
+    },
+    "12-1-relay": {
+      "sectionId": "12-1-relay",
+      "title": "ตัวอย่าง 1: ควบคุม Relay ด้วยปุ่มกด",
+      "chapterId": "12",
+      "pageUrl": "esp32/12-relay-module/",
+      "sourceFile": "esp32/12-relay-module.md"
+    },
+    "12-lcd-potentiometer-button-relay": {
+      "sectionId": "12-lcd-potentiometer-button-relay",
+      "title": "โปรเจครวม: LCD + Potentiometer + Button + Relay",
+      "chapterId": "12",
+      "pageUrl": "esp32/12-relay-module/",
+      "sourceFile": "esp32/12-relay-module.md"
+    },
+    "12-summary": {
+      "sectionId": "12-summary",
+      "title": "สรุป",
+      "chapterId": "12",
+      "pageUrl": "esp32/12-relay-module/",
+      "sourceFile": "esp32/12-relay-module.md"
+    },
+    "12-next-steps": {
+      "sectionId": "12-next-steps",
+      "title": "📚 เนื้อหาบทถัดไป",
+      "chapterId": "12",
+      "pageUrl": "esp32/12-relay-module/",
+      "sourceFile": "esp32/12-relay-module.md"
+    },
+    "13-objectives": {
+      "sectionId": "13-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "13",
+      "pageUrl": "esp32/13-wifi-ntp/",
+      "sourceFile": "esp32/13-wifi-ntp.md"
+    },
+    "13-equipment": {
+      "sectionId": "13-equipment",
+      "title": "อุปกรณ์ที่ใช้",
+      "chapterId": "13",
+      "pageUrl": "esp32/13-wifi-ntp/",
+      "sourceFile": "esp32/13-wifi-ntp.md"
+    },
+    "13-1-wifi": {
+      "sectionId": "13-1-wifi",
+      "title": "ตัวอย่าง 1: สแกน WiFi",
+      "chapterId": "13",
+      "pageUrl": "esp32/13-wifi-ntp/",
+      "sourceFile": "esp32/13-wifi-ntp.md"
+    },
+    "13-2-wifi": {
+      "sectionId": "13-2-wifi",
+      "title": "ตัวอย่าง 2: เชื่อมต่อ WiFi",
+      "chapterId": "13",
+      "pageUrl": "esp32/13-wifi-ntp/",
+      "sourceFile": "esp32/13-wifi-ntp.md"
+    },
+    "13-3-ntp": {
+      "sectionId": "13-3-ntp",
+      "title": "ตัวอย่าง 3: ดึงเวลาจาก NTP",
+      "chapterId": "13",
+      "pageUrl": "esp32/13-wifi-ntp/",
+      "sourceFile": "esp32/13-wifi-ntp.md"
+    },
+    "13-4-lcd": {
+      "sectionId": "13-4-lcd",
+      "title": "ตัวอย่าง 4: แสดงเวลาบน LCD (เสถียร)",
+      "chapterId": "13",
+      "pageUrl": "esp32/13-wifi-ntp/",
+      "sourceFile": "esp32/13-wifi-ntp.md"
+    },
+    "13-summary": {
+      "sectionId": "13-summary",
+      "title": "สรุป",
+      "chapterId": "13",
+      "pageUrl": "esp32/13-wifi-ntp/",
+      "sourceFile": "esp32/13-wifi-ntp.md"
+    },
+    "13-next-steps": {
+      "sectionId": "13-next-steps",
+      "title": "📚 เนื้อหาบทถัดไป",
+      "chapterId": "13",
+      "pageUrl": "esp32/13-wifi-ntp/",
+      "sourceFile": "esp32/13-wifi-ntp.md"
+    },
+    "14-objectives": {
+      "sectionId": "14-objectives",
+      "title": "วัตถุประสงค์",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-equipment": {
+      "sectionId": "14-equipment",
+      "title": "อุปกรณ์ที่ใช้",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-step-1": {
+      "sectionId": "14-step-1",
+      "title": "ขั้นตอนที่ 1: สร้าง Google Sheet",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-step-2": {
+      "sectionId": "14-step-2",
+      "title": "ขั้นตอนที่ 2: สร้าง Google Apps Script",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-step-3": {
+      "sectionId": "14-step-3",
+      "title": "ขั้นตอนที่ 3: โค้ด ESP32",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-google-sheets": {
+      "sectionId": "14-google-sheets",
+      "title": "ผลลัพธ์ใน Google Sheets",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-sensor": {
+      "sectionId": "14-sensor",
+      "title": "ตัวอย่าง: ส่งหลาย Sensor",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-section-08": {
+      "sectionId": "14-section-08",
+      "title": "การวิเคราะห์ข้อมูล",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-summary": {
+      "sectionId": "14-summary",
+      "title": "สรุป",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-challenges": {
+      "sectionId": "14-challenges",
+      "title": "🎯 ความท้าทาย",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-questions": {
+      "sectionId": "14-questions",
+      "title": "❓ คำถามท้ายบท",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    },
+    "14-course-complete": {
+      "sectionId": "14-course-complete",
+      "title": "🎓 จบหลักสูตร",
+      "chapterId": "14",
+      "pageUrl": "esp32/14-google-sheets/",
+      "sourceFile": "esp32/14-google-sheets.md"
+    }
+  }
+}

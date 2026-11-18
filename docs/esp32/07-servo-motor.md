@@ -1,6 +1,7 @@
 # บทที่ 7: Servo Motor และการควบคุมมุม
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="07-objectives" data-progress-title="วัตถุประสงค์" }
+
 - เข้าใจหลักการทำงานของ Servo Motor
 - ใช้ `ledcWrite()` ควบคุม Servo
 - หมุน Servo ไปยังมุมต่างๆ (0-180°)
@@ -8,7 +9,8 @@
 
 ---
 
-## อุปกรณ์ที่ใช้
+## อุปกรณ์ที่ใช้ { data-progress-section="07-equipment" data-progress-title="อุปกรณ์ที่ใช้" }
+
 - ESP32 Development Board
 - Servo Motor SG90 (หรือรุ่นอื่นที่คล้ายกัน)
 - ปุ่มกด 1-2 ตัว
@@ -16,7 +18,7 @@
 
 ---
 
-## ทฤษฎี: Servo Motor
+## ทฤษฎี: Servo Motor { data-progress-section="07-servo-motor" data-progress-title="ทฤษฎี: Servo Motor" }
 
 ### Servo Motor คืออะไร?
 
@@ -38,18 +40,19 @@
 ### การควบคุม Servo
 
 Servo ใช้สัญญาณ **PWM** แบบพิเศษ:
+
 - **ความถี่:** 50Hz (คาบเวลา 20ms)
 - **Pulse Width:**
-  - 500μs → 0° (ซ้ายสุด)
-  - 1500μs → 90° (กลาง)
-  - 2500μs → 180° (ขวาสุด)
+    - 500μs → 0° (ซ้ายสุด)
+    - 1500μs → 90° (กลาง)
+    - 2500μs → 180° (ขวาสุด)
  
 ### Pulse Width vs Angle
 ![alt text](../assets/images/pulse-width-vs-angle.webp)
 
 ---
 
-## การใช้ ledcWrite() กับ Servo
+## การใช้ ledcWrite() กับ Servo { data-progress-section="07-ledcwrite-servo" data-progress-title="การใช้ ledcWrite() กับ Servo" }
 
 ### ขั้นตอน
 
@@ -64,13 +67,14 @@ $$
 $$
 
 **ตัวอย่าง:**
+
 - 0° → 500μs → Duty = 1638
 - 90° → 1500μs → Duty = 4915
 - 180° → 2500μs → Duty = 8192
 
 ---
 
-## ตัวอย่าง 1: หมุน Servo ไปยังมุมต่างๆ
+## ตัวอย่าง 1: หมุน Servo ไปยังมุมต่างๆ { data-progress-section="07-1-servo" data-progress-title="ตัวอย่าง 1: หมุน Servo ไปยังมุมต่างๆ" }
 
 ### วงจร
 
@@ -85,6 +89,7 @@ GND ─────────────────  GND (สีน้ำต
 
 
 **หมายเหตุ:** 
+
 - ใช้ 5V จาก ESP32 (หรือแหล่งจ่ายไฟภายนอก)
 - สำหรับ Servo หลายตัว ควรใช้แหล่งจ่ายไฟแยก
 
@@ -146,11 +151,12 @@ Servo จะหมุนไปยังมุม: **0° → 45° → 90° → 13
 
 ---
 
-## ตัวอย่าง 2: ควบคุม Servo ด้วยปุ่มกด (ล็อค/ปลดล็อค)
+## ตัวอย่าง 2: ควบคุม Servo ด้วยปุ่มกด (ล็อค/ปลดล็อค) { data-progress-section="07-2-servo" data-progress-title="ตัวอย่าง 2: ควบคุม Servo ด้วยปุ่มกด (ล็อค/ปลดล็อค)" }
 
 ### ทฤษฎี
 
 สร้างระบบล็อคอย่างง่าย:
+
 - กดปุ่มครั้งที่ 1 → Servo หมุนไป **0°** (ล็อค 🔒)
 - กดปุ่มครั้งที่ 2 → Servo หมุนไป **90°** (ปลดล็อค 🔓)
 
@@ -226,13 +232,14 @@ void servoWrite(int angle) {
 ```
 
 **ประยุกต์ใช้:**
+
 - ล็อคประตู
 - กล่องเก็บของ
 - ตู้เซฟขนาดเล็ก
 
 ---
 
-## ตัวอย่าง 3: ควบคุม Servo ด้วย 2 ปุ่ม (เปิด/ปิด)
+## ตัวอย่าง 3: ควบคุม Servo ด้วย 2 ปุ่ม (เปิด/ปิด) { data-progress-section="07-3-servo-2" data-progress-title="ตัวอย่าง 3: ควบคุม Servo ด้วย 2 ปุ่ม (เปิด/ปิด)" }
 
 ### วงจร
  
@@ -316,7 +323,7 @@ Servo จะ**ค่อยๆ หมุน**แบบ Smooth (ไม่กระ
 
 ---
 
-## ตัวอย่าง 4: Sweep (กวาด) ซ้าย-ขวา
+## ตัวอย่าง 4: Sweep (กวาด) ซ้าย-ขวา { data-progress-section="07-4-sweep" data-progress-title="ตัวอย่าง 4: Sweep (กวาด) ซ้าย-ขวา" }
 
 ### วงจร
 
@@ -365,17 +372,19 @@ void servoWrite(int angle) {
 Servo จะ**กวาดไปกลับ**ระหว่าง 0° ถึง 180° อย่างต่อเนื่อง
 
 **ประยุกต์ใช้:**
+
 - Radar Scanner
 - Camera Pan/Tilt
 - พัดลมหมุน
 
 ---
 
-## ตัวอย่าง 5: Serial Command Control
+## ตัวอย่าง 5: Serial Command Control { data-progress-section="07-5-serial-command-control" data-progress-title="ตัวอย่าง 5: Serial Command Control" }
 
 ### ทฤษฎี
 
 ควบคุม Servo ผ่าน Serial Monitor:
+
 - พิมพ์ `0` → หมุนไป 0°
 - พิมพ์ `90` → หมุนไป 90°
 - พิมพ์ `180` → หมุนไป 180°
@@ -448,7 +457,7 @@ Servo angle: 135°
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="07-summary" data-progress-title="สรุป" }
 
 | หัวข้อ | รายละเอียด |
 |--------|-----------|
@@ -463,11 +472,12 @@ Servo angle: 135°
 
 ---
 
-## 🎯 ความท้าทาย
+## 🎯 ความท้าทาย { data-progress-section="07-challenges" data-progress-title="🎯 ความท้าทาย" }
 
 ### Challenge 1: Three-Position Switch
 
 ใช้ 3 ปุ่ม:
+
 - ปุ่ม 1 → Servo ไป 0°
 - ปุ่ม 2 → Servo ไป 90°
 - ปุ่ม 3 → Servo ไป 180°
@@ -479,12 +489,13 @@ Servo หมุนไปมุมที่กำหนด แล้ว**รอ 3
 ### Challenge 3: Password Lock
 
 สร้างล็อคที่ต้อง**กดปุ่ม 3 ครั้งติดกัน** (ภายใน 2 วินาที) เพื่อปลดล็อค
+
 - ถ้ากดถูก → Servo หมุนเปิด (90°)
 - ถ้ากดผิด → Servo อยู่เฉยๆ (0°)
 
 ---
 
-## ❓ คำถามท้ายบท
+## ❓ คำถามท้ายบท { data-progress-section="07-questions" data-progress-title="❓ คำถามท้ายบท" }
 
 1. Servo Motor ต่างจากมอเตอร์ DC ธรรมดาอย่างไร?
 2. ทำไม Servo ต้องใช้ PWM ที่ 50Hz?
@@ -494,9 +505,10 @@ Servo หมุนไปมุมที่กำหนด แล้ว**รอ 3
 
 ---
 
-## 📚 เนื้อหาบทถัดไป
+## 📚 เนื้อหาบทถัดไป { data-progress-section="07-next-steps" data-progress-title="📚 เนื้อหาบทถัดไป" }
 
 ในบทถัดไป เราจะเรียนรู้:
+
 - 📏 เซนเซอร์วัดระยะทาง Ultrasonic (HC-SR04)
 - 📚 การใช้ NewPing Library
 - 🤖 โปรเจค: **ถังขยะอัตโนมัติ** (ใช้ Ultrasonic + Servo)

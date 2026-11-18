@@ -1,0 +1,31 @@
+/* Completion indicators follow the Loadcell course's green/blue markers. */
+[data-progress-section] {
+    position: relative;
+    padding-right: 2rem;
+}
+
+[data-progress-section].progress-completed::after,
+[data-progress-section].progress-in-progress::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+[data-progress-section].progress-in-progress::after {
+    content: "…";
+    background: #1976d2;
+}
+
+[data-progress-section].progress-completed::after {
+    content: "✓";
+    background: #2e7d32;
+}

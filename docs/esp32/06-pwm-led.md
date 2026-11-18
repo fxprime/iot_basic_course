@@ -1,6 +1,7 @@
 # บทที่ 6: PWM และการควบคุมความสว่าง LED
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="06-objectives" data-progress-title="วัตถุประสงค์" }
+
 - เข้าใจหลักการ PWM (Pulse Width Modulation)
 - ใช้ `ledcWrite()` ควบคุมความสว่าง LED
 - ควบคุมความสว่างตามระยะเวลาที่กดปุ่ม
@@ -8,7 +9,8 @@
 
 ---
 
-## อุปกรณ์ที่ใช้
+## อุปกรณ์ที่ใช้ { data-progress-section="06-equipment" data-progress-title="อุปกรณ์ที่ใช้" }
+
 - ESP32 Development Board
 - LED 1 ดวง
 - ต้านทาน 470Ω
@@ -17,7 +19,7 @@
 
 ---
 
-## ทฤษฎี: PWM (Pulse Width Modulation)
+## ทฤษฎี: PWM (Pulse Width Modulation) { data-progress-section="06-pwm-pulse-width-modulation" data-progress-title="ทฤษฎี: PWM (Pulse Width Modulation)" }
 
 ### PWM คืออะไร?
 
@@ -31,17 +33,18 @@
 **Duty Cycle** = สัดส่วนเวลาที่สัญญาณเป็น HIGH
 
 $$
-\text{Duty Cycle (\%)} = \frac{\text{เวลาที่เป็น HIGH}}{\text{เวลารวมทั้งหมด}} \times 100
+\text{Duty Cycle}\;(\%) = \frac{\text{เวลาที่เป็น HIGH}}{\text{เวลารวมทั้งหมด}} \times 100
 $$
 
 **ตัวอย่าง:**
+
 - 0% = ดับ
 - 50% = สว่างครึ่งหนึ่ง
 - 100% = สว่างเต็มที่
 
 ---
 
-## PWM ใน ESP32
+## PWM ใน ESP32 { data-progress-section="06-pwm-esp32" data-progress-title="PWM ใน ESP32" }
 
 ### ฟังก์ชัน PWM ใหม่
 
@@ -65,13 +68,14 @@ ledcWrite(pin, value);
 | **value** | ค่า Duty Cycle | 0-255 (8-bit) |
 
 **หมายเหตุ:** 
+
 - Resolution 8-bit → ค่า 0-255
 - Resolution 10-bit → ค่า 0-1023
 - Resolution 12-bit → ค่า 0-4095
 
 ---
 
-## ตัวอย่าง 1: ควบคุมความสว่าง LED ด้วย PWM
+## ตัวอย่าง 1: ควบคุมความสว่าง LED ด้วย PWM { data-progress-section="06-1-led-pwm" data-progress-title="ตัวอย่าง 1: ควบคุมความสว่าง LED ด้วย PWM" }
 
 ### วงจร
 
@@ -126,7 +130,7 @@ LED จะ**ค่อยๆ สว่างขึ้น** ทีละขั้�
 
 ---
 
-## ตัวอย่าง 2: Fade In/Out Effect
+## ตัวอย่าง 2: Fade In/Out Effect { data-progress-section="06-2-fade-in-out-effect" data-progress-title="ตัวอย่าง 2: Fade In/Out Effect" }
 
 ### วงจร
 
@@ -166,7 +170,7 @@ LED จะ**ค่อยๆ สว่างขึ้น → สว่างเ�
 
 ---
 
-## ตัวอย่าง 3 (โจทย์): กดค้างเพิ่มความสว่าง ปล่อยลดความสว่าง ⭐
+## ตัวอย่าง 3 (โจทย์): กดค้างเพิ่มความสว่าง ปล่อยลดความสว่าง ⭐ { data-progress-section="06-3" data-progress-title="ตัวอย่าง 3 (โจทย์): กดค้างเพิ่มความสว่าง ปล่อยลดความสว่าง ⭐" }
 
 ### จงเขียนโค้ดให้ทำงานดังนี้:
 
@@ -253,12 +257,13 @@ Release to fade out
 ```
 
 **การทำงาน:**
+
 - กดค้าง → LED ค่อยๆ สว่างขึ้นจนเต็มที่ (255)
 - ปล่อย → LED ค่อยๆ มืดลงจนดับ (0)
 
 ---
 
-## ตัวอย่าง 4: ปรับความสว่างขึ้น-ลงด้วยปุ่ม 2 ปุ่ม
+## ตัวอย่าง 4: ปรับความสว่างขึ้น-ลงด้วยปุ่ม 2 ปุ่ม { data-progress-section="06-4-2" data-progress-title="ตัวอย่าง 4: ปรับความสว่างขึ้น-ลงด้วยปุ่ม 2 ปุ่ม" }
 
 ### วงจร
 
@@ -367,7 +372,7 @@ Brightness: 228 (89%) ███████████████████�
 
 ---
 
-## ตัวอย่าง 5: กดค้างเพื่อ Fade ขึ้น-ลงอัตโนมัติ
+## ตัวอย่าง 5: กดค้างเพื่อ Fade ขึ้น-ลงอัตโนมัติ { data-progress-section="06-5-fade" data-progress-title="ตัวอย่าง 5: กดค้างเพื่อ Fade ขึ้น-ลงอัตโนมัติ" }
 
 ### วงจร
 
@@ -428,7 +433,7 @@ void loop() {
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="06-summary" data-progress-title="สรุป" }
 
 | หัวข้อ | รายละเอียด |
 |--------|-----------|
@@ -441,7 +446,7 @@ void loop() {
 
 ---
 
-## 🎯 ความท้าทาย
+## 🎯 ความท้าทาย { data-progress-section="06-challenges" data-progress-title="🎯 ความท้าทาย" }
 
 ### Challenge 1: Traffic Light with Fade
 
@@ -464,6 +469,7 @@ brightness = (sin(millis() / 500.0) + 1) * 127.5;
 ### Challenge 3: Multi-Level Brightness
 
 ใช้ 1 ปุ่ม สลับความสว่าง 5 ระดับ:
+
 - กดครั้งที่ 1 → 20%
 - กดครั้งที่ 2 → 40%
 - กดครั้งที่ 3 → 60%
@@ -473,7 +479,7 @@ brightness = (sin(millis() / 500.0) + 1) * 127.5;
 
 ---
 
-## ❓ คำถามท้ายบท
+## ❓ คำถามท้ายบท { data-progress-section="06-questions" data-progress-title="❓ คำถามท้ายบท" }
 
 1. PWM คืออะไร และทำงานอย่างไร?
 2. Duty Cycle 50% หมายความว่าอย่างไร?
@@ -483,9 +489,10 @@ brightness = (sin(millis() / 500.0) + 1) * 127.5;
 
 ---
 
-## 📚 เนื้อหาบทถัดไป
+## 📚 เนื้อหาบทถัดไป { data-progress-section="06-next-steps" data-progress-title="📚 เนื้อหาบทถัดไป" }
 
 ในบทถัดไป เราจะเรียนรู้:
+
 - 🤖 การควบคุม Servo Motor ด้วย PWM
 - 📐 หมุน Servo 0-180 องศา
 - 🎮 ควบคุม Servo ด้วยปุ่มกด

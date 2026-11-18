@@ -2,14 +2,15 @@
 
 ในบทนี้เราจะเริ่มต้นด้วยการติดตั้งเครื่องมือที่จำเป็นสำหรับการเขียนโปรแกรม ESP32
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="01-objectives" data-progress-title="วัตถุประสงค์" }
+
 - ดาวน์โหลดและติดตั้ง Arduino IDE
 - เข้าใจส่วนประกอบพื้นฐานของ Arduino IDE
 - เตรียมพร้อมสำหรับการเขียนโปรแกรมครั้งแรก
 
 ---
 
-## ขั้นตอนที่ 1: ดาวน์โหลด Arduino IDE
+## ขั้นตอนที่ 1: ดาวน์โหลด Arduino IDE { data-progress-section="01-step-1" data-progress-title="ขั้นตอนที่ 1: ดาวน์โหลด Arduino IDE" }
 
 ### 1.1 เข้าเว็บไซต์ Arduino
 ไปที่เว็บไซต์ [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software)
@@ -19,6 +20,7 @@
 ### 1.2 เลือกระบบปฏิบัติการของคุณ
 
 เลือกเวอร์ชันที่เหมาะกับเครื่องคอมพิวเตอร์ของคุณ:
+
 - **Windows** - สำหรับ Windows 10/11
 - **macOS** - สำหรับ Mac
 - **Linux** - สำหรับระบบ Linux
@@ -35,7 +37,7 @@
 
 ---
 
-## ขั้นตอนที่ 2: ติดตั้ง Arduino IDE
+## ขั้นตอนที่ 2: ติดตั้ง Arduino IDE { data-progress-section="01-step-2" data-progress-title="ขั้นตอนที่ 2: ติดตั้ง Arduino IDE" }
 
 ### สำหรับ Windows
 
@@ -58,8 +60,10 @@
 
 1. เปิดไฟล์ `.dmg` ที่ดาวน์โหลดมา
 ![alt text](../assets/images/mac_install_1.webp) 
+
 2. ลากไอคอน Arduino IDE ไปที่โฟลเดอร์ Applications
 ![alt text](../assets/images/mac_install_2.webp)
+
 3. เปิด Arduino IDE จาก Applications
 ![alt text](../assets/images/mac_install_3.webp)   
 ![alt text](../assets/images/mac_install_4.webp)
@@ -84,7 +88,7 @@ sudo ./install.sh
 
 ---
 
-## ขั้นตอนที่ 3: รู้จักกับ Arduino IDE
+## ขั้นตอนที่ 3: รู้จักกับ Arduino IDE { data-progress-section="01-step-3" data-progress-title="ขั้นตอนที่ 3: รู้จักกับ Arduino IDE" }
 
 เมื่อเปิด Arduino IDE ขึ้นมาครั้งแรก คุณจะเห็นหน้าจอหลักแบบนี้:
  
@@ -118,6 +122,7 @@ sudo ./install.sh
 <summary>📖 <b>อธิบายส่วนประกอบแต่ละส่วน</b></summary>
 
 ### 1. เมนูบาร์ (Menu Bar)
+
 - **File** - เปิด, บันทึก, หรือสร้างโปรเจคใหม่
 - **Edit** - แก้ไข, คัดลอก, ค้นหาโค้ด
 - **Sketch** - Compile และ Upload โปรแกรม
@@ -125,16 +130,19 @@ sudo ./install.sh
 - **Help** - คู่มือและเอกสารช่วยเหลือ
 
 ### 2. ปุ่มควบคุมหลัก
+
 - **✓ (Verify)** - ตรวจสอบโค้ดว่ามีข้อผิดพลาดหรือไม่
 - **→ (Upload)** - อัปโหลดโปรแกรมเข้าบอร์ด
 - **Board Selector** - เลือกบอร์ดและพอร์ตที่ใช้งาน
 
 ### 3. พื้นที่เขียนโค้ด (Editor)
+
 - พื้นที่สีขาวที่ใช้เขียนโปรแกรม
 - มี Syntax Highlighting (แต่ละคำสั่งจะมีสีต่างกัน)
 - แสดงเลขบรรทัด (Line Number) ด้านซ้าย
 
 ### 4. Console/Output
+
 - แสดงผลการ Compile
 - แสดงข้อผิดพลาด (Error)
 - แสดงข้อความเตือน (Warning)
@@ -145,11 +153,13 @@ sudo ./install.sh
 <summary>🔧 <b>ฟังก์ชันพื้นฐานที่ต้องรู้</b></summary>
 
 ### `void setup()`
+
 - รันเพียงครั้งเดียวตอนเริ่มโปรแกรม
 - ใช้สำหรับตั้งค่าเริ่มต้น เช่น กำหนด pinMode
 - เหมือนการเตรียมความพร้อมก่อนเริ่มงานจริง
 
 ### `void loop()`
+
 - รันซ้ำไปเรื่อยๆ หลังจาก setup() เสร็จ
 - ใส่โค้ดหลักที่ต้องการให้ทำงานอยู่เสมอ
 - เหมือนการทำงานที่วนซ้ำไปเรื่อยๆ
@@ -174,7 +184,7 @@ void loop() {
 
 ---
 
-## ขั้นตอนที่ 4: ทดสอบว่าติดตั้งสำเร็จ
+## ขั้นตอนที่ 4: ทดสอบว่าติดตั้งสำเร็จ { data-progress-section="01-step-4" data-progress-title="ขั้นตอนที่ 4: ทดสอบว่าติดตั้งสำเร็จ" }
 
 ### 4.1 สร้างโปรเจคใหม่
 
@@ -194,18 +204,21 @@ void loop() {
 
 ### ปัญหา: กดปุ่ม Verify แล้วขึ้น Error
 **วิธีแก้:**
+
 - ตรวจสอบว่ามี `{` และ `}` ครบคู่กัน
 - ตรวจสอบว่าทุกบรรทัดมี `;` ปิดท้าย (ยกเว้น `{` `}`)
 - ดูข้อความ Error ใน Console ด้านล่าง
 
 ### ปัญหา: Arduino IDE เปิดไม่ขึ้น
 **วิธีแก้:**
+
 - ลองติดตั้งใหม่อีกครั้ง
 - ตรวจสอบว่าคอมพิวเตอร์รองรับเวอร์ชันที่ดาวน์โหลด
 - ลองดาวน์โหลด Arduino IDE เวอร์ชัน 1.8.x แทน
 
 ### ปัญหา: ตัวอักษรแสดงผิดเพี้ยน
 **วิธีแก้:**
+
 - ไปที่ **File** > **Preferences**
 - เลือก Editor Font ที่รองรับภาษาไทย เช่น "Tahoma" หรือ "Angsana New"
 
@@ -213,9 +226,10 @@ void loop() {
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="01-summary" data-progress-title="สรุป" }
 
 ในบทนี้เราได้:
+
 - ✅ ดาวน์โหลดและติดตั้ง Arduino IDE
 - ✅ รู้จักส่วนประกอบหลักของ Arduino IDE
 - ✅ เข้าใจฟังก์ชัน `setup()` และ `loop()`
@@ -223,7 +237,7 @@ void loop() {
 
 ---
 
-## ขั้นตอนถัดไป
+## ขั้นตอนถัดไป { data-progress-section="01-next-steps" data-progress-title="ขั้นตอนถัดไป" }
 
 ในบทถัดไป เราจะติดตั้ง ESP32 board เข้ากับ Arduino IDE เพื่อให้สามารถเขียนโปรแกรมและอัปโหลดเข้าบอร์ด ESP32 ได้
 

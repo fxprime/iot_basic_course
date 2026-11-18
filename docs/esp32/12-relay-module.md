@@ -1,13 +1,15 @@
 # บทที่ 12: Relay Module และโปรเจครวม
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="12-objectives" data-progress-title="วัตถุประสงค์" }
+
 - เข้าใจหลักการทำงานของ Relay
 - ควบคุมอุปกรณ์ไฟฟ้า 220V อย่างปลอดภัย
 - รวมโปรเจค: Relay + LCD + Potentiometer + Button
 
 ---
 
-## อุปกรณ์ที่ใช้
+## อุปกรณ์ที่ใช้ { data-progress-section="12-equipment" data-progress-title="อุปกรณ์ที่ใช้" }
+
 - ESP32 Development Board
 - Relay Module 1 Channel
 - LCD 16x2 I2C
@@ -17,7 +19,7 @@
 
 ---
 
-## ทฤษฎี: Relay คืออะไร?
+## ทฤษฎี: Relay คืออะไร? { data-progress-section="12-relay" data-progress-title="ทฤษฎี: Relay คืออะไร?" }
 
 **Relay** = สวิตช์ควบคุมด้วยแม่เหล็กไฟฟ้า สำหรับเปิด-ปิดวงจรไฟฟ้าแรงสูง
 
@@ -32,20 +34,23 @@
 ```
 
 **ข้อดี:**
+
 - ESP32 (3.3V) ควบคุมอุปกรณ์ 220V ได้
 - แยกวงจรควบคุมกับวงจรไฟฟ้าหลัก
 - ปลอดภัย
 
 **การต่อ Load:**
+
 - **COM** (Common) → ไฟเข้า
 - **NO** (Normally Open) → ไฟออก (ใช้บ่อย)
 - **NC** (Normally Closed) → ไฟออก (ปิดปกติ)
 
 ---
 
-## ⚠️ ความปลอดภัย
+## ⚠️ ความปลอดภัย { data-progress-section="12-section-04" data-progress-title="⚠️ ความปลอดภัย" }
 
 **คำเตือน:**
+
 - ⚡ 220V อันตราย! อาจถึงแก่ชีวิต
 - ✋ ห้ามสัมผัสขา Relay ขณะเปิดไฟ
 - 🔌 ถอดปลั๊กก่อนต่อสาย
@@ -53,7 +58,7 @@
 
 ---
 
-## ตัวอย่าง 1: ควบคุม Relay ด้วยปุ่มกด
+## ตัวอย่าง 1: ควบคุม Relay ด้วยปุ่มกด { data-progress-section="12-1-relay" data-progress-title="ตัวอย่าง 1: ควบคุม Relay ด้วยปุ่มกด" }
 
 ### วงจร
 
@@ -111,13 +116,14 @@ void loop() {
 
 ---
 
-## โปรเจครวม: LCD + Potentiometer + Button + Relay
+## โปรเจครวม: LCD + Potentiometer + Button + Relay { data-progress-section="12-lcd-potentiometer-button-relay" data-progress-title="โปรเจครวม: LCD + Potentiometer + Button + Relay" }
 
 ### เป้าหมาย
 
 **โจทย์หลัก:** กดปุ่ม → แสดง "ON" บน LCD + Relay ทำงาน
 
 **โจทย์ย่อย:**
+
 - แสดงค่า Potentiometer
 - ถ้าค่า Pot ≥ 500 → Relay ON เป็นเวลา 3 วินาที
 - ถ้าค่า 500-700 → ON 5 วินาที
@@ -225,7 +231,7 @@ int calculateOnTime(int potValue) {
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="12-summary" data-progress-title="สรุป" }
 
 | หัวข้อ | รายละเอียด |
 |--------|-----------|
@@ -236,12 +242,13 @@ int calculateOnTime(int potValue) {
 
 ---
 
-## 📚 เนื้อหาบทถัดไป
+## 📚 เนื้อหาบทถัดไป { data-progress-section="12-next-steps" data-progress-title="📚 เนื้อหาบทถัดไป" }
 
 ในบทถัดไป เราจะเรียนรู้:
+
 - 📡 WiFi - สแกนเครือข่าย
 - 🌐 เชื่อมต่ออินเทอร์เน็ต
 - ⏰ ดึงเวลาจาก NTP Server
 - 📟 แสดงเวลาบน LCD
 
-[→ ไปบทที่ 15: WiFi และ NTP Time](15-wifi-ntp.md)
+[→ ไปบทที่ 13: WiFi และ NTP Time](13-wifi-ntp.md)

@@ -6,7 +6,8 @@
 
 ในบทนี้เราจะเรียนรู้การรับข้อมูลจาก Serial Monitor และสร้างโปรแกรมที่โต้ตอบได้
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="04-objectives" data-progress-title="วัตถุประสงค์" }
+
 - รับข้อมูลจาก Serial Monitor
 - ตรวจสอบและประมวลผลข้อมูลที่รับ
 - สร้างโปรแกรมแบบ Interactive
@@ -14,7 +15,7 @@
 
 ---
 
-## ขั้นตอนที่ 1: รับข้อความจาก Serial Monitor
+## ขั้นตอนที่ 1: รับข้อความจาก Serial Monitor { data-progress-section="04-step-1" data-progress-title="ขั้นตอนที่ 1: รับข้อความจาก Serial Monitor" }
 
 ### 1.1 โปรแกรมพื้นฐาน
 
@@ -49,6 +50,7 @@ void loop() {
 ```cpp
 if (Serial.available() > 0)
 ```
+
 - ตรวจสอบว่ามีข้อมูลเข้ามาทาง Serial หรือไม่
 - Return จำนวน byte ที่มีอยู่ใน buffer
 - ถ้า > 0 แสดงว่ามีข้อมูล
@@ -57,6 +59,7 @@ if (Serial.available() > 0)
 ```cpp
 String input = Serial.readStringUntil('\n');
 ```
+
 - อ่านข้อมูลจนเจอ newline (`\n`)
 - newline เกิดจากการกด Enter
 - เก็บข้อมูลในตัวแปร `input` ประเภท String
@@ -94,9 +97,10 @@ You typed: Hello ESP32
 
 ![รูปผลลัพธ์การทดสอบ](../assets/images/serial-test-input.webp)
 ![รูปผลลัพธ์การทดสอบ](../assets/images/serial-test-result.webp)
+
 ---
 
-## ขั้นตอนที่ 2: ควบคุม LED ด้วย Serial
+## ขั้นตอนที่ 2: ควบคุม LED ด้วย Serial { data-progress-section="04-step-2" data-progress-title="ขั้นตอนที่ 2: ควบคุม LED ด้วย Serial" }
 
 ### 2.1 เขียนโปรแกรมควบคุม
 
@@ -149,6 +153,7 @@ text.trim();
 ```
 
 **ทำไมต้องใช้?**
+
 - User อาจพิมพ์เว้นวรรคหน้าหรือหลัง
 - `" ON"` ไม่เท่ากับ `"ON"`
 
@@ -162,6 +167,7 @@ text.toUpperCase();
 ```
 
 **ทำไมต้องใช้?**
+
 - User อาจพิมพ์ "on", "On", "ON"
 - แปลงเป็นตัวใหญ่หมด → เปรียบเทียบง่าย
 
@@ -179,6 +185,7 @@ text.indexOf("LED");    // หาตำแหน่งของ "LED"
 ### 2.2 ทดสอบโปรแกรม
 
 **ทดลองพิมพ์:**
+
 - `ON` → LED ติด
 - `OFF` → LED ดับ
 - `on` → LED ติด (แปลงเป็นตัวใหญ่อัตโนมัติ)
@@ -188,7 +195,7 @@ text.indexOf("LED");    // หาตำแหน่งของ "LED"
 
 ---
 
-## ขั้นตอนที่ 3: รับตัวเลขและคำนวณ
+## ขั้นตอนที่ 3: รับตัวเลขและคำนวณ { data-progress-section="04-step-3" data-progress-title="ขั้นตอนที่ 3: รับตัวเลขและคำนวณ" }
 
 ### 3.1 โปรแกรมบวกเลข
 
@@ -272,13 +279,14 @@ String text = String(count);
 ### 3.2 ทดสอบโปรแกรม
 
 **ทดลองพิมพ์:**
+
 - `5` → Result: 5 x 2 = 10
 - `100` → Result: 100 x 2 = 200
 - `hello` → Please enter a valid number
 
 ---
 
-## ขั้นตอนที่ 4: สร้าง Menu Interactive
+## ขั้นตอนที่ 4: สร้าง Menu Interactive { data-progress-section="04-step-4" data-progress-title="ขั้นตอนที่ 4: สร้าง Menu Interactive" }
 
 ### 4.1 โปรแกรม Menu System
 
@@ -406,6 +414,7 @@ printMessage("Hello");
 ```
 
 ### ประโยชน์ของ Function:
+
 - โค้ดอ่านง่าย เข้าใจง่าย
 - ใช้ซ้ำได้หลายที่
 - แก้ไขง่าย (แก้ที่เดียว ใช้ได้ทุกที่)
@@ -437,7 +446,7 @@ Uptime: 25 seconds
 
 ---
 
-## ขั้นตอนที่ 5: การใช้ Serial ในการ Debug
+## ขั้นตอนที่ 5: การใช้ Serial ในการ Debug { data-progress-section="04-step-5" data-progress-title="ขั้นตอนที่ 5: การใช้ Serial ในการ Debug" }
 
 ### 5.1 แสดงค่าตัวแปรเพื่อ Debug
 
@@ -480,6 +489,7 @@ Serial.println("[ERROR] This is error");
 ```
 
 ประโยชน์:
+
 - มองเห็นชัดว่าข้อความไหนสำคัญ
 - Search หาได้ง่าย
 
@@ -533,9 +543,10 @@ debugPrint("Value: " + String(sensorValue));
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="04-summary" data-progress-title="สรุป" }
 
 ในบทนี้เราได้เรียนรู้:
+
 - ✅ รับข้อมูลจาก Serial Monitor
 - ✅ ประมวลผล String (trim, toUpperCase, toInt)
 - ✅ สร้างโปรแกรมแบบ Interactive
@@ -544,7 +555,7 @@ debugPrint("Value: " + String(sensorValue));
 
 ---
 
-## แบบฝึกหัด
+## แบบฝึกหัด { data-progress-section="04-exercises" data-progress-title="แบบฝึกหัด" }
 
 1. สร้างโปรแกรมเครื่องคิดเลข รับตัวเลข 2 ตัว และเครื่องหมาย (+, -, *, /)
 2. สร้างโปรแกรมที่รับชื่อและตอบกลับ "Hello, [ชื่อ]!"
@@ -660,8 +671,8 @@ void loop() {
 
 ---
 
-## ขั้นตอนถัดไป
+## ขั้นตอนถัดไป { data-progress-section="04-next-steps" data-progress-title="ขั้นตอนถัดไป" }
 
 ในบทถัดไป เราจะเรียนรู้การใช้ปุ่มกด (Button) และการอ่านสัญญาณ Digital Input
 
-➡️ [บทถัดไป: Button Input](05-button.md)
+➡️ [บทถัดไป: Button Input](05-button-debouncing.md)

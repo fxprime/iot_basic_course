@@ -2,6 +2,7 @@
 
 # Script to serve MkDocs in virtual environment
 # Usage: ./serve.sh
+set -euo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VENV_DIR="$PROJECT_DIR/.venv"
@@ -45,4 +46,5 @@ fi
 echo "🌐 Starting server at http://127.0.0.1:8000"
 echo "Press Ctrl+C to stop"
 echo ""
-mkdocs serve
+node "$PROJECT_DIR/generate-section-registry.js"
+mkdocs serve --config-file "$PROJECT_DIR/mkdocs.yml" "$@"

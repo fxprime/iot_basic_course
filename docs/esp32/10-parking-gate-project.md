@@ -1,6 +1,7 @@
 # บทที่ 10: โปรเจค Parking Gate (ไม้กั้นรถ)
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="10-objectives" data-progress-title="วัตถุประสงค์" }
+
 - บูรณาการความรู้จากบทที่ผ่านมา
 - ใช้ Ultrasonic, IR Sensor, และ Servo ร่วมกัน
 - ฝึกเขียนเงื่อนไขและควบคุม Logic
@@ -8,7 +9,8 @@
 
 ---
 
-## อุปกรณ์ที่ใช้
+## อุปกรณ์ที่ใช้ { data-progress-section="10-equipment" data-progress-title="อุปกรณ์ที่ใช้" }
+
 - ESP32 Development Board
 - HC-SR04 Ultrasonic Sensor
 - IR Sensor (Infrared Obstacle Detection)
@@ -19,7 +21,7 @@
 
 ---
 
-## ทฤษฎี: ประตูโรงจอดรถอัตโนมัติ
+## ทฤษฎี: ประตูโรงจอดรถอัตโนมัติ { data-progress-section="10-section-03" data-progress-title="ทฤษฎี: ประตูโรงจอดรถอัตโนมัติ" }
 
 ### การทำงาน
 
@@ -34,19 +36,20 @@
 ```
 
 **Logic:**
+
 1. **รถเข้า:**
-   - Ultrasonic ตรวจจับรถด้านนอก (ใกล้กว่า 20cm)
-   - เปิดประตู (Servo 90°)
-   - รอจน IR ตรวจจับรถเข้าด้านใน
-   - ปิดประตูอัตโนมัติ
+    - Ultrasonic ตรวจจับรถด้านนอก (ใกล้กว่า 20cm)
+    - เปิดประตู (Servo 90°)
+    - รอจน IR ตรวจจับรถเข้าด้านใน
+    - ปิดประตูอัตโนมัติ
 
 2. **สถานะ:**
-   - LED เขียว = ประตูเปิด (รถสามารถเข้าได้)
-   - LED แดง = ประตูปิด (รถไม่สามารถเข้าได้)
+    - LED เขียว = ประตูเปิด (รถสามารถเข้าได้)
+    - LED แดง = ประตูปิด (รถไม่สามารถเข้าได้)
 
 ---
 
-## IR Sensor คืออะไร?
+## IR Sensor คืออะไร? { data-progress-section="10-ir-sensor" data-progress-title="IR Sensor คืออะไร?" }
 
 ### Infrared Obstacle Detection Sensor
 
@@ -63,17 +66,20 @@
 ```
 
 **หลักการทำงาน:**
+
 1. LED IR ส่งแสง Infrared ออกไป
 2. แสงสะท้อนกลับเมื่อชนวัตถุ
 3. Photo Diode รับแสงสะท้อน
 4. Output เป็น **Digital** (HIGH/LOW)
 
 **การต่อ:**
+
 - **VCC** → 3.3V หรือ 5V
 - **GND** → GND
 - **OUT** → GPIO (Digital Input)
 
 **Output:**
+
 - **LOW (0)** = มีวัตถุ (ตรวจจับได้)
 - **HIGH (1)** = ไม่มีวัตถุ
 
@@ -81,7 +87,7 @@
 
 ---
 
-## การต่อวงจร
+## การต่อวงจร { data-progress-section="10-section-05" data-progress-title="การต่อวงจร" }
 
 ```
 ESP32              HC-SR04
@@ -116,7 +122,7 @@ GPIO 27 ────┬───── LED เขียว (+)
 
 ---
 
-## โค้ดตัวอย่าง (ฉบับเต็ม - สำหรับผู้สอน)
+## โค้ดตัวอย่าง (ฉบับเต็ม - สำหรับผู้สอน) { data-progress-section="10-section-06" data-progress-title="โค้ดตัวอย่าง (ฉบับเต็ม - สำหรับผู้สอน)" }
 
 ```cpp
 #include <NewPing.h>
@@ -234,7 +240,7 @@ void servoWrite(int angle) {
 
 ---
 
-## โค้ดแบบฝึกหัด (สำหรับนักเรียน) 📝
+## โค้ดแบบฝึกหัด (สำหรับนักเรียน) 📝 { data-progress-section="10-section-07" data-progress-title="โค้ดแบบฝึกหัด (สำหรับนักเรียน) 📝" }
 
 ### ส่วนที่ 1: Template พร้อมฟังก์ชัน
 
@@ -367,7 +373,7 @@ void loop() {
 
 ---
 
-## คำแนะนำสำหรับนักเรียน 📚
+## คำแนะนำสำหรับนักเรียน 📚 { data-progress-section="10-section-08" data-progress-title="คำแนะนำสำหรับนักเรียน 📚" }
 
 ### ขั้นตอนการทำงาน
 
@@ -393,7 +399,7 @@ bool carInside = isCarInside();
 
 ---
 
-## เฉลย (สำหรับนักเรียนที่ทำไม่ได้)
+## เฉลย (สำหรับนักเรียนที่ทำไม่ได้) { data-progress-section="10-section-09" data-progress-title="เฉลย (สำหรับนักเรียนที่ทำไม่ได้)" }
 
 <details>
 <summary>คลิกเพื่อดูเฉลย</summary>
@@ -427,18 +433,18 @@ void loop() {
 
 ---
 
-## การทดสอบ
+## การทดสอบ { data-progress-section="10-section-10" data-progress-title="การทดสอบ" }
 
 ### ขั้นตอนการทดสอบ
 
 1. **อัปโหลดโค้ด** ไปยัง ESP32
 2. **เปิด Serial Monitor** (115200 baud)
 3. **วางมือเข้าใกล้ Ultrasonic** (< 20cm)
-   - ประตูควรเปิด
-   - LED เขียวควรติด
+    - ประตูควรเปิด
+    - LED เขียวควรติด
 4. **วางมือบัง IR Sensor**
-   - หลังจาก 1 วินาที ประตูควรปิด
-   - LED แดงควรติด
+    - หลังจาก 1 วินาที ประตูควรปิด
+    - LED แดงควรติด
 5. **ทดลองซ้ำหลายครั้ง**
 
 ### ผลลัพธ์ที่คาดหวัง
@@ -460,28 +466,28 @@ Distance: 50 cm
 
 ---
 
-## ปรับปรุงโปรเจค (ขั้นสูง) 🚀
+## ปรับปรุงโปรเจค (ขั้นสูง) 🚀 { data-progress-section="10-section-11" data-progress-title="ปรับปรุงโปรเจค (ขั้นสูง) 🚀" }
 
 ### ไอเดียเพิ่มเติม
 
 1. **ปรับความเร็วประตู**
-   - กดปุ่ม → ปรับความเร็วเปิด-ปิด
+    - กดปุ่ม → ปรับความเร็วเปิด-ปิด
 
 2. **นับจำนวนรถ**
-   - เพิ่มตัวนับจำนวนรถที่เข้า-ออก
+    - เพิ่มตัวนับจำนวนรถที่เข้า-ออก
 
 3. **หน่วงเวลาก่อนปิด**
-   - ใช้ Potentiometer ปรับเวลารอก่อนปิด (1-10 วินาที)
+    - ใช้ Potentiometer ปรับเวลารอก่อนปิด (1-10 วินาที)
 
 4. **แจ้งเตือนเสียง**
-   - เพิ่ม Buzzer เตือนเมื่อประตูกำลังปิด
+    - เพิ่ม Buzzer เตือนเมื่อประตูกำลังปิด
 
 5. **รีโมตควบคุม**
-   - ใช้ปุ่ม IR Remote เปิด-ปิดแบบ Manual
+    - ใช้ปุ่ม IR Remote เปิด-ปิดแบบ Manual
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="10-summary" data-progress-title="สรุป" }
 
 | หัวข้อ | รายละเอียด |
 |--------|-----------|
@@ -493,7 +499,7 @@ Distance: 50 cm
 
 ---
 
-## 🎯 ความท้าทาย
+## 🎯 ความท้าทาย { data-progress-section="10-challenges" data-progress-title="🎯 ความท้าทาย" }
 
 ### Challenge 1: Two-Way Gate
 
@@ -506,13 +512,14 @@ Distance: 50 cm
 ### Challenge 3: LCD Display
 
 เพิ่มจอ LCD แสดง:
+
 - สถานะประตู (OPEN/CLOSED)
 - จำนวนรถในโรงจอด
 - เวลาที่รถเข้า
 
 ---
 
-## ❓ คำถามท้ายบท
+## ❓ คำถามท้ายบท { data-progress-section="10-questions" data-progress-title="❓ คำถามท้ายบท" }
 
 1. IR Sensor ใช้หลักการอะไรในการตรวจจับวัตถุ?
 2. ทำไม IR Sensor ถึงต้องปรับระยะด้วยสกรู?
@@ -522,12 +529,13 @@ Distance: 50 cm
 
 ---
 
-## 📚 เนื้อหาบทถัดไป
+## 📚 เนื้อหาบทถัดไป { data-progress-section="10-next-steps" data-progress-title="📚 เนื้อหาบทถัดไป" }
 
 ในบทถัดไป เราจะเรียนรู้:
+
 - 📟 LCD Display (จอแสดงผล 16x2)
 - 📚 การใช้ LiquidCrystal_I2C Library
 - 📝 แสดงข้อความและตัวเลข
 - 🔄 อัปเดตข้อมูลแบบ Real-time
 
-[→ ไปบทที่ 13: LCD Display และการแสดงผล](13-lcd-display.md)
+[→ ไปบทที่ 11: LCD Display และการแสดงผล](11-lcd-display.md)

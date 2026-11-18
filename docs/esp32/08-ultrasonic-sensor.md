@@ -1,6 +1,7 @@
 # บทที่ 8: Ultrasonic Sensor (HC-SR04)
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="08-objectives" data-progress-title="วัตถุประสงค์" }
+
 - เข้าใจหลักการทำงานของเซนเซอร์ Ultrasonic
 - ใช้ NewPing Library วัดระยะทาง
 - สร้างโปรเจค**ถังขยะอัตโนมัติ** (Ultrasonic + Servo)
@@ -8,7 +9,8 @@
 
 ---
 
-## อุปกรณ์ที่ใช้
+## อุปกรณ์ที่ใช้ { data-progress-section="08-equipment" data-progress-title="อุปกรณ์ที่ใช้" }
+
 - ESP32 Development Board
 - HC-SR04 Ultrasonic Sensor
 - Servo Motor SG90
@@ -16,7 +18,7 @@
 
 ---
 
-## ทฤษฎี: Ultrasonic Sensor (HC-SR04)
+## ทฤษฎี: Ultrasonic Sensor (HC-SR04) { data-progress-section="08-ultrasonic-sensor-hc-sr04" data-progress-title="ทฤษฎี: Ultrasonic Sensor (HC-SR04)" }
 
 ### การทำงาน
 
@@ -27,6 +29,7 @@
 
 
 **หลักการ:**
+
 1. ส่ง Pulse ไปที่ขา **TRIG** (10μs)
 2. เซนเซอร์ส่งคลื่นเสียง 40kHz ออกไป
 3. คลื่นเสียงสะท้อนกลับมาเมื่อชนวัตถุ
@@ -57,7 +60,7 @@ $$
 
 ---
 
-## การใช้ NewPing Library
+## การใช้ NewPing Library { data-progress-section="08-newping-library" data-progress-title="การใช้ NewPing Library" }
 
 ### ทำไมต้องใช้ Library?
 
@@ -88,7 +91,7 @@ distance = sonar.ping_cm();
 
 ---
 
-## ตัวอย่าง 1: วัดระยะทางด้วย NewPing
+## ตัวอย่าง 1: วัดระยะทางด้วย NewPing { data-progress-section="08-1-newping" data-progress-title="ตัวอย่าง 1: วัดระยะทางด้วย NewPing" }
 
 ### วงจร
 
@@ -148,7 +151,7 @@ Distance: 10 cm
 
 ---
 
-## ตัวอย่าง 2: แสดงระยะทางแบบ Bar Graph
+## ตัวอย่าง 2: แสดงระยะทางแบบ Bar Graph { data-progress-section="08-2-bar-graph" data-progress-title="ตัวอย่าง 2: แสดงระยะทางแบบ Bar Graph" }
 
 ### วงจร
 
@@ -200,7 +203,7 @@ Distance Bar Graph
 
 ---
 
-## ตัวอย่าง 3: Proximity Alert (แจ้งเตือนเมื่อใกล้)
+## ตัวอย่าง 3: Proximity Alert (แจ้งเตือนเมื่อใกล้) { data-progress-section="08-3-proximity-alert" data-progress-title="ตัวอย่าง 3: Proximity Alert (แจ้งเตือนเมื่อใกล้)" }
 
 ### วงจร
 
@@ -279,13 +282,14 @@ Threshold: 20 cm
 
 ---
 
-## โปรเจค: ถังขยะอัตโนมัติ 🗑️
+## โปรเจค: ถังขยะอัตโนมัติ 🗑️ { data-progress-section="08-section-08" data-progress-title="โปรเจค: ถังขยะอัตโนมัติ 🗑️" }
 
 ### ทฤษฎี
 
 **ถังขยะอัตโนมัติ** เปิดฝาอัตโนมัติเมื่อมีคนเข้าใกล้
 
 **การทำงาน:**
+
 1. วัดระยะทางด้วย Ultrasonic
 2. ถ้าใกล้กว่า 20cm → เปิดฝา (Servo 90°)
 3. รอ 3 วินาที
@@ -414,13 +418,14 @@ Distance: 50 cm  ← ออกไป (รอ 3 วินาที)
 ```
 
 **การทำงาน:**
+
 - เมื่อมีคนเข้าใกล้ (< 20cm) → ฝาเปิดอัตโนมัติ
 - รอ 3 วินาที → ฝาปิดอัตโนมัติ
 - Servo หมุนแบบ Smooth (ไม่กระตุก)
 
 ---
 
-## ตัวอย่าง 5: ถังขยะอัตโนมัติ (ปรับปรุง - ตรวจจับต่อเนื่อง)
+## ตัวอย่าง 5: ถังขยะอัตโนมัติ (ปรับปรุง - ตรวจจับต่อเนื่อง) { data-progress-section="08-5" data-progress-title="ตัวอย่าง 5: ถังขยะอัตโนมัติ (ปรับปรุง - ตรวจจับต่อเนื่อง)" }
 
 ### ปรับปรุงอะไร?
 
@@ -540,12 +545,13 @@ Distance: 60 cm  ← ไม่เจอคน 3 วินาที
 ```
 
 **ข้อดี:** 
+
 - ฝาจะเปิดค้างตราบใดที่ยังมีคนอยู่ใกล้
 - ปิดเฉพาะเมื่อคนออกไปแล้ว
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="08-summary" data-progress-title="สรุป" }
 
 | หัวข้อ | รายละเอียด |
 |--------|-----------|
@@ -557,11 +563,12 @@ Distance: 60 cm  ← ไม่เจอคน 3 วินาที
 
 ---
 
-## 🎯 ความท้าทาย
+## 🎯 ความท้าทาย { data-progress-section="08-challenges" data-progress-title="🎯 ความท้าทาย" }
 
 ### Challenge 1: Parking Sensor
 
 สร้างเซนเซอร์จอดรถ:
+
 - > 50cm → LED เขียว (ปลอดภัย)
 - 20-50cm → LED เหลือง (ระวัง)
 - < 20cm → LED แดง + Buzzer (อันตราย)
@@ -569,6 +576,7 @@ Distance: 60 cm  ← ไม่เจอคน 3 วินาที
 ### Challenge 2: Adjustable Threshold
 
 เพิ่มปุ่ม 2 ปุ่ม:
+
 - ปุ่ม UP → เพิ่มระยะเปิดฝา (+5cm)
 - ปุ่ม DOWN → ลดระยะเปิดฝา (-5cm)
 
@@ -577,13 +585,14 @@ Distance: 60 cm  ← ไม่เจอคน 3 วินาที
 ### Challenge 3: Multi-Level Trash Bin
 
 วัดระยะทางภายในถังขยะ:
+
 - > 30cm → ถังว่าง (เขียว)
 - 15-30cm → ถังเต็มครึ่ง (เหลือง)
 - < 15cm → ถังเต็ม (แดง + แจ้งเตือน)
 
 ---
 
-## ❓ คำถามท้ายบท
+## ❓ คำถามท้ายบท { data-progress-section="08-questions" data-progress-title="❓ คำถามท้ายบท" }
 
 1. Ultrasonic Sensor วัดระยะทางได้อย่างไร?
 2. ทำไมต้องใช้ NewPing Library?
@@ -593,12 +602,13 @@ Distance: 60 cm  ← ไม่เจอคน 3 วินาที
 
 ---
 
-## 📚 เนื้อหาบทถัดไป
+## 📚 เนื้อหาบทถัดไป { data-progress-section="08-next-steps" data-progress-title="📚 เนื้อหาบทถัดไป" }
 
 ในบทถัดไป เราจะเรียนรู้:
+
 - 🎚️ Analog Input - อ่านค่าความต้านทาน
 - 🔄 Potentiometer - ควบคุมตำแหน่ง Servo
 - 🐟 โปรเจค: **ตู้ให้อาหารปลาอัตโนมัติ**
 - 📊 การแปลงค่า ADC (0-4095)
 
-[→ ไปบทที่ 11: Analog Input และตู้ให้อาหารปลา](11-analog-input.md)
+[→ ไปบทที่ 9: Analog Input และตู้ให้อาหารปลา](09-analog-input.md)

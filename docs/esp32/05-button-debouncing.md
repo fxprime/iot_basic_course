@@ -1,7 +1,7 @@
 # บทที่ 5: Button และ Debouncing
 
 
-## ตัวอย่างโปรเจค Arduino / ESP32
+## ตัวอย่างโปรเจค Arduino / ESP32 { data-progress-section="05-arduino-esp32" data-progress-title="ตัวอย่างโปรเจค Arduino / ESP32" }
 
 
 ![alt text](../assets/images/project_example_1.webp) 
@@ -12,7 +12,8 @@
  
 
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="05-objectives" data-progress-title="วัตถุประสงค์" }
+
 - เข้าใจการทำงานของปุ่มกด
 - ใช้งาน `digitalRead()` และ `INPUT_PULLUP`
 - เข้าใจปัญหา Button Bounce
@@ -21,7 +22,8 @@
 
 ---
 
-## อุปกรณ์ที่ใช้
+## อุปกรณ์ที่ใช้ { data-progress-section="05-equipment" data-progress-title="อุปกรณ์ที่ใช้" }
+
 - ESP32 Development Board
 - ปุ่มกด (Push Button) 1 ตัว
 - LED 1 ดวง
@@ -29,15 +31,16 @@
 - สายจัมเปอร์
 
 ![รูปอุปกรณ์ที่ใช้](../assets/images/button-components.webp)
+
 ---
 
 
-## Bonus : โปรแกรม simulation วงจร falstad
+## Bonus : โปรแกรม simulation วงจร falstad { data-progress-section="05-bonus-simulation-falstad" data-progress-title="Bonus : โปรแกรม simulation วงจร falstad" }
 https://www.falstad.com/circuit/circuitjs.html
 
 ใช้สำหรับจำลองวงจรไฟฟ้า ที่สามารถทดสอบการทำงานของปุ่มกดและวงจรต่างๆ ได้โดยไม่ต้องใช้ฮาร์ดแวร์จริง 
 
-## Part 1: การใช้งานปุ่มกดพื้นฐาน
+## Part 1: การใช้งานปุ่มกดพื้นฐาน { data-progress-section="05-part-1" data-progress-title="Part 1: การใช้งานปุ่มกดพื้นฐาน" }
 
 ### ทฤษฎี: โครงสร้างปุ่มกด
 
@@ -67,6 +70,7 @@ https://www.falstad.com/circuit/circuitjs.html
 
 
 **พฤติกรรม:**
+
 - **ไม่กด** = HIGH (1)
 - **กด** = LOW (0)
 
@@ -150,7 +154,7 @@ void loop() {
 
 ---
 
-## Part 2: Button Bounce และปัญหา
+## Part 2: Button Bounce และปัญหา { data-progress-section="05-part-2-button-bounce" data-progress-title="Part 2: Button Bounce และปัญหา" }
 
 ### ทฤษฎี: Button Bounce คืออะไร?
 
@@ -187,6 +191,7 @@ void loop() {
 ```
 
 **ขั้นตอน:**
+
 1. อัปโหลดโค้ด
 2. เปิด **Tools → Serial Plotter**
 3. กดปุ่มและปล่อยอย่างช้าๆ
@@ -246,7 +251,7 @@ LED ติด/ดับแบบสุ่ม เพราะ Bounce ทำให
 
 ---
 
-## Part 3: Debouncing - แก้ปัญหา
+## Part 3: Debouncing - แก้ปัญหา { data-progress-section="05-part-3-debouncing" data-progress-title="Part 3: Debouncing - แก้ปัญหา" }
 
 ### หลักการ Debouncing
 
@@ -417,6 +422,7 @@ void loop() {
 ```
 
 **ข้อดี:**
+
 - ✅ ไม่บล็อกโปรแกรม
 - ✅ สามารถทำงานอื่นพร้อมกันได้
 - ✅ เหมาะกับโปรแกรมซับซ้อน
@@ -507,7 +513,7 @@ Count: 1
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="05-summary" data-progress-title="สรุป" }
 
 | หัวข้อ | รายละเอียด |
 |--------|-----------|
@@ -522,25 +528,27 @@ Count: 1
 
 ---
 
-## 🎯 ความท้าทาย
+## 🎯 ความท้าทาย { data-progress-section="05-challenges" data-progress-title="🎯 ความท้าทาย" }
 
 ### Challenge 1: Double Click Detector
 กด 2 ครั้งติดกัน (ภายใน 500ms) → LED กะพริบ 3 ครั้ง  
 กด 1 ครั้ง → LED กะพริบ 1 ครั้ง
 
 ### Challenge 2: Multi-Button System
+
 - ปุ่ม 1 (GPIO 19) → เพิ่มตัวนับ
 - ปุ่ม 2 (GPIO 18) → ลดตัวนับ
 - ปุ่ม 3 (GPIO 5) → รีเซ็ต
 
 ### Challenge 3: LED Brightness Control
+
 - กดสั้น → เพิ่มความสว่าง +20%
 - กดค้าง 1 วินาที → ลดความสว่าง -20%
 - กดค้าง 3 วินาที → ปิด LED
 
 ---
 
-## ❓ คำถามท้ายบท
+## ❓ คำถามท้ายบท { data-progress-section="05-questions" data-progress-title="❓ คำถามท้ายบท" }
 
 1. `INPUT_PULLUP` ทำหน้าที่อะไร?
 2. Button Bounce คืออะไร และเกิดขึ้นเมื่อไหร่?
@@ -551,11 +559,12 @@ Count: 1
 
 ---
 
-## 📚 เนื้อหาบทถัดไป
+## 📚 เนื้อหาบทถัดไป { data-progress-section="05-next-steps" data-progress-title="📚 เนื้อหาบทถัดไป" }
 
 ในบทถัดไป เราจะเรียนรู้:
+
 - 💡 การควบคุมความสว่าง LED ด้วย PWM
 - 🎛️ ใช้ `ledcWrite()` ปรับความเข้มแสง
 - 🌅 สร้าง Fade Effect (ค่อยๆ สว่าง/มืด)
 
-[→ ไปบทที่ 6: PWM และการควบคุมความสว่าง LED](08-pwm-led.md)
+[→ ไปบทที่ 6: PWM และการควบคุมความสว่าง LED](06-pwm-led.md)

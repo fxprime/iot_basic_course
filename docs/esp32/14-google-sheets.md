@@ -1,6 +1,7 @@
 # บทที่ 14: Google Sheets Integration (บันทึกข้อมูลลง Cloud)
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="14-objectives" data-progress-title="วัตถุประสงค์" }
+
 - ส่งข้อมูลจาก ESP32 ไปยัง Google Sheets
 - บันทึก Timestamp (เวลา)
 - เก็บข้อมูลเพื่อวิเคราะห์
@@ -8,26 +9,27 @@
 
 ---
 
-## อุปกรณ์ที่ใช้
+## อุปกรณ์ที่ใช้ { data-progress-section="14-equipment" data-progress-title="อุปกรณ์ที่ใช้" }
+
 - ESP32 Development Board
 - Sensor (Potentiometer, Ultrasonic, ฯลฯ)
 - บัญชี Google (Gmail)
 
 ---
 
-## ขั้นตอนที่ 1: สร้าง Google Sheet
+## ขั้นตอนที่ 1: สร้าง Google Sheet { data-progress-section="14-step-1" data-progress-title="ขั้นตอนที่ 1: สร้าง Google Sheet" }
 
 1. เข้า [https://sheets.google.com](https://sheets.google.com)
 2. คลิก **Blank** สร้าง Sheet ใหม่
 3. ตั้งชื่อ: **"ESP32_Data"**
 4. สร้างหัวตาราง (แถวที่ 1):
-   - A1: `Timestamp`
-   - B1: `Sensor`
-   - C1: `Value`
+    - A1: `Timestamp`
+    - B1: `Sensor`
+    - C1: `Value`
 
 ---
 
-## ขั้นตอนที่ 2: สร้าง Google Apps Script
+## ขั้นตอนที่ 2: สร้าง Google Apps Script { data-progress-section="14-step-2" data-progress-title="ขั้นตอนที่ 2: สร้าง Google Apps Script" }
 
 1. ใน Google Sheet คลิก **Extensions → Apps Script**
 2. ลบโค้ดเดิม แล้ววางโค้ดนี้:
@@ -53,14 +55,14 @@ function doPost(e) {
 4. คลิก **Deploy → New deployment**
 5. เลือก **Web app**
 6. ตั้งค่า:
-   - **Execute as:** Me
-   - **Who has access:** Anyone
+    - **Execute as:** Me
+    - **Who has access:** Anyone
 7. คลิก **Deploy**
 8. **คัดลอก URL** (เช่น `https://script.google.com/...`)
 
 ---
 
-## ขั้นตอนที่ 3: โค้ด ESP32
+## ขั้นตอนที่ 3: โค้ด ESP32 { data-progress-section="14-step-3" data-progress-title="ขั้นตอนที่ 3: โค้ด ESP32" }
 
 ### ติดตั้ง Library
 
@@ -167,7 +169,7 @@ void sendToGoogleSheets(String timestamp, String sensor, String value) {
 
 ---
 
-## ผลลัพธ์ใน Google Sheets
+## ผลลัพธ์ใน Google Sheets { data-progress-section="14-google-sheets" data-progress-title="ผลลัพธ์ใน Google Sheets" }
 
 ```
 | Timestamp           | Sensor        | Value |
@@ -179,7 +181,7 @@ void sendToGoogleSheets(String timestamp, String sensor, String value) {
 
 ---
 
-## ตัวอย่าง: ส่งหลาย Sensor
+## ตัวอย่าง: ส่งหลาย Sensor { data-progress-section="14-sensor" data-progress-title="ตัวอย่าง: ส่งหลาย Sensor" }
 
 ### โค้ด
 
@@ -216,18 +218,18 @@ void loop() {
 
 ---
 
-## การวิเคราะห์ข้อมูล
+## การวิเคราะห์ข้อมูล { data-progress-section="14-section-08" data-progress-title="การวิเคราะห์ข้อมูล" }
 
 ### สร้างกราฟใน Google Sheets
 
 1. เลือกข้อมูล (คอลัมน์ A, B, C)
 2. **Insert → Chart**
 3. เลือกประเภทกราฟ:
-   - **Line Chart** - ดูแนวโน้มเมื่อเวลาผ่านไป
-   - **Bar Chart** - เปรียบเทียบค่า
+    - **Line Chart** - ดูแนวโน้มเมื่อเวลาผ่านไป
+    - **Bar Chart** - เปรียบเทียบค่า
 4. ปรับแต่ง Chart editor:
-   - X-axis: Timestamp
-   - Y-axis: Value
+    - X-axis: Timestamp
+    - Y-axis: Value
 
 ### ตัวอย่างการใช้งาน
 
@@ -238,7 +240,7 @@ void loop() {
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="14-summary" data-progress-title="สรุป" }
 
 | หัวข้อ | รายละเอียด |
 |--------|-----------|
@@ -250,7 +252,7 @@ void loop() {
 
 ---
 
-## 🎯 ความท้าทาย
+## 🎯 ความท้าทาย { data-progress-section="14-challenges" data-progress-title="🎯 ความท้าทาย" }
 
 ### Challenge 1: Auto Alert
 
@@ -270,7 +272,7 @@ void loop() {
 
 ---
 
-## ❓ คำถามท้ายบท
+## ❓ คำถามท้ายบท { data-progress-section="14-questions" data-progress-title="❓ คำถามท้ายบท" }
 
 1. Google Apps Script คืออะไร?
 2. ทำไมต้องบันทึก Timestamp?
@@ -280,9 +282,10 @@ void loop() {
 
 ---
 
-## 🎓 จบหลักสูตร
+## 🎓 จบหลักสูตร { data-progress-section="14-course-complete" data-progress-title="🎓 จบหลักสูตร" }
 
 **🎉 ยินดีด้วย!** คุณได้เรียนรู้:
+
 - ✅ การเขียนโปรแกรม ESP32
 - ✅ Digital และ Analog Input/Output
 - ✅ เซนเซอร์ (Ultrasonic, IR, Potentiometer)
@@ -292,6 +295,7 @@ void loop() {
 - ✅ Cloud Integration (Google Sheets)
 
 **ต่อไปคุณสามารถ:**
+
 - สร้างโปรเจค IoT ของตัวเอง
 - เชื่อมต่อกับ Cloud Platform (AWS, Azure, Firebase)
 - ศึกษา MQTT, WebSocket, HTTP API

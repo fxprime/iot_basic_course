@@ -1,6 +1,7 @@
 # บทที่ 11: LCD Display และการแสดงผล
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="11-objectives" data-progress-title="วัตถุประสงค์" }
+
 - เข้าใจการทำงานของจอ LCD 16x2 I2C
 - ใช้ LiquidCrystal_PCF8574 Library
 - แสดงข้อความและตัวเลข
@@ -8,7 +9,8 @@
 
 ---
 
-## อุปกรณ์ที่ใช้
+## อุปกรณ์ที่ใช้ { data-progress-section="11-equipment" data-progress-title="อุปกรณ์ที่ใช้" }
+
 - ESP32 Development Board
 - LCD 16x2 I2C
 - Potentiometer 10kΩ
@@ -17,13 +19,14 @@
 
 ---
 
-## ทฤษฎี: LCD 16x2 I2C
+## ทฤษฎี: LCD 16x2 I2C { data-progress-section="11-lcd-16x2-i2c" data-progress-title="ทฤษฎี: LCD 16x2 I2C" }
 
 ### LCD คืออะไร?
 
 **LCD (Liquid Crystal Display)** = จอแสดงผลตัวอักษรและตัวเลข
 
 **ขนาด 16x2:**
+
 - **16 คอลัมน์** (0-15)
 - **2 แถว** (0-1)
 
@@ -34,6 +37,7 @@
 **I2C** = โปรโตคอลสื่อสารที่ใช้สาย **2 เส้น** (SDA, SCL)
 
 **ข้อดี:**
+
 - ลดสายที่ต้องต่อ (จาก 16 เส้น → 4 เส้น)
 - ต่ออุปกรณ์หลายตัวได้บนสายเดียวกัน
 
@@ -52,7 +56,7 @@ GND    ───── GND
 
 ---
 
-## ติดตั้ง Library
+## ติดตั้ง Library { data-progress-section="11-library" data-progress-title="ติดตั้ง Library" }
 
 1. เปิด Arduino IDE
 2. **Sketch → Include Library → Manage Libraries**
@@ -62,7 +66,7 @@ GND    ───── GND
 
 ---
 
-## ตัวอย่าง 1: Hello World (Run ครั้งเดียว)
+## ตัวอย่าง 1: Hello World (Run ครั้งเดียว) { data-progress-section="11-1-hello-world-run" data-progress-title="ตัวอย่าง 1: Hello World (Run ครั้งเดียว)" }
 
 ### วงจร
 
@@ -112,7 +116,7 @@ void loop() {
 
 ---
 
-## ตัวอย่าง 2: แสดงค่า Potentiometer (Loop)
+## ตัวอย่าง 2: แสดงค่า Potentiometer (Loop) { data-progress-section="11-2-potentiometer-loop" data-progress-title="ตัวอย่าง 2: แสดงค่า Potentiometer (Loop)" }
 
 ### วงจร
 
@@ -170,7 +174,7 @@ void loop() {
 
 ---
 
-## ⚠️ ปัญหา: ตัวอักษรค้าง
+## ⚠️ ปัญหา: ตัวอักษรค้าง { data-progress-section="11-section-07" data-progress-title="⚠️ ปัญหา: ตัวอักษรค้าง" }
 
 ### สาเหตุ
 
@@ -206,7 +210,7 @@ lcd.print(value);
 
 ---
 
-## ตัวอย่าง 3: แสดงสถานะปุ่มกด
+## ตัวอย่าง 3: แสดงสถานะปุ่มกด { data-progress-section="11-3" data-progress-title="ตัวอย่าง 3: แสดงสถานะปุ่มกด" }
 
 ### โจทย์
 
@@ -271,7 +275,7 @@ void loop() {
 
 ---
 
-## โจทย์สำหรับนักเรียน 1: แสดง YES/NO
+## โจทย์สำหรับนักเรียน 1: แสดง YES/NO { data-progress-section="11-1-yes-no" data-progress-title="โจทย์สำหรับนักเรียน 1: แสดง YES/NO" }
 
 ### เป้าหมาย
 
@@ -314,7 +318,7 @@ else {
 
 ---
 
-## ⚠️ ปัญหา: ตัวอักษรค้าง (YES/NO)
+## ⚠️ ปัญหา: ตัวอักษรค้าง (YES/NO) { data-progress-section="11-yes-no" data-progress-title="⚠️ ปัญหา: ตัวอักษรค้าง (YES/NO)" }
 
 ### สถานการณ์
 
@@ -337,7 +341,7 @@ else {
 
 ---
 
-## โจทย์สำหรับนักเรียน 2: Potentiometer + Button
+## โจทย์สำหรับนักเรียน 2: Potentiometer + Button { data-progress-section="11-2-potentiometer-button" data-progress-title="โจทย์สำหรับนักเรียน 2: Potentiometer + Button" }
 
 ### เป้าหมาย
 
@@ -381,19 +385,21 @@ void loop() {
 
 ---
 
-## โปรเจคพิเศษ: ESP32 Dino Run Game 🦖
+## โปรเจคพิเศษ: ESP32 Dino Run Game 🦖 { data-progress-section="11-esp32-dino-run-game" data-progress-title="โปรเจคพิเศษ: ESP32 Dino Run Game 🦖" }
 
 ### ทฤษฎี
 
 เกม **Dino Run** สไตล์ Chrome Dinosaur แต่รันบน LCD!
 
 **การทำงาน:**
+
 - กดปุ่ม → Dino กระโดด
 - หลบ Cactus
 - คะแนนเพิ่มทุกครั้งที่หลบได้
 - ความเร็วเพิ่มทุก 10 คะแนน
 
 **เทคนิคที่ใช้:**
+
 - Custom Characters (กราฟิก Dino และ Cactus)
 - State Machine (START → GAME → GAME_OVER)
 - Animation (สลับ Frame A/B)
@@ -725,6 +731,7 @@ byte dinoGfxFrameA[8] = {
 ```
 
 **สถานะ:**
+
 - **START_STATE** → แสดงหน้าจอเริ่มต้น
 - **GAME_STATE** → กำลังเล่น
 - **GAME_OVER_STATE** → จบเกม
@@ -772,7 +779,7 @@ else {
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="11-summary" data-progress-title="สรุป" }
 
 | หัวข้อ | รายละเอียด |
 |--------|-----------|
@@ -788,12 +795,13 @@ else {
 
 ---
 
-## 📚 เนื้อหาบทถัดไป
+## 📚 เนื้อหาบทถัดไป { data-progress-section="11-next-steps" data-progress-title="📚 เนื้อหาบทถัดไป" }
 
 ในบทถัดไป เราจะเรียนรู้:
+
 - 🔌 Relay Module - ควบคุมอุปกรณ์ไฟฟ้า 220V
 - ⚠️ ความปลอดภัยกับ High Voltage
 - 🎮 ควบคุม Relay ด้วยปุ่มกด
 - 📟 แสดงสถานะบน LCD + Potentiometer
 
-[→ ไปบทที่ 14: Relay Module](14-relay-module.md)
+[→ ไปบทที่ 12: Relay Module](12-relay-module.md)

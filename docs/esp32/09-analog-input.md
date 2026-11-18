@@ -1,6 +1,7 @@
 # บทที่ 9: Analog Input และ Potentiometer
 
-## วัตถุประสงค์
+## วัตถุประสงค์ { data-progress-section="09-objectives" data-progress-title="วัตถุประสงค์" }
+
 - เข้าใจการทำงานของ ADC (Analog-to-Digital Converter)
 - อ่านค่า Analog Input ด้วย `analogRead()`
 - ใช้ Potentiometer ควบคุมอุปกรณ์
@@ -8,7 +9,8 @@
 
 ---
 
-## อุปกรณ์ที่ใช้
+## อุปกรณ์ที่ใช้ { data-progress-section="09-equipment" data-progress-title="อุปกรณ์ที่ใช้" }
+
 - ESP32 Development Board
 - Potentiometer 10kΩ (ตัวต้านทานปรับค่าได้)
 - Servo Motor SG90
@@ -18,19 +20,22 @@
 
 ---
 
-## ทฤษฎี: Analog Input และ ADC
+## ทฤษฎี: Analog Input และ ADC { data-progress-section="09-analog-input-adc" data-progress-title="ทฤษฎี: Analog Input และ ADC" }
 
 ### Digital vs Analog
 
 **Digital Signal:**
+
 - มีได้เพียง **2 สถานะ**: HIGH (1) หรือ LOW (0)
 - ตัวอย่าง: ปุ่มกด, สวิตช์
 
 **Analog Signal:**
+
 - มีค่า**ต่อเนื่อง** ระหว่าง 0V ถึง 3.3V
 - ตัวอย่าง: เซนเซอร์แสง, อุณหภูมิ, Potentiometer
  
 ![alt text](../assets/images/digital-vs-analog.webp)
+
 ---
 
 ### ADC (Analog-to-Digital Converter)
@@ -38,6 +43,7 @@
 **ADC** = วงจรแปลงสัญญาณ Analog → Digital เพื่อให้ ESP32 ประมวลผลได้
 
 **ESP32 ADC:**
+
 - **ความละเอียด:** 12-bit (0-4095)
 - **แรงดันวัด:** 0-3.3V
 - **ช่องสัญญาณ:** ADC1 (GPIO 32-39), ADC2 (ใช้ไม่ได้เมื่อเปิด WiFi)
@@ -47,13 +53,14 @@ $$
 $$
 
 **ตัวอย่าง:**
+
 - 0V → ADC = 0
 - 1.65V → ADC = 2048 (ครึ่งหนึ่ง)
 - 3.3V → ADC = 4095 (เต็ม)
 
 ---
 
-## Potentiometer คืออะไร?
+## Potentiometer คืออะไร? { data-progress-section="09-potentiometer" data-progress-title="Potentiometer คืออะไร?" }
 
 **Potentiometer** (ตัวต้านทานปรับค่าได้) = ตัวต้านทานที่สามารถ**หมุนปรับค่า**ได้
 
@@ -62,18 +69,20 @@ $$
 
 
 **หลักการทำงาน:**
+
 - หมุนซ้ายสุด → ออก 0V
 - หมุนกลาง → ออก ~1.65V
 - หมุนขวาสุด → ออก 3.3V
 
 **การต่อ:**
+
 - **ขาซ้าย** → GND
 - **ขากลาง** → GPIO (Analog Input)
 - **ขาขวา** → 3.3V
 
 ---
 
-## ตัวอย่าง 1: อ่านค่า Potentiometer
+## ตัวอย่าง 1: อ่านค่า Potentiometer { data-progress-section="09-1-potentiometer" data-progress-title="ตัวอย่าง 1: อ่านค่า Potentiometer" }
 
 ### วงจร
 
@@ -112,7 +121,7 @@ ADC Value: 4095   ← หมุนขวาสุด
 
 ---
 
-## ตัวอย่าง 2: แปลงค่า ADC เป็นแรงดัน
+## ตัวอย่าง 2: แปลงค่า ADC เป็นแรงดัน { data-progress-section="09-2-adc" data-progress-title="ตัวอย่าง 2: แปลงค่า ADC เป็นแรงดัน" }
 
 ### วงจร
 
@@ -157,7 +166,7 @@ ADC: 4095 | Voltage: 3.30 V
 
 ---
 
-## ตัวอย่าง 3: แสดงผลแบบ Bar Graph
+## ตัวอย่าง 3: แสดงผลแบบ Bar Graph { data-progress-section="09-3-bar-graph" data-progress-title="ตัวอย่าง 3: แสดงผลแบบ Bar Graph" }
 
 ### วงจร
 
@@ -206,7 +215,7 @@ Potentiometer Bar Graph
 
 ---
 
-## ตัวอย่าง 4: ควบคุมความสว่าง LED ด้วย Potentiometer
+## ตัวอย่าง 4: ควบคุมความสว่าง LED ด้วย Potentiometer { data-progress-section="09-4-led-potentiometer" data-progress-title="ตัวอย่าง 4: ควบคุมความสว่าง LED ด้วย Potentiometer" }
 
 ### วงจร
 
@@ -260,7 +269,7 @@ Brightness: 100%  ← LED สว่างเต็มที่
 
 ---
 
-## ตัวอย่าง 5: ควบคุมมุม Servo ด้วย Potentiometer
+## ตัวอย่าง 5: ควบคุมมุม Servo ด้วย Potentiometer { data-progress-section="09-5-servo-potentiometer" data-progress-title="ตัวอย่าง 5: ควบคุมมุม Servo ด้วย Potentiometer" }
 
 ### วงจร
 
@@ -325,18 +334,20 @@ Pot: 4095 → Angle: 180°
 
 ---
 
-## โปรเจค: ตู้ให้อาหารปลาอัตโนมัติ 🐟
+## โปรเจค: ตู้ให้อาหารปลาอัตโนมัติ 🐟 { data-progress-section="09-section-10" data-progress-title="โปรเจค: ตู้ให้อาหารปลาอัตโนมัติ 🐟" }
 
 ### ทฤษฎี
 
 **ตู้ให้อาหารปลา** ควบคุมปริมาณอาหารด้วย Potentiometer
 
 **การทำงาน:**
+
 - หมุน Potentiometer → เลือกปริมาณอาหาร (0-100%)
 - Servo หมุนเปิดฝา → อาหารตกลงไป
 - มุมเปิดขึ้นอยู่กับปริมาณที่เลือก
 
 **ตัวอย่าง:**
+
 - 25% → Servo เปิด 45°
 - 50% → Servo เปิด 90°
 - 100% → Servo เปิด 180°
@@ -463,19 +474,21 @@ Closing lid...
 ```
 
 **การทำงาน:**
+
 1. หมุน Potentiometer → เลือกปริมาณอาหาร
 2. LED กะพริบเร็วขึ้นตามปริมาณ
 3. กดปุ่ม FEED → Servo เปิดฝาตามปริมาณ
 4. รอ 1 วินาที → ปิดฝาอัตโนมัติ
 
 **ประยุกต์ใช้:**
+
 - ให้อาหารปลาในบ่อ
 - ให้อาหารสัตว์เลี้ยง
 - ควบคุมปริมาณการเท (ของเหลว, เมล็ดพืช)
 
 ---
 
-## สรุป
+## สรุป { data-progress-section="09-summary" data-progress-title="สรุป" }
 
 | หัวข้อ | รายละเอียด |
 |--------|-----------|
@@ -488,11 +501,12 @@ Closing lid...
 
 ---
 
-## 🎯 ความท้าทาย
+## 🎯 ความท้าทาย { data-progress-section="09-challenges" data-progress-title="🎯 ความท้าทาย" }
 
 ### Challenge 1: Servo Speed Control
 
 ใช้ Potentiometer ควบคุม**ความเร็ว**ในการหมุน Servo (ไม่ใช่มุม)
+
 - หมุนซ้ายสุด → Servo กวาดช้ามาก
 - หมุนขวาสุด → Servo กวาดเร็วมาก
 
@@ -501,6 +515,7 @@ Closing lid...
 ### Challenge 2: Multi-Level Fish Feeder
 
 ใช้ 3 ปุ่ม:
+
 - ปุ่ม 1 → ให้อาหาร 25%
 - ปุ่ม 2 → ให้อาหาร 50%
 - ปุ่ม 3 → ให้อาหาร 100%
@@ -510,13 +525,14 @@ Closing lid...
 ### Challenge 3: Automatic Feeder with Schedule
 
 เพิ่มฟังก์ชันให้อาหารอัตโนมัติทุกๆ 30 วินาที
+
 - Potentiometer → เลือกปริมาณเริ่มต้น
 - ปุ่ม → เปิด/ปิดโหมดอัตโนมัติ
 - LED → แสดงสถานะ (กะพริบเมื่อเปิด Auto)
 
 ---
 
-## ❓ คำถามท้ายบท
+## ❓ คำถามท้ายบท { data-progress-section="09-questions" data-progress-title="❓ คำถามท้ายบท" }
 
 1. Analog Signal ต่างจาก Digital Signal อย่างไร?
 2. ADC ของ ESP32 มีความละเอียดกี่ bit? แปลว่าอะไร?
@@ -526,12 +542,13 @@ Closing lid...
 
 ---
 
-## 📚 เนื้อหาบทถัดไป
+## 📚 เนื้อหาบทถัดไป { data-progress-section="09-next-steps" data-progress-title="📚 เนื้อหาบทถัดไป" }
 
 ในบทถัดไป เราจะเรียนรู้:
+
 - 🚗 โปรเจค: **ประตูโรงจอดรถอัตโนมัติ**
 - 📏 ใช้ Ultrasonic + IR Sensor + Servo ร่วมกัน
 - 🧩 เขียนฟังก์ชันทิ้งไว้ให้นักเรียนเติม Logic
 - 🎯 ฝึกการใช้เงื่อนไขและควบคุมอุปกรณ์หลายตัว
 
-[→ ไปบทที่ 12: โปรเจคประตูโรงจอดรถอัตโนมัติ](12-parking-gate-project.md)
+[→ ไปบทที่ 10: โปรเจคประตูโรงจอดรถอัตโนมัติ](10-parking-gate-project.md)
